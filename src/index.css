@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 263 38% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 263 38% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 263 38% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 28% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 265 25% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 262 83% 58%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 265 25% 15%;
+    --input: 265 25% 15%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-lumo-900 text-foreground font-inter antialiased;
+    background-image: 
+      radial-gradient(circle at 25% 5%, rgba(139, 92, 246, 0.05) 0%, transparent 25%),
+      radial-gradient(circle at 75% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 20%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter tracking-tight font-light;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl md:text-5xl;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-gradient-to-br from-lumo-800/40 to-lumo-900/60 backdrop-blur-md border border-lumo-700/20 rounded-xl;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:border-lumo-300/30 hover:shadow-purple-glow;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-lumo-500 to-lumo-300 text-white rounded-md font-medium 
+    transition-all duration-300 hover:shadow-purple-glow-sm hover:scale-[1.02] active:scale-[0.98];
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border border-lumo-300/50 text-white rounded-md font-medium
+    transition-all duration-300 hover:border-lumo-300 hover:bg-lumo-800/30 hover:shadow-purple-glow-sm active:scale-[0.98];
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-lumo-300 to-lumo-100 bg-clip-text text-transparent;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .glow-border {
+    @apply border border-lumo-300/30 shadow-purple-glow;
+  }
+}
+
+/* Remove the incorrect @font-face declaration as we're already importing the font via Google Fonts */
