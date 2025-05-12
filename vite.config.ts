@@ -18,5 +18,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  assetsInclude: ['**/*.glb'], // ✅ Tell Vite to treat .glb files as static assets
+  assetsInclude: ['**/*.glb', '**/*.png'], // ✅ Tell Vite to treat .glb files as static assets
 }));

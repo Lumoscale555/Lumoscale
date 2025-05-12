@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import GhostCursor from "./components/GhostCursor.jsx";
+
 
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -14,7 +16,9 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Lanyard from "./components/Lanyard/Lanyard";
+
+import Lanyard from "./components/components/Lanyard";
+
 
 const queryClient = new QueryClient();
 
@@ -25,8 +29,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
-          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
           <Navbar />
+          {/* <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} /> */}
+          <GhostCursor/>
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />

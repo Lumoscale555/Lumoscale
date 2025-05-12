@@ -25,5 +25,33 @@ export default tseslint.config(
       ],
       "@typescript-eslint/no-unused-vars": "off",
     },
+  },
+  {
+  "parser": "babel-eslint",  // or "@babel/eslint-parser" for newer setups
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": ["react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    // your custom rules here
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
+}
+
 );

@@ -1,11 +1,12 @@
 "use client";
+import React from 'react';
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
 import {
-  useGLTF,
-  useTexture,
   Environment,
   Lightformer,
+  OrbitControls,
+  Box,
 } from "@react-three/drei";
 import {
   BallCollider,
@@ -14,13 +15,16 @@ import {
   RigidBody,
   useRopeJoint,
   useSphericalJoint,
-  RigidBodyProps, 
+  RigidBodyProps,
 } from "@react-three/rapier";
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
-import cardGLB from "./card.glb";
-import lanyard from "./lanyard.png";
+// Replace the imports with placeholder assets since the files aren't available
+// import cardGLB from "../assets/lanyard/card.glb";
+// import lanyard from "../assets/lanyard/lanyard.png";
+
+import "./Lanyard.css";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
 
@@ -31,6 +35,11 @@ interface LanyardProps {
   transparent?: boolean;
 }
 
+interface BandProps {
+  maxSpeed?: number;
+  minSpeed?: number;
+}
+
 export default function Lanyard({
   position = [0, 0, 30],
   gravity = [0, -40, 0],
@@ -38,7 +47,7 @@ export default function Lanyard({
   transparent = true,
 }: LanyardProps) {
   return (
-    <div className="relative z-0 w-full h-screen flex justify-center items-center transform scale-100 origin-center">
+    <div className="lanyard-wrapper">
       <Canvas
         camera={{ position, fov }}
         gl={{ alpha: transparent }}
@@ -47,8 +56,9 @@ export default function Lanyard({
         }
       >
         <ambientLight intensity={Math.PI} />
+        <OrbitControls />
         <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band />
+          <SimplifiedBand />
         </Physics>
         <Environment blur={0.75}>
           <Lightformer
@@ -85,13 +95,8 @@ export default function Lanyard({
   );
 }
 
-interface BandProps {
-  maxSpeed?: number;
-  minSpeed?: number;
-}
-
-function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
-  // Using "any" for refs since the exact types depend on Rapier's internals
+// Simplified version that doesn't depend on external assets
+function SimplifiedBand({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   const band = useRef<any>(null);
   const fixed = useRef<any>(null);
   const j1 = useRef<any>(null);
@@ -112,8 +117,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
     linearDamping: 4,
   };
 
-  const { nodes, materials } = useGLTF(cardGLB) as any;
-  const texture = useTexture(lanyard);
   const [curve] = useState(
     () =>
       new THREE.CatmullRomCurve3([
@@ -160,45 +163,87 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   }, [hovered, dragged]);
 
   useFrame((state, delta) => {
-    if (dragged && typeof dragged !== "boolean") {
+    if (dragged && typeof dragged !== "boolean" && card.current) {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
       vec.add(dir.multiplyScalar(state.camera.position.length()));
       [card, j1, j2, j3, fixed].forEach((ref) => ref.current?.wakeUp());
-      card.current?.setNextKinematicTranslation({
+      card.current.setNextKinematicTranslation({
         x: vec.x - dragged.x,
         y: vec.y - dragged.y,
         z: vec.z - dragged.z,
       });
     }
-    if (fixed.current) {
+
+    // Ensure all refs and necessary properties are available
+    if (
+      fixed.current &&
+      j1.current &&
+      j2.current &&
+      j3.current &&
+      card.current &&
+      band.current &&
+      band.current.geometry
+    ) {
       [j1, j2].forEach((ref) => {
-        if (!ref.current.lerped)
-          ref.current.lerped = new THREE.Vector3().copy(
-            ref.current.translation()
+        // ref.current is known to be non-null here from the outer check
+        const currentRef = ref.current as any; // Use 'as any' to handle dynamic 'lerped' property
+        if (!currentRef.lerped) {
+          currentRef.lerped = new THREE.Vector3().copy(
+            currentRef.translation()
           );
+        }
         const clampedDistance = Math.max(
           0.1,
-          Math.min(1, ref.current.lerped.distanceTo(ref.current.translation()))
+          Math.min(1, currentRef.lerped.distanceTo(currentRef.translation()))
         );
-        ref.current.lerped.lerp(
-          ref.current.translation(),
+        currentRef.lerped.lerp(
+          currentRef.translation(),
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))
         );
       });
-      curve.points[0].copy(j3.current.translation());
-      curve.points[1].copy(j2.current.lerped);
-      curve.points[2].copy(j1.current.lerped);
-      curve.points[3].copy(fixed.current.translation());
-      band.current.geometry.setPoints(curve.getPoints(32));
-      ang.copy(card.current.angvel());
-      rot.copy(card.current.rotation());
-      card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
+
+      // Ensure lerped properties are set before use
+      const j1Lerped = (j1.current as any).lerped;
+      const j2Lerped = (j2.current as any).lerped;
+
+      if (j1Lerped && j2Lerped) {
+        curve.points[0].copy(j3.current.translation());
+        curve.points[1].copy(j2Lerped);
+        curve.points[2].copy(j1Lerped);
+        curve.points[3].copy(fixed.current.translation());
+        
+        // Assuming band.current.geometry is of type MeshLineGeometry which has setPoints
+        (band.current.geometry as any).setPoints(curve.getPoints(32));
+        
+        const currentAngvel = card.current.angvel();
+        const currentRotation = card.current.rotation();
+        card.current.setAngvel({ x: currentAngvel.x, y: currentAngvel.y - currentRotation.y * 0.25, z: currentAngvel.z });
+      }
     }
   });
 
   curve.curveType = "chordal";
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  
+  // Create a simple texture to replace the missing lanyard.png
+  const texture = new THREE.CanvasTexture(
+    (() => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 64;
+      canvas.height = 64;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, 64, 64);
+        ctx.fillStyle = "#ff0000";
+        ctx.fillRect(0, 32, 64, 2);
+      }
+      return canvas;
+    })()
+  );
+  
+  texture.wrapS = THREE.RepeatWrapping;
+  texture.wrapT = THREE.RepeatWrapping;
 
   return (
     <>
@@ -261,22 +306,16 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
               );
             }}
           >
-            <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial
-                map={materials.base.map}
-                map-anisotropy={16}
+            {/* Simplified card instead of using the GLB model */}
+            <Box args={[1.6, 2.25, 0.1]}>
+              <meshPhysicalMaterial 
+                color="#444444" 
                 clearcoat={1}
                 clearcoatRoughness={0.15}
                 roughness={0.9}
                 metalness={0.8}
               />
-            </mesh>
-            <mesh
-              geometry={nodes.clip.geometry}
-              material={materials.metal}
-              material-roughness={0.3}
-            />
-            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
+            </Box>
           </group>
         </RigidBody>
       </group>
@@ -294,4 +333,4 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
       </mesh>
     </>
   );
-}
+} 
