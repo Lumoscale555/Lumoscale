@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import GhostCursor from "./components/GhostCursor.jsx";
+
 
 
 import Index from "./pages/Index";
