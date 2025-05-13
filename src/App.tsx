@@ -17,8 +17,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-import Lanyard from "./components/components/Lanyard";
-
 
 const queryClient = new QueryClient();
 
