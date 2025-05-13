@@ -3,29 +3,29 @@ import { useState, useEffect, useRef } from 'react';
 
 const testimonials = [
   {
-    quote: "Working with LumoScale completely transformed our digital presence. Their marketing strategies increased our conversion rates by 45% in just three months.",
-    name: "Sarah Johnson",
-    position: "CEO",
-    company: "GREEN CYCLE"
-  },
-  {
-    quote: "The custom software solution delivered by LumoScale streamlined our operations and reduced processing time by 60%. Their team understood our needs perfectly.",
-    name: "Michael Chen",
-    position: "CTO",
-    company: "Namoona Group"
-  },
-  {
-    quote: "LumoScale's innovative approach to our digital marketing campaign generated unprecedented engagement. They truly understand how to connect with audiences.",
-    name: "Alexia Rivera",
-    position: "Marketing Director",
-    company: "InternForage"
-  },
-  {
-    quote: "The e-commerce platform developed by LumoScale increased our online sales by 72% within the first quarter. Their attention to detail is unmatched.",
-    name: "Daniel Patel",
-    position: "Founder",
+    quote: "Lumoscale brought our website vision to life with a modern and minimal design. The process was effortless, and their team stayed attentive to every detail. Really happy with the result.",
+    name: "M. Sundeep Reddy",
+    position: "Managing Director",
     company: "Lucido Interiors"
-  }
+  },
+  {
+    quote: "As an edtech brand, our website needed to be clean, easy to navigate, and student-friendly — Lumoscale delivered just that. Their approach was organized and seamless.",
+    name: "Guntireddi Rithendra",
+    position: "Founder",
+    company: "Intern Forage"
+  },
+  {
+    quote: "The team was quick, professional, and flexible throughout the process. We now have a simple, polished website that’s easy to manage and aligned with our goals.",
+    name: "Aditya",
+    position: "Strategic Edge Research",
+    
+  },
+  // {
+  //   quote: "The e-commerce platform developed by LumoScale increased our online sales by 72% within the first quarter. Their attention to detail is unmatched.",
+  //   name: "Daniel Patel",
+  //   position: "Founder",
+  //   company: "Lucido Interiors"
+  // }
 ];
 
 const Testimonials = () => {

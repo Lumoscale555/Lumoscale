@@ -31,7 +31,7 @@ const App = () => (
         <div className="flex flex-col min-h-screen">
           <Navbar />
           {/* <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} /> */}
-          <GhostCursor/>
+          {/* <GhostCursor/> */}
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />

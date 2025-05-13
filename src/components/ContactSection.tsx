@@ -217,15 +217,15 @@ const ContactSection = () => {
               </div>
             </div>
             
-            <div className="glass-card p-8">
-              <h3 className="text-xl font-medium mb-6">Office Hours</h3>
+            {/* <div className="glass-card p-8">
+              <h3 className="text-xl font-medium mb-6">Connect With us</h3>
               <p className="text-white/70 mb-4">
                 We're available Monday through Friday, from 9:00 AM to 6:00 PM (IST).
               </p>
               <p className="text-white/70">
                 For urgent inquiries outside of business hours, please email us and we'll respond as soon as possible.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

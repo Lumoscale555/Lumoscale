@@ -86,14 +86,14 @@ const ServicesOverview = () => {
               style={{ transitionDelay: `${service.delay}ms` }}
             >
               {/* Gradient Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" style={{padding: '1px'}}>
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-30 transition-opacity duration-700 -z-10" style={{padding: '1px'}}>
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`}></div>
               </div>
               
               {/* Card Content */}
               <div className="p-8">
-                <h3 className="text-2xl font-medium mb-4">{service.category}</h3>
-                <p className="text-white/70 mb-6">{service.description}</p>
+                <h3 className="text-3xl font-medium mb-4">{service.category}</h3>
+                <p className="text-white/90 mb-6">{service.description}</p>
                 
                 <ul className="space-y-3 mb-8">
                   {service.items.map((item, idx) => (

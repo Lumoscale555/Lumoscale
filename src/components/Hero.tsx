@@ -1,6 +1,11 @@
 
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import {
+  Sparkles,
+} from "lucide-react";
+
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -42,12 +47,25 @@ const Hero = () => {
         <div className="absolute inset-0 bg-lumo-900/50"></div>
       </div>
       
+      
       {/* Content */}
       <div 
+      
         ref={heroRef}
         className="container mx-auto px-4 relative z-10 transition-opacity duration-1000 opacity-0 transform translate-y-4"
       >
+   
+
+
+
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
+ 
+             <span className="bg-[#6366f1] text-transparent bg-clip-text text-base sm:text-xl font-medium flex items-center relative -top-20">
+  <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-blue-400" />
+  Ready to Innovate
+</span>
+
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6">
             Drive Growth with  <span className="text-gradient font-normal">Digital Marketing & Innovative Software</span>
           </h1>

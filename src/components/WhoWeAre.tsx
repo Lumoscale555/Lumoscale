@@ -52,20 +52,26 @@ const WhoWeAre = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Strategic Vision",
-              description: "We align every digital solution with your business objectives for maximum impact and sustainable growth.",
+              title: "Strategic Growth Partner",
+              description: "We're not just another agency — we're your strategic growth partner, providing 360° support from digital marketing and branding to deep business strategy.",
               delay: "0"
             },
             {
-              title: "Creative Excellence",
-              description: "Our team of industry experts deliver innovative solutions that blend creativity with technical precision.",
+              title: "Focus on Real Results",
+              description: "What sets us apart? We focus on real results—leads, sales, and growth. Our team studies your industry, builds custom strategies, and works closely with you.",
               delay: "100"
             },
             {
-              title: "Measurable Results",
-              description: "We're obsessed with data-backed performance, providing transparent analytics that demonstrate real ROI.",
+              title: "Empowering Businesses",
+              description: "Our mission is simple — to empower businesses by using smart digital marketing to expand their reach, connect with the right audience, and boost their bottom line.",
               delay: "200"
-            }
+            },
+            // {
+            //   title: "Dedicated Partnership",
+            //   description: "With LumoScale, you don’t just get a service — you get a dedicated partner committed to your success, working like an extension of your team.",
+            //   delay: "300"
+            // }
+
           ].map((item, index) => (
             <div 
               key={index} 
