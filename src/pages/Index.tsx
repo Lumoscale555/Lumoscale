@@ -5,6 +5,7 @@ import ServicesOverview from '../components/ServicesOverview';
 import TrustedBy from '../components/TrustedBy';
 import Testimonials from '../components/Testimonials';
 import ContactSection from '../components/ContactSection';
+import Portfolio from './Portfolio';
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <WhoWeAre />
       <ServicesOverview />
       <TrustedBy />
+      <Portfolio/>
       <Testimonials />
       <ContactSection />
     </div>

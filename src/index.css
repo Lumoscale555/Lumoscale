@@ -4,6 +4,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @layer utilities {
+  .bg-lumo-900 {
+    background-color: var(--lumo-900);
+  }
+  
+  .bg-lumo-800\/30 {
+    background-color: rgba(24, 28, 37, 0.3);
+  }
+  
+  .text-lumo-300 {
+    color: var(--lumo-300);
+  }
+  
+  .text-lumo-200 {
+    color: var(--lumo-200);
+  }
+  
+  .text-lumo-100 {
+    color: white;
+  }
+} */
+
+@import './styles/animations.css';
 
 @layer base {
   :root {

@@ -1,0 +1,78 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: floatAnimation 8s ease-in-out infinite;
+}
+
+/* Refined glass card styles */
+.premium-glass-card {
+  background: rgba(24, 28, 37, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.premium-glass-card:hover {
+  background: rgba(28, 32, 40, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient text style */
+.text-gradient {
+  background: linear-gradient(120deg, #a5c4e3, #6a98c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Premium button styles */
+.premium-button {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Adding custom accent colors to the Lumo theme */
+:root {
+  --lumo-900: #13151a;
+  --lumo-800: #181c25;
+  --lumo-300: #a5c4e3;
+  --lumo-200: #6a98c5;
+}
+
+
