@@ -257,7 +257,7 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
         onClick={() => setIsOpen(true)}
       >
         {/* Client Image/Placeholder */}
-        <div className="aspect-[16/12] bg-dark-800/30 flex items-center justify-center overflow-hidden">
+        <div className="aspect-[5/5] bg-dark-800/30 flex items-center justify-center overflow-hidden">
           {client.image ? (
             <img
               src={client.image}
@@ -451,26 +451,23 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
               <p className="text-white/80 mb-6">{client.description}</p>
 
               {/* Client Gallery */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {client.galleryImages.map((img, idx) => (
-                  <div
-                    key={idx}
-                    className="aspect-square bg-dark-700/50 rounded-md overflow-hidden"
-                  >
-                    {img ? (
-                      <img
-                        src={img}
-                        alt={`${client.clientName} gallery ${idx + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-white/30">
-                        Image {idx + 1}
-                      </div>
-                    )}
+            <div className="grid grid-cols-1 gap-4">
+            {client.galleryImages.map((img, idx) => (
+              <div key={idx}>
+                {img ? (
+                  <img
+                    src={img}
+                    alt={`...`}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-white/30">
+                    Image {idx + 1}
                   </div>
-                ))}
+                )}
               </div>
+            ))}
+          </div>
             </>
           )}
         </DialogContent>
