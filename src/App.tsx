@@ -1,14 +1,14 @@
-
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-
+import WelcomeScreen from "./pages/WelcomeScreen.jsx";
 
 import Index from "./pages/Index";
 import Services from "./pages/Services";
@@ -17,19 +17,20 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+const LandingPage = ({ showWelcome, setShowWelcome }) => {
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        {showWelcome && (
+          <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
+        )}
+      </AnimatePresence>
+
+      {!showWelcome && (
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          {/* <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} /> */}
-          {/* <GhostCursor/> */}
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
@@ -42,9 +43,28 @@ const App = () => (
           </main>
           <Footer />
         </div>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+      )}
+    </>
+  );
+};
+
+const App = () => {
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <LandingPage
+            showWelcome={showWelcome}
+            setShowWelcome={setShowWelcome}
+          />
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
