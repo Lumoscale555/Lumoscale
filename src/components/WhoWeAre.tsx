@@ -35,7 +35,7 @@ const WhoWeAre = () => {
   }, []);
 
   return (
-    <section id="who-we-are" className="section-padding">
+    <section id="who-we-are" className="section-padding ">
       <div 
         ref={sectionRef}
         className="container mx-auto px-4 opacity-0"
@@ -53,17 +53,17 @@ const WhoWeAre = () => {
           {[
             {
               title: "Strategic Growth Partner",
-              description: "We're not just another agency — we're your strategic growth partner, providing 360° support from digital marketing and branding to deep business strategy.",
+              description: "You're not just hiring an agency — you're gaining a strategic growth partner, offering you 360° support across digital marketing, branding, and deep business strategy. ",
               delay: "0"
             },
             {
               title: "Focus on Real Results",
-              description: "What sets us apart? We focus on real results—leads, sales, and growth. Our team studies your industry, builds custom strategies, and works closely with you.",
+              description: "What sets you apart? You get real results—more leads, sales, and growth. We study your industry, craft custom strategies, and partner closely with you.",
               delay: "100"
             },
             {
-              title: "Empowering Businesses",
-              description: "Our mission is simple — to empower businesses by using smart digital marketing to expand their reach, connect with the right audience, and boost their bottom line.",
+              title: "Psychology-Driven Marketing",
+              description: "You benefit from strategies crafted by marketing psychologists who understand what truly motivates your customers—so your marketing connects, convinces, and converts.",
               delay: "200"
             },
             // {
