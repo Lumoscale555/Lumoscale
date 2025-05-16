@@ -64,7 +64,7 @@ const Hero = () => {
             confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" className="btn-primary">
+            <Link to="https://calendly.com/lumoscale/30min" className="btn-primary">
               Get Started
             </Link>
             <Link to="/services" className="btn-secondary">

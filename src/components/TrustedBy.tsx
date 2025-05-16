@@ -17,6 +17,10 @@ const clients = [
     name: "Lucido Interiors",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/li.jpg-GXbIeeIAwmAI7Jo5BbzvptsvLqWylv.jpeg",
   },
+   {
+    name: "Absolead",
+    logo: "/Images/Logos/abs.png",
+  },
 ];
 
 const TrustedBy = () => {

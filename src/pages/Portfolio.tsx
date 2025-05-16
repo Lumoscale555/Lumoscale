@@ -11,7 +11,7 @@ import {
   VideoProject,
   GraphicDesignProject 
 } from '../components/Portfolio/PortfolioCard';
-import { ArrowRight, Film, Folder, Users, Image } from 'lucide-react';
+import {  Film, Folder, Users, Image } from 'lucide-react';
 
 // Sample portfolio data - this will be replaced with your actual content
 const webdevProjects: WebDevProject[] = [
@@ -20,87 +20,68 @@ const webdevProjects: WebDevProject[] = [
     type: 'webdev',
     title: "Absolead",
     category: "Website Development",
-    description: "Modern e-commerce platform with integrated payment processing and inventory management",
+    description: "Absolead delivers customized recruitment solutions that connect businesses with the right talent, driving growth locally and globally",
     image: "/Images/Website/absolead.png",
     technologies: ["React", "Vite", "Tailwind"],
     liveLink: "https://www.absolead.io/",
-    detailedDescription: "A fully responsive e-commerce platform built with modern technologies. Features include product filtering, search functionality, user accounts, wishlist, cart management, payment processing with Stripe, and an admin dashboard for inventory management.",
+    detailedDescription: "Absolead offers end-to-end hiring solutions tailored to your business needs, from recruitment outsourcing to blue-collar and offshore hiring.We partner with companies across industries, providing strategic workforce insights and pre-vetted talent.Our approach combines speed, reliability, and deep market expertise to help you build winning teams.With Absolead, scale your business confidently through smart and effective recruitment strategies.",
     testimonial: {
       text: "The website exceeded our expectations. Sales increased by 40% within the first month after launch.",
-      author: "Jane Cooper, CEO"
+      author: ""
     },
-    challenges: [
-      "Implementing a secure payment gateway that works across multiple countries",
-      "Creating a responsive design that works on all device sizes",
-      "Building an intuitive admin interface for non-technical staff"
-    ]
+    
   },
   {
     id: 2,
     type: 'webdev',
     title: "Lucido Interiors",
     category: "Website Development",
-    description: "Professional portfolio website showcasing creative work and services",
+    description: "Lucido Interiors transforms homes and offices in Hyderabad with modern, functional, and personalized design solutions.",
     image: "/Images/Website/lucido.jpg",
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     liveLink: "https://lucidointeriors.in/",
-    detailedDescription: "A custom portfolio website designed to showcase creative work in an engaging and interactive way. The site features smooth animations, project filtering, and a contact form integrated with email notifications.",
-    challenges: [
-      "Creating performant animations that work well across all browsers",
-      "Optimizing images for fast loading while maintaining quality",
-      "Implementing an accessible design that works for all users"
-    ]
+    detailedDescription: "Lucido Interiors is a Hyderabad-based interior design company that creates stylish and functional living and workspaces. They specialize in personalized designs for homes and offices, blending modern aesthetics with practical solutions.",
+    
   },
   {
     id: 3,
     type: 'webdev',
     title: "GreenCycle",
     category: "Website Development",
-    description: "Online booking and reservation system for a service-based business",
+    description: "GreenCycle drives eco-innovation through hydrogen energy, fuel cells, and green transport for a sustainable future.",
     image: "/Images/Website/GreenCycle.png",
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveLink: "https://greenocycle-murex.vercel.app/",
-    detailedDescription: "A comprehensive booking system that allows customers to schedule appointments, make payments, and receive confirmations. The system includes a staff dashboard for managing bookings, customer information, and generating reports.",
-    challenges: [
-      "Implementing a real-time calendar that prevents double bookings",
-      "Creating a notification system for both customers and staff",
-      "Building a flexible cancellation and rescheduling system"
-    ]
+    detailedDescription: "GreenCycle is an eco-innovation platform focused on advancing hydrogen energy solutions. It develops fuel cell technologies, sustainable infrastructure, and green transportation systems to promote a cleaner, hydrogen-powered future.",
+    
   },
     {
     id: 4,
     type: 'webdev',
     title: "Strategic Edge",
     category: "Website Development",
-    description: "Online booking and reservation system for a service-based business",
+    description: "Strategic Edge Research empowers travel businesses with market insights and strategic planning for smarter growth.",
     image: "/Images/Website/Strategic.png",
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveLink: "https://www.strategicedgeresearch.com/",
-    detailedDescription: "A comprehensive booking system that allows customers to schedule appointments, make payments, and receive confirmations. The system includes a staff dashboard for managing bookings, customer information, and generating reports.",
-    challenges: [
-      "Implementing a real-time calendar that prevents double bookings",
-      "Creating a notification system for both customers and staff",
-      "Building a flexible cancellation and rescheduling system"
-    ]
+    detailedDescription: "Strategic Edge Research is a consulting company that helps travel businesses grow using market research and smart business strategies. They provide insights, planning, and data solutions to help companies make better decisions and stay ahead in the travel industry.",
+    
   },
   {
     id: 5,
     type: 'webdev',
     title: "InternForage",
     category: "Website Development",
-    description: "Online booking and reservation system for a service-based business",
+    description: "InternForage is an EdTech platform offering hands-on tech training and internships to build real-world, career-ready skills.",
     image: "/Images/Website/intern.png",
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveLink: "https://internforage.com/",
-    detailedDescription: "A comprehensive booking system that allows customers to schedule appointments, make payments, and receive confirmations. The system includes a staff dashboard for managing bookings, customer information, and generating reports.",
-    challenges: [
-      "Implementing a real-time calendar that prevents double bookings",
-      "Creating a notification system for both customers and staff",
-      "Building a flexible cancellation and rescheduling system"
-    ]
+    detailedDescription: "InternForage is an EdTech platform that helps students and professionals build real-world tech skills through hands-on courses, internships, and mentorship. It offers training in areas like AWS, full-stack development, AI, and more, with a focus on career readiness and industry-aligned learning.",
   }
-
 ];
+
+
+
 
 const socialMediaClients: SocialMediaClient[] = [
   {
@@ -111,7 +92,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "FitLife Gym",
     description: "Comprehensive social media campaign for a fitness brand",
     campaignDesc: "Instagram and Facebook campaign that increased engagement by 65%",
-    image: "/Images/socialmedia/Fitness/demo.png",
+    image: "/Images/socialmedia/Fitness/thumb.png",
     galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png","/Images/socialmedia/Fitness/Fitness2.png"]
   },
   {
@@ -122,7 +103,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Niranjan",
     description: "Food photography and promotional campaign for an upscale restaurant",
     campaignDesc: "Food photography and promotional campaign that boosted reservations",
-    image: "/Images/socialmedia/Niranjan/demo.png",
+    image: "/Images/socialmedia/Niranjan/thumb.png",
     galleryImages: ["/Images/socialmedia/Niranjan/n1.png","/Images/socialmedia/Niranjan/n2.png","/Images/socialmedia/Niranjan/n3.png"]
   },
   {
@@ -133,7 +114,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Clg_buzz",
     description: "Product launch campaign across multiple social media platforms",
     campaignDesc: "Multi-platform product launch that generated 10,000+ pre-orders",
-    image: "/Images/socialmedia/clgbuzz/demo.png",
+    image: "/Images/socialmedia/clgbuzz/thumb.jpg",
     galleryImages: ["/Images/socialmedia/clgbuzz/clg1.png"]
   },
   {
@@ -144,7 +125,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "batman",
     description: "Ongoing social media management for a fashion brand",
     campaignDesc: "Content creation and community management for a trendy fashion brand",
-    image: "",
+    image: "/Images/socialmedia/batman/thumb.jpg",
     galleryImages: ["/Images/socialmedia/batman/batman1.png"]
   },
   {
@@ -155,7 +136,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "FoodTown",
     description: "Property showcases and lead generation campaign",
     campaignDesc: "Virtual tours and property highlights that increased inquiries by 45%",
-    image: "",
+    image: "/Images/socialmedia/Foodtown/thumb.png",
     galleryImages: ["/Images/socialmedia/Foodtown/food1.png","/Images/socialmedia/Foodtown/food2.png","/Images/socialmedia/Foodtown/food3.png"]
   },
   {
@@ -166,7 +147,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "nimantran",
     description: "Educational content and product promotion for health supplements",
     campaignDesc: "Educational content strategy that positioned the brand as an industry leader",
-    image: "",
+    image: "/Images/socialmedia/nimantran/thumb.png",
     galleryImages: ["/Images/socialmedia/nimantran/n1.png","/Images/socialmedia/nimantran/n2.png","/Images/socialmedia/nimantran/n3.png"]
   },
   {
@@ -177,7 +158,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Audumber",
     description: "Local marketing and community engagement for multiple locations",
     campaignDesc: "Location-based marketing that increased foot traffic across all stores",
-    image: "",
+    image: "/Images/socialmedia/Audumber/thumb.png",
     galleryImages: ["/Images/socialmedia/Audumber/a1.png","/Images/socialmedia/Audumber/a2.png"]
   },
   {
@@ -188,7 +169,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Aspectsportsindia",
     description: "Event promotion and ticket sales campaign",
     campaignDesc: "Viral campaign that led to a sold-out event three weeks before the date",
-    image: "",
+    image: "/Images/socialmedia/sports/thumb.png",
     galleryImages: ["/Images/socialmedia/sports/sports1.png","/Images/socialmedia/sports/sports2.png"]
   },
   {
@@ -199,7 +180,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Dr.rituubhatia_cardiologist",
     description: "Influencer partnerships and product education campaign",
     campaignDesc: "Influencer collaborations that reached over 2 million potential customers",
-    image: "",
+    image: "/Images/socialmedia/cardiologist/thumb.png",
     galleryImages: ["/Images/socialmedia/cardiologist/dr1.png"]
   }
 ];
@@ -212,7 +193,7 @@ const videoProjects: VideoProject[] = [
     category: "Video Editing",
     description: "30-second commercial for a sportswear brand",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-    videoUrl: "/videos/video4.mp4"
+    videoUrl: "/videos/video1.mp4"
   },
   {
     id: 2,
@@ -239,7 +220,25 @@ const videoProjects: VideoProject[] = [
     category: "Video Editing",
     description: "Compilation of key moments from a corporate event",
     image: "",
-    videoUrl: "/videos/video1.mp4"
+    videoUrl: "/videos/video4.mp4"
+  },
+  {
+    id: 4,
+    type: 'video',
+    title: "Event Highlights",
+    category: "Video Editing",
+    description: "Compilation of key moments from a corporate event",
+    image: "",
+    videoUrl: "/videos/video5.mp4"
+  },
+  {
+    id: 4,
+    type: 'video',
+    title: "Event Highlights",
+    category: "Video Editing",
+    description: "Compilation of key moments from a corporate event",
+    image: "",
+    videoUrl: "/videos/video6.mp4"
   }
 ];
 
@@ -252,7 +251,7 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     title: "Absolead",
     category: "Graphic Design",
     description: "Modern, minimalist logo design for a technology startup",
-    image: "/Images/Logos/abs.png.",
+    image: "/Images/Logos/abs.png",
     detailedDescription: "A clean, forward-thinking logo design created for a tech startup in the AI space. The design uses simple geometric shapes to convey innovation and reliability.",
     projectInfo: {
       client: "NexTech AI",
@@ -264,10 +263,70 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     id: 2,
     type: 'graphic',
     subCategory: 'logo',
-    title: "Restaurant Rebrand",
+    title: "LumoScale",
     category: "Graphic Design",
     description: "Complete logo redesign for an established restaurant",
-    image: "",
+    image: "/Images/Logos/lumoscale.jpg",
+    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    projectInfo: {
+      client: "Bella Cucina",
+      duration: "3 weeks",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+    }
+  },
+  {
+    id: 3,
+    type: 'graphic',
+    subCategory: 'logo',
+    title: "AngelArena",
+    category: "Graphic Design",
+    description: "Complete logo redesign for an established restaurant",
+    image: "/Images/Logos/anglearena.jpg",
+    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    projectInfo: {
+      client: "Bella Cucina",
+      duration: "3 weeks",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+    }
+  },
+  {
+    id: 2,
+    type: 'graphic',
+    subCategory: 'logo',
+    title: "RichVibes",
+    category: "Graphic Design",
+    description: "Complete logo redesign for an established restaurant",
+    image: "/Images/Logos/richvibes.jpg",
+    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    projectInfo: {
+      client: "Bella Cucina",
+      duration: "3 weeks",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+    }
+  },
+  {
+    id: 2,
+    type: 'graphic',
+    subCategory: 'logo',
+    title: "Trishul",
+    category: "Graphic Design",
+    description: "Complete logo redesign for an established restaurant",
+    image: "/Images/Logos/trishul.jpg",
+    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    projectInfo: {
+      client: "Bella Cucina",
+      duration: "3 weeks",
+      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+    }
+  },
+  {
+    id: 2,
+    type: 'graphic',
+    subCategory: 'logo',
+    title: "Manam",
+    category: "Graphic Design",
+    description: "Complete logo redesign for an established restaurant",
+    image: "/Images/Logos/manam.jpg",
     detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
     projectInfo: {
       client: "Bella Cucina",
@@ -276,37 +335,6 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     }
   },
   
-  // Instagram Posts
-  {
-    id: 3,
-    type: 'graphic',
-    subCategory: 'logo',
-    title: "Fashion Brand Posts",
-    category: "Graphic Design",
-    description: "Series of cohesive Instagram posts for a clothing line",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    detailedDescription: "A collection of visually striking Instagram posts designed to showcase a summer clothing collection. Each post maintains brand consistency while highlighting individual products.",
-    projectInfo: {
-      client: "Urban Threads",
-      duration: "Ongoing",
-      tools: ["Adobe Photoshop", "Canva"]
-    }
-  },
-  {
-    id: 4,
-    type: 'graphic',
-    subCategory: 'logo',
-    title: "Quote Templates",
-    category: "Graphic Design",
-    description: "Custom quote templates for a motivational speaker",
-    image: "",
-    detailedDescription: "A set of 20 visually consistent but unique templates designed for sharing inspirational quotes. Each template can be easily customized with different quotes while maintaining the speaker's brand identity.",
-    projectInfo: {
-      client: "Inspire Forward",
-      duration: "1 week",
-      tools: ["Adobe InDesign", "Canva"]
-    }
-  }
 ];
 
 const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design"];
