@@ -5,7 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BarChart, TrendingUp, Users } from "lucide-react";
 
 export type PortfolioItemBase = {
   id: number;
@@ -32,6 +32,24 @@ export type SocialMediaClient = PortfolioItemBase & {
   clientName: string;
   campaignDesc: string;
   galleryImages: string[];
+  campaignDetails?: {
+    objective: string;
+    strategy: {
+      targeting: string[];
+      triggers: string[];
+      formats: string[];
+    };
+    results: {
+      adSpend: string;
+      impressions: string;
+      reach: string;
+      leads: string;
+      newMemberships: string;
+      costPerLead: string;
+      costPerMembership: string;
+      revenueGrowth: string;
+    };
+  };
 };
 
 export type VideoProject = PortfolioItemBase & {
@@ -235,16 +253,16 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
   return (
     <>
       <div
-        className="glass-card-hover overflow-hidden relative group cursor-pointer h-full min-h-[400px]"
+        className="glass-card-hover overflow-hidden relative group cursor-pointer h-full flex flex-col"
         onClick={() => setIsOpen(true)}
       >
         {/* Client Image/Placeholder */}
-        <div className="aspect-[5/6] bg-dark-800/30 flex items-center justify-center overflow-hidden">
+        <div className="aspect-[16/12] bg-dark-800/30 flex items-center justify-center overflow-hidden">
           {client.image ? (
             <img
               src={client.image}
               alt={client.clientName}
-              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           ) : (
             <div className="text-4xl font-bold text-white/30">
@@ -254,11 +272,20 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
         </div>
 
         {/* Client Info */}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-medium mb-2 group-hover:text-gradient transition-all duration-300">
             {client.clientName}
           </h3>
-          <p className="text-white/70 text-sm">{client.campaignDesc}</p>
+          <p className="text-white/70 text-sm flex-grow">
+            {client.campaignDesc}
+          </p>
+
+          {/* View Case Study */}
+          <div className="flex justify-end mt-3">
+            <button className="text-sm text-primary flex items-center gap-1 group-hover:text-gradient transition-colors">
+              View Case Study <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
 
         {/* Glow effect on hover */}
@@ -268,35 +295,184 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
         </div>
       </div>
 
-      {/* Gallery Dialog */}
+      {/* Expanded Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="bg-dark-800 border-dark-700 max-w-4xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="bg-dark-800 border-dark-700 max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-2xl font-medium">
               {client.clientName}
             </DialogTitle>
           </DialogHeader>
 
-          <p className="text-white/80 mb-6">{client.description}</p>
-
-          {/* Client Gallery */}
-          <div className="grid grid-cols-1 gap-4">
-            {client.galleryImages.map((img, idx) => (
-              <div key={idx}>
-                {img ? (
-                  <img
-                    src={img}
-                    alt={`...`}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-white/30">
-                    Image {idx + 1}
-                  </div>
-                )}
+          {client.campaignDetails ? (
+            <div className="space-y-8">
+              {/* Case Study Header */}
+              <div>
+                <h2 className="text-xl font-semibold text-gradient">
+                  Meta Ads Campaign Case Study
+                </h2>
+                <p className="text-white/70 mt-2 text-sm">
+                  {client.description}
+                </p>
               </div>
-            ))}
-          </div>
+
+              {/* Objective Section */}
+              <div className="space-y-3">
+                <h3 className="text-lg font-medium text-white">Objective</h3>
+                <p className="text-white/80 text-sm">
+                  {client.campaignDetails.objective}
+                </p>
+              </div>
+
+              {/* Strategy & Execution Section */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-white">
+                  Strategy & Execution
+                </h3>
+
+                {/* Audience Targeting */}
+                <div>
+                  <h4 className="text-sm font-medium text-white mb-2">
+                    1. Audience Targeting
+                  </h4>
+                  <ul className="space-y-2">
+                    {client.campaignDetails.strategy.targeting.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-white/80 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Psychological Triggers */}
+                <div>
+                  <h4 className="text-sm font-medium text-white mb-2">
+                    2. Psychological Triggers Used
+                  </h4>
+                  <ul className="space-y-2">
+                    {client.campaignDetails.strategy.triggers.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-white/80 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Ad Formats and Placements */}
+                <div>
+                  <h4 className="text-sm font-medium text-white mb-2">
+                    3. Ad Formats and Placements
+                  </h4>
+                  <ul className="space-y-2">
+                    {client.campaignDetails.strategy.formats.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+                        <span className="text-white/80 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Results Section */}
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-white flex items-center gap-2">
+                  <TrendingUp className="text-primary" size={20} />
+                  Results (30 day campaign)
+                </h3>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Ad Spend</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.adSpend}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Impressions</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.impressions}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Reach</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.reach}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Leads</p>
+                    <p className="text-xl font-semibold text-white flex items-center justify-center">
+                      <Users size={16} className="mr-1 text-primary" />
+                      {client.campaignDetails.results.leads}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">New Memberships</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.newMemberships}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Cost Per Lead</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.costPerLead}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">
+                      Cost Per Membership
+                    </p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.costPerMembership}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Revenue Growth</p>
+                    <p className="text-xl font-semibold text-white flex items-center justify-center">
+                      <BarChart size={16} className="mr-1 text-primary" />
+                      {client.campaignDetails.results.revenueGrowth}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <p className="text-white/80 mb-6">{client.description}</p>
+
+              {/* Client Gallery */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {client.galleryImages.map((img, idx) => (
+                  <div
+                    key={idx}
+                    className="aspect-square bg-dark-700/50 rounded-md overflow-hidden"
+                  >
+                    {img ? (
+                      <img
+                        src={img}
+                        alt={`${client.clientName} gallery ${idx + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-white/30">
+                        Image {idx + 1}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </DialogContent>
       </Dialog>
     </>

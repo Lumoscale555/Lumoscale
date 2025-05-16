@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { 
   WebDevCard, 
@@ -11,7 +10,7 @@ import {
   VideoProject,
   GraphicDesignProject 
 } from '../components/Portfolio/PortfolioCard';
-import {  Film, Folder, Users, Image } from 'lucide-react';
+import { ArrowRight, Film, Folder, Users, Image } from 'lucide-react';
 
 // Sample portfolio data - this will be replaced with your actual content
 const webdevProjects: WebDevProject[] = [
@@ -79,9 +78,6 @@ const webdevProjects: WebDevProject[] = [
     detailedDescription: "InternForage is an EdTech platform that helps students and professionals build real-world tech skills through hands-on courses, internships, and mentorship. It offers training in areas like AWS, full-stack development, AI, and more, with a focus on career readiness and industry-aligned learning.",
   }
 ];
-
-
-
 
 const socialMediaClients: SocialMediaClient[] = [
   {
@@ -337,7 +333,59 @@ const graphicDesignProjects: GraphicDesignProject[] = [
   
 ];
 
-const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design"];
+// New Ads case studies array
+const adsCaseStudies: SocialMediaClient[] = [
+  {
+    id: 1,
+    type: 'social',
+    title: "Basha Body Care Case Study",
+    category: "Ads",
+    clientName: "Basha Body Care Gym",
+    description: "Meta Ads campaign that increased membership sign-ups and trial bookings in Vishakhapatnam",
+    campaignDesc: "Targeted Meta Ads campaign that increased membership revenue by 60%",
+    image: "",
+    galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
+    campaignDetails: { 
+      objective: "Increase membership sign-ups and trial class bookings through a targeted Meta Ads campaign that leverages data-driven audience insights and consumer psychology.",
+      strategy: {
+        targeting: [
+          "Location: Vishakhapatnam city and nearby suburbs (10 km radius)",
+          "Age Group: 18-45 years (focus on young adults & working professionals)",
+          "Interests: Fitness & wellness, weight training, yoga, CrossFit, healthy living",
+          "Behaviors: Frequent gym visitors, online shoppers of fitness gear",
+          "Custom Audience: Past website visitors, Facebook page engagers",
+          "Lookalike Audience: 1% lookalike based on existing members"
+        ],
+        triggers: [
+          "Social Proof: Member testimonials and transformation stories",
+          "FOMO: Limited-time offers for discounted trial memberships",
+          "Commitment & Consistency: Free trial classes to increase chances of full membership",
+          "Authority: Highlighted certified trainers and expert-led classes",
+          "Visual Motivation: High-energy, aspirational images and videos"
+        ],
+        formats: [
+          "Carousel ads for showcasing facilities and trainers",
+          "Video ads highlighting a day at the gym",
+          "Stories ads with quick CTAs for trial sign-up",
+          "Placements: Facebook Feed, Instagram Feed, Instagram Stories"
+        ]
+      },
+      results: {
+        adSpend: "₹18,000",
+        impressions: "60,000+",
+        reach: "15,000+",
+        leads: "54",
+        newMemberships: "17 (31.5% conversion)",
+        costPerLead: "₹333",
+        costPerMembership: "₹1,059",
+        revenueGrowth: "60% increase from prior month"
+      }
+    }
+  }
+];
+
+// Updated categories including Ads
+const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Ads"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Website Development");
@@ -345,7 +393,8 @@ const Portfolio = () => {
     ...webdevProjects, 
     ...socialMediaClients, 
     ...videoProjects, 
-    ...graphicDesignProjects
+    ...graphicDesignProjects,
+    ...adsCaseStudies
   ]);
   
   const headingRef = useRef<HTMLDivElement>(null);
@@ -361,6 +410,8 @@ const Portfolio = () => {
       setFilteredItems(videoProjects);
     } else if (activeCategory === "Graphic Design") {
       setFilteredItems(graphicDesignProjects);
+    } else if (activeCategory === "Ads") {
+      setFilteredItems(adsCaseStudies);
     }
   }, [activeCategory]);
   
@@ -449,17 +500,15 @@ const Portfolio = () => {
       {/* Portfolio Content */}
       <div className="container mx-auto px-4">
         {/* Website Development Section */}
-        {( activeCategory === "Website Development") && (
+        {(activeCategory === "Website Development") && (
           <div 
             ref={(el) => (sectionRefs.current[0] = el)}
             className="mb-20 opacity-0"
           >
-            {  (
-              <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-2xl md:text-3xl font-medium">Website Development</h2>
-                <div className="h-px bg-primary/30 flex-grow"></div>
-              </div>
-            )}
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium">Website Development</h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {webdevProjects.map(project => (
@@ -475,15 +524,13 @@ const Portfolio = () => {
             ref={(el) => (sectionRefs.current[1] = el)}
             className="mb-20 opacity-0"
           >
-            {(
-              <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
-                  Social Media Marketing
-                  <Users size={20} className="text-primary" />
-                </h2>
-                <div className="h-px bg-primary/30 flex-grow"></div>
-              </div>
-            )}
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                Social Media Marketing
+                <Users size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {socialMediaClients.map(client => (
@@ -499,15 +546,13 @@ const Portfolio = () => {
             ref={(el) => (sectionRefs.current[2] = el)}
             className="mb-20 opacity-0"
           >
-            { (
-              <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
-                  Video Editing
-                  <Film size={20} className="text-primary" />
-                </h2>
-                <div className="h-px bg-primary/30 flex-grow"></div>
-              </div>
-            )}
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                Video Editing
+                <Film size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
               {videoProjects.map(video => (
@@ -535,15 +580,13 @@ const Portfolio = () => {
             ref={(el) => (sectionRefs.current[3] = el)}
             className="opacity-0"
           >
-            { (
-              <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
-                  Graphic Design
-                  <Image size={20} className="text-primary" />
-                </h2>
-                <div className="h-px bg-primary/30 flex-grow"></div>
-              </div>
-            )}
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                Graphic Design
+                <Image size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
             
             {/* Logo Design Subsection */}
             <div className="mb-12">
@@ -553,9 +596,28 @@ const Portfolio = () => {
                 ))}
               </div>
             </div>
+          </div>
+        )}
+        
+        {/* Ads Section */}
+        {(activeCategory === "Ads") && (
+          <div 
+            ref={(el) => (sectionRefs.current[4] = el)}
+            className="mb-20 opacity-0"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                Meta Ads Campaigns
+                <ArrowRight size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
             
-            {/* Instagram Posts Subsection */}
-           
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {adsCaseStudies.map(caseStudy => (
+                <SocialMediaCard key={caseStudy.id} client={caseStudy} />
+              ))}
+            </div>
           </div>
         )}
       </div>
