@@ -1,16 +1,6 @@
-
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: ''
-  });
-  
   const headingRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
@@ -39,30 +29,6 @@ const Contact = () => {
     };
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // This would typically connect to a backend API for form submission
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
-    });
-    // Show success message (in a real app, this would be a toast notification)
-    alert('Thank you for contacting us! We will get back to you soon.');
-  };
-
   return (
     <div className="pt-32 pb-20 bg-lumo-900 min-h-screen">
       <div 
@@ -86,108 +52,16 @@ const Contact = () => {
           >
             <div className="glass-card p-8 opacity-0">
               <h2 className="text-2xl mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white/70 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-white/70 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                      placeholder="Your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-white/70 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="service" className="block text-sm font-medium text-white/70 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="software-development">Software Development</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full bg-lumo-800/50 border border-lumo-700/30 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-lumo-300/50 focus:border-transparent transition-all"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
-                </div>
-                
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
-                </button>
-              </form>
+              <div 
+                className="visme_d" 
+                data-title="Blog Contact Form" 
+                data-url="vdz9g383-blog-contact-form" 
+                data-domain="forms" 
+                data-full-page="false" 
+                data-min-height="500px" 
+                data-form-id="127382"
+              ></div>
+              <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
             </div>
           </div>
           
