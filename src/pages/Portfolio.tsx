@@ -748,7 +748,7 @@ const Portfolio = () => {
         ref={headingRef}
         className="container mx-auto px-4 mb-16 opacity-0"
       >
-        <h1 className="text-4xl md:text-6xl mb-6 text-center">
+        <h1 className="text-4xl md:text-6xl mb-6 text-center  font-serif">
           Our <span className="text-gradient">Portfolio</span>
         </h1>
         <p className="text-xl text-white/70 max-w-3xl mx-auto text-center">

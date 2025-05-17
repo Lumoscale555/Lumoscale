@@ -62,7 +62,7 @@ const WhyUs = () => {
         className="container mx-auto px-4 opacity-0"
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl mb-6">
+          <h2 className="text-3xl md:text-5xl mb-4 font-serif">
             Why <span className="text-gradient">Choose Us</span>
           </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
