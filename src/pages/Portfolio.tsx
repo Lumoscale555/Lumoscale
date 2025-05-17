@@ -189,7 +189,7 @@ const videoProjects: VideoProject[] = [
     type: 'video',
     title: "Brand Commercial",
     category: "Video Editing",
-    description: "30-second commercial for a sportswear brand",
+    description: "We turned luxury into a story — Nirva Resort promo reel, crafted by us!",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
     videoUrl: "/videos/video1.mp4"
   },
@@ -198,7 +198,7 @@ const videoProjects: VideoProject[] = [
     type: 'video',
     title: "Product Showcase",
     category: "Video Editing",
-    description: "Detailed product demonstration video with motion graphics",
+    description: "Visually hooking short commercial for a cafe",
     image: "",
     videoUrl: "/videos/video2.mp4"
   },
@@ -211,34 +211,35 @@ const videoProjects: VideoProject[] = [
     image: "",
     videoUrl: "/videos/video3.mp4"
   },
-   {
+  {
     id: 4,
     type: 'video',
-    title: "Event Highlights",
+    title: "Venue Highlight",
     category: "Video Editing",
-    description: "Compilation of key moments from a corporate event",
+    description: "Commercial of a restro bar with a complimention of top performing foods",
     image: "",
     videoUrl: "/videos/video4.mp4"
   },
   {
-    id: 4,
+    id: 5,
     type: 'video',
-    title: "Event Highlights",
+    title: "Realty Tour",
     category: "Video Editing",
-    description: "Compilation of key moments from a corporate event",
+    description: "Animated visual commercial for real estate",
     image: "",
     videoUrl: "/videos/video5.mp4"
   },
   {
-    id: 4,
+    id: 6,
     type: 'video',
-    title: "Event Highlights",
+    title: "Fitness Promo",
     category: "Video Editing",
-    description: "Compilation of key moments from a corporate event",
+    description: "Extreme quality commercial of a gym with a complimention of workout routines",
     image: "",
     videoUrl: "/videos/video6.mp4"
   }
 ];
+
 
 const graphicDesignProjects: GraphicDesignProject[] = [
   // Logo Design
@@ -252,8 +253,8 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     image: "/Images/Logos/abs.png",
     detailedDescription: "A clean, forward-thinking logo design created for a tech startup in the AI space. The design uses simple geometric shapes to convey innovation and reliability.",
     projectInfo: {
-      client: "NexTech AI",
-      duration: "2 weeks",
+      client: "Absolead",
+      duration: "2 days",
       tools: ["Adobe Illustrator", "Figma"]
     }
   },
@@ -885,6 +886,18 @@ const Portfolio = () => {
                 ))}
               </div>
             </div>
+            <div className="flex justify-center">
+              <a 
+                href="https://drive.google.com/drive/folders/1hvi7RDQvbtorJYQJ3KOqjfT3121JS1bk?usp=sharing" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex items-center gap-2"
+              >
+                <Folder size={18} />
+                View More 
+              </a>
+            </div>
+          
           </div>
         )}
         
