@@ -634,7 +634,7 @@ const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
   {
     id: 1,
     type: 'video',
-    title: 'Ayesha Khan Influencer ',
+    title: 'Watch Ayesha Khan bring the magic of the resort to life — real stories, real vibes, real impact ',
     category: 'Influencer Marketing',
     description: '',
     image: '/Images/influencer/ayesha-thumb.jpg', // Thumbnail for video
@@ -648,7 +648,7 @@ const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
     clientName: 'Vishal Prajapati',
     description: '',
     campaignDesc: 'Instagram influencer campaign with high engagement.',
-    image: '/Images/influencer/thumb.png',
+    image: '/Images/influencer/vishal.png',
     galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
   },
 ];
