@@ -640,9 +640,32 @@ const seoCaseStudies: SEOProject[] = [
   }
 ];
 
+// Influencer Marketing Data
+const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
+  {
+    id: 1,
+    type: 'video',
+    title: 'Ayesha Khan Influencer ',
+    category: 'Influencer Marketing',
+    description: '',
+    image: '/Images/influencer/ayesha-thumb.jpg', // Thumbnail for video
+    videoUrl: '/videos/video1.mp4',
+  },
+  {
+    id: 2,
+    type: 'social',
+    title: 'Vishal Prajapati Influencer ',
+    category: 'Influencer Marketing',
+    clientName: 'Vishal Prajapati',
+    description: '',
+    campaignDesc: 'Instagram influencer campaign with high engagement.',
+    image: '/Images/influencer/vishal.png',
+    galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
+  },
+];
 
 // Updated categories including Ads
-const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing",  "SEO Marketing"];
+const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing",  "SEO Marketing", "Influencer Marketing"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Website Development");
@@ -652,8 +675,8 @@ const Portfolio = () => {
     ...videoProjects, 
     ...graphicDesignProjects,
     ...adsCaseStudies,
-    ...seoCaseStudies
-
+    ...seoCaseStudies,
+    ...influencerMarketing
   ]);
   
   const headingRef = useRef<HTMLDivElement>(null);
@@ -674,6 +697,8 @@ const Portfolio = () => {
     }
     else if (activeCategory === "SEO Marketing") {
       setFilteredItems(seoCaseStudies);
+    } else if (activeCategory === "Influencer Marketing") {
+      setFilteredItems(influencerMarketing);
     }
   }, [activeCategory]);
   
@@ -900,6 +925,29 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {seoCaseStudies.map(project => (
                 <SEOCard key={project.id} project={project} />
+              ))}
+            </div>
+          </div>
+        )}
+        {(activeCategory === "Influencer Marketing") && (
+          <div 
+            ref={(el) => (sectionRefs.current[6] = el)}
+            className="mb-20 opacity-0"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                Influencer Marketing
+                <Users size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {influencerMarketing.map(item => (
+                item.type === 'video' ? (
+                  <VideoCard key={item.id} video={item as VideoProject} />
+                ) : (
+                  <SocialMediaCard key={item.id} client={item as SocialMediaClient} />
+                )
               ))}
             </div>
           </div>
