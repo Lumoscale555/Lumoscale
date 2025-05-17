@@ -35,7 +35,7 @@ const testimonials = [
     company: "Lucido Interiors"
   },
   {
-    quote: "We saw a major boost in speed, SEO rankings, and user engagement after LumoScale’s revamp. Highly recommended.",
+    quote: "We saw a major boost in speed, SEO rankings, and user engagement after LumoScale's revamp. Highly recommended.",
     name: "Aditya Singaraju",
     position: "Founder",
     company: "StrategicEdge Research"
@@ -65,7 +65,7 @@ const testimonials = [
     company: "O2 Fitness Gym"
   },
   {
-    quote: "From zero DMs to daily inquiries. That’s the LumoScale effect.",
+    quote: "From zero DMs to daily inquiries. That's the LumoScale effect.",
     name: "Hastimal Niranjan",
     position: "",
     company: ""
@@ -89,12 +89,6 @@ const testimonials = [
     company: "CLGBuzz"
   }
 ];
-
-
-// Duplicate testimonials to create seamless scrolling effect
-const column1Testimonials = [...testimonials, ...testimonials];
-const column2Testimonials = [...testimonials, ...testimonials];
-const column3Testimonials = [...testimonials, ...testimonials];
 
 const Testimonials = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -121,6 +115,9 @@ const Testimonials = () => {
     };
   }, []);
 
+  // Duplicate testimonials for seamless horizontal scroll
+  const horizontalTestimonials = [...testimonials, ...testimonials];
+
   return (
     <section className="section-padding overflow-hidden">
       <div 
@@ -135,53 +132,25 @@ const Testimonials = () => {
             Real stories from real people who have achieved amazing results working with LumoScale.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {/* First column - scrolls upward */}
-          <div className="overflow-hidden relative h-[700px]">
-            <div className="absolute w-full animate-scroll-up" style={{
-              animation: 'scroll-up 40s linear infinite',
-            }}>
-              {column1Testimonials.map((testimonial, index) => (
-                <TestimonialCard 
-                  key={`col1-${index}`}
-                  testimonial={testimonial}
-                  className="mb-6"
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Second column - scrolls downward */}
-          <div className="overflow-hidden relative h-[700px] mt-12 md:mt-24">
-            <div className="absolute w-full animate-scroll-down" style={{
-              animation: 'scroll-down 40s linear infinite',
-            }}>
-              {column2Testimonials.map((testimonial, index) => (
-                <TestimonialCard 
-                  key={`col2-${index}`}
-                  testimonial={testimonial}
-                  className="mb-6"
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Third column - scrolls upward */}
-          <div className="overflow-hidden relative h-[700px]">
-            <div className="absolute w-full animate-scroll-up" style={{
-              animation: 'scroll-up 45s linear infinite',  // Slightly different speed for visual interest
-            }}>
-              {column3Testimonials.map((testimonial, index) => (
-                <TestimonialCard 
-                  key={`col3-${index}`}
-                  testimonial={testimonial}
-                  className="mb-6"
-                />
-              ))}
-            </div>
+        {/* Horizontal infinite scroll */}
+        <div className="relative w-full overflow-hidden">
+          <div
+            className="flex gap-6 animate-horizontal-scroll"
+            style={{
+              animation: 'horizontal-scroll 60s linear infinite',
+              width: `${horizontalTestimonials.length * 350}px`, // 350px per card (approx)
+            }}
+          >
+            {horizontalTestimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={`horizontal-${index}`}
+                testimonial={testimonial}
+                className="min-w-[320px] max-w-[350px] w-full"
+              />
+            ))}
           </div>
         </div>
+        {/* Add keyframes for horizontal-scroll in global CSS or tailwind config */}
       </div>
     </section>
   );
@@ -201,23 +170,15 @@ const TestimonialCard = ({ testimonial, className = "" }: TestimonialCardProps) 
   return (
     <Card className={`glass-card border border-primary/10 hover:border-primary/30 transition-all duration-300 ${className}`}>
       <CardContent className="p-6">
-       
-        
         <p className="text-white/80 mb-5 text-sm leading-relaxed">
           {testimonial.quote}
         </p>
-        
         <div className="flex items-center">
-          <Avatar className="h-10 w-10 border border-primary/30">
-            <AvatarFallback className="bg-primary/10 text-primary">
-              {testimonial.name.charAt(0)}
-            </AvatarFallback>
-          </Avatar>
-          
-          <div className="ml-3">
+          {/* Avatar removed as per request */}
+          <div className="ml-0">
             <h4 className="font-medium text-sm">{testimonial.name}</h4>
             <p className="text-xs text-white/60">
-              {testimonial.position}, {testimonial.company}
+              {testimonial.position}{testimonial.position && testimonial.company ? ', ' : ''}{testimonial.company}
             </p>
           </div>
         </div>

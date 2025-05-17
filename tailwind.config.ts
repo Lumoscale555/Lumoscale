@@ -117,6 +117,10 @@ export default {
           from: { transform: "translateY(-50%)" },
           to: { transform: "translateY(0)" },
         },
+        "horizontal-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -124,8 +128,9 @@ export default {
         "fade-in-up": "fade-in-up 0.7s ease-out forwards",
         float: "float 3s ease-in-out infinite",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
-          "scroll-up": "scroll-up 40s linear infinite",
+        "scroll-up": "scroll-up 40s linear infinite",
         "scroll-down": "scroll-down 40s linear infinite",
+        "horizontal-scroll": "horizontal-scroll 60s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
