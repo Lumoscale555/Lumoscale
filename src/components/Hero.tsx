@@ -30,12 +30,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 -z-10">
-        <iframe
+        {/* <iframe
           src="https://my.spline.design/reactiveorb-UaQTcaRZp6cIum1qibuCpiR3/"
           frameBorder="0"
           title="Reactive Orb"
           className="absolute top-0 left-0 w-[200vw] h-[200vh] -translate-x-1/4 -translate-y-1/4 scale-[1.5] sm:scale-[2] -z-10 pointer-events-none filter brightness-[2.2] contrast-[2] saturate-[2] mix-blend-screen opacity-95"
-        />
+        /> */}
 
         {/* Optional Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
