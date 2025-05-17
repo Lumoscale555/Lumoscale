@@ -207,7 +207,7 @@ const videoProjects: VideoProject[] = [
     type: 'video',
     title: "Sports Highlight",
     category: "Video Editing",
-    description: "Every shot, every cheer, captured in action",
+    description: "Every shot, every cheer, captured in action",
     image: "",
     videoUrl: "/videos/video3.mp4"
   },
@@ -277,15 +277,15 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     id: 3,
     type: 'graphic',
     subCategory: 'logo',
-    title: "AngelArena",
+    title: "Angel Arna",
     category: "Graphic Design",
     description: "Crafted a stunning 3D influencer setup with aesthetic lighting and modern design to elevate content quality and brand appeal.",
     image: "/Images/Logos/anglearena.jpg",
     detailedDescription: "We created a sleek 3D design of an influencer setup featuring dynamic lighting, a minimalist desk layout, and aesthetic wall panels. The visuals helped the influencer showcase a professional yet relatable vibe—perfect for brand deals and content shoots.",
     projectInfo: {
-      client: "Bella Cucina",
-      duration: "3 weeks",
-      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+      client: "Samreen shaik",
+      duration: "2 Days",
+      tools: ["Adobe Illustrator", "Canva"]
     }
   },
   {
@@ -298,9 +298,9 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     image: "/Images/Logos/richvibes.jpg",
     detailedDescription: "Designed a sleek flat logo featuring a stylized car silhouette with red racing stripes, symbolizing speed, energy, and high performance—perfectly capturing the essence of a modern automotive brand.",
     projectInfo: {
-      client: "Bella Cucina",
-      duration: "3 weeks",
-      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+      client: "Richvibes AYI",
+      duration: "2 Days",
+      tools: ["Adobe Illustrator", " Canva"]
     }
   },
   {
@@ -313,9 +313,9 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     image: "/Images/Logos/trishul.jpg",
     detailedDescription: "Crafted a clean 2D logo for a real estate brand, featuring minimalist rooftops and sharp lines to convey trust, structure, and sophistication—ideal for building strong buyer confidence.",
     projectInfo: {
-      client: "Bella Cucina",
-      duration: "3 weeks",
-      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+      client: "Trishul prime realty",
+      duration: "1 Day",
+      tools: ["Canva"]
     }
   },
   {
@@ -328,9 +328,9 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     image: "/Images/Logos/manam.jpg",
     detailedDescription: "The 2D logo for the charitable trust features a peaceful pigeon in light blue, symbolizing hope and tranquility, combined with gentle design elements that reflect compassion and community care.",
     projectInfo: {
-      client: "Bella Cucina",
-      duration: "3 weeks",
-      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+      client: " Manam foundation",
+      duration: "1 Day",
+      tools: ["Canva"]
     }
   },
 ];
