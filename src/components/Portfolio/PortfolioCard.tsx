@@ -845,8 +845,8 @@ export const GraphicDesignCard = ({ project }: GraphicDesignCardProps) => {
 
       {/* Detailed Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="bg-dark-800 border-dark-700 max-w-3xl">
-          <DialogHeader>
+      <DialogContent className="bg-dark-800 border-dark-700 max-w-3xl max-h-[80vh] h-[80vh] overflow-y-auto flex flex-col">
+      <DialogHeader>
             <DialogTitle className="text-2xl font-medium">
               {project.title}
             </DialogTitle>

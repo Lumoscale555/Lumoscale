@@ -89,7 +89,7 @@ const socialMediaClients: SocialMediaClient[] = [
     category: "Social Media Marketing",
     clientName: "O2 Fitness GYM",
     description: "Comprehensive social media campaign for a fitness brand",
-    campaignDesc: "Instagram and Facebook campaign that increased engagement by 65%",
+    campaignDesc: "Comprehensive social media campaign for a fitness brand",
     image: "/Images/socialmedia/Fitness/thumb.png",
     galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png","/Images/socialmedia/Fitness/Fitness2.png"]
   },
