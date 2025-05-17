@@ -10,6 +10,35 @@ const NavLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
+const NAVBAR_HEIGHT = 80; // Adjust this value to match your navbar height in px
+
+function scrollToSectionWithOffset(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    const yOffset = -NAVBAR_HEIGHT;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
+
+function useScrollToHashWithOffset() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const yOffset = -NAVBAR_HEIGHT;
+          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100); // Delay to ensure DOM is rendered
+    }
+  }, [location]);
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -56,27 +85,42 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {NavLinks.map((link) => (
-  <Link
-    key={link.name}
-    to={link.path}
-    onClick={() => {
-      if (link.name === "About" || link.name === "Contact") {
-        window.scrollTo(0, 0);
-      }
-    }}
-    className={`relative group text-sm font-medium transition-colors duration-300 ${
-      location.pathname === link.path
-        ? "text-lumo-200"
-        : "text-white/80 hover:text-cyan-300"
-    }`}
-  >
-    <span className="inline-block relative">
-      {link.name}
-      <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
-    </span>
-  </Link>
-))}
-
+            link.path.startsWith("#") ? (
+              <a
+                key={link.name}
+                href={link.path}
+                onClick={e => {
+                  e.preventDefault();
+                  scrollToSectionWithOffset(link.path.replace('#', ''));
+                }}
+                className={`relative group text-sm font-medium transition-colors duration-300 ${
+                  location.pathname === "/" && window.location.hash === link.path
+                    ? "text-lumo-200"
+                    : "text-white/80 hover:text-cyan-300"
+                }`}
+              >
+                <span className="inline-block relative">
+                  {link.name}
+                  <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`relative group text-sm font-medium transition-colors duration-300 ${
+                  location.pathname === link.path
+                    ? "text-lumo-200"
+                    : "text-white/80 hover:text-cyan-300"
+                }`}
+              >
+                <span className="inline-block relative">
+                  {link.name}
+                  <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </Link>
+            )
+          ))}
 
           <Link to="/contact" className="btn-primary">
             Get Started
@@ -109,29 +153,48 @@ const Navbar = () => {
 
           <div className="flex flex-col space-y-4 p-5">
             {NavLinks.map((link, index) => (
-  <Link
-    key={link.name}
-    to={link.path}
-    onClick={() => {
-      if (link.name === "About" || link.name === "Contact") {
-        window.scrollTo(0, 0);
-      }
-    }}
-    className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
-      location.pathname === link.path
-        ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
-        : "text-white/80 hover:text-white hover:bg-lumo-800/50"
-    }`}
-    style={{
-      animationDelay: `${(index + 1) * 50}ms`,
-      opacity: isOpen ? 1 : 0,
-      transition: "opacity 0.3s ease-in-out",
-    }}
-  >
-    {link.name}
-  </Link>
-))}
-
+              link.path.startsWith("#") ? (
+                <a
+                  key={link.name}
+                  href={link.path}
+                  onClick={e => {
+                    e.preventDefault();
+                    scrollToSectionWithOffset(link.path.replace('#', ''));
+                    setIsOpen(false);
+                  }}
+                  className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
+                    location.pathname === "/" && window.location.hash === link.path
+                      ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
+                      : "text-white/80 hover:text-white hover:bg-lumo-800/50"
+                  }`}
+                  style={{
+                    animationDelay: `${(index + 1) * 50}ms`,
+                    opacity: isOpen ? 1 : 0,
+                    transition: "opacity 0.3s ease-in-out",
+                  }}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
+                    location.pathname === link.path
+                      ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
+                      : "text-white/80 hover:text-white hover:bg-lumo-800/50"
+                  }`}
+                  style={{
+                    animationDelay: `${(index + 1) * 50}ms`,
+                    opacity: isOpen ? 1 : 0,
+                    transition: "opacity 0.3s ease-in-out",
+                  }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
+            ))}
           </div>
 
           <div className="mt-auto p-5 border-t border-lumo-700/30">
