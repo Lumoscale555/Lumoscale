@@ -69,7 +69,7 @@ const Services = () => {
         hasBackground={false}
       />
 
-      <CTASection />
+      
     </div>
   );
 };

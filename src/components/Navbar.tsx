@@ -59,15 +59,19 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`relative text-sm font-medium transition-all duration-300 ${
+              className={`relative group text-sm font-medium transition-colors duration-300 ${
                 location.pathname === link.path
-                  ? "text-lumo-200 after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-lumo-300 after:shadow-purple-glow-sm"
-                  : "text-white/80 hover:text-white"
+                  ? "text-lumo-200"
+                  : "text-white/80 hover:text-cyan-300"
               }`}
             >
-              {link.name}
+              <span className="inline-block relative">
+                {link.name}
+                <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
+              </span>
             </Link>
           ))}
+
           <Link to="/contact" className="btn-primary">
             Get Started
           </Link>

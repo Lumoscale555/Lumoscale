@@ -49,7 +49,7 @@ const webdevProjects: WebDevProject[] = [
     category: "Website Development",
     description: "GreenCycle drives eco-innovation through hydrogen energy, fuel cells, and green transport for a sustainable future.",
     image: "/Images/Website/GreenCycle.png",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    technologies: ["React js",   "Tailwind CSS"],
     liveLink: "https://greenocycle-murex.vercel.app/",
     detailedDescription: "GreenCycle is an eco-innovation platform focused on advancing hydrogen energy solutions. It develops fuel cell technologies, sustainable infrastructure, and green transportation systems to promote a cleaner, hydrogen-powered future.",
     
@@ -61,7 +61,7 @@ const webdevProjects: WebDevProject[] = [
     category: "Website Development",
     description: "Strategic Edge Research empowers travel businesses with market insights and strategic planning for smarter growth.",
     image: "/Images/Website/Strategic.png",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    technologies: ["Vue.js",  "Tailwind CSS"],
     liveLink: "https://www.strategicedgeresearch.com/",
     detailedDescription: "Strategic Edge Research is a consulting company that helps travel businesses grow using market research and smart business strategies. They provide insights, planning, and data solutions to help companies make better decisions and stay ahead in the travel industry.",
     
@@ -73,7 +73,7 @@ const webdevProjects: WebDevProject[] = [
     category: "Website Development",
     description: "InternForage is an EdTech platform offering hands-on tech training and internships to build real-world, career-ready skills.",
     image: "/Images/Website/intern.png",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    technologies: ["TypeScript",  "Tailwind CSS"],
     liveLink: "https://internforage.com/",
     detailedDescription: "InternForage is an EdTech platform that helps students and professionals build real-world tech skills through hands-on courses, internships, and mentorship. It offers training in areas like AWS, full-stack development, AI, and more, with a focus on career readiness and industry-aligned learning.",
   }
@@ -85,7 +85,7 @@ const socialMediaClients: SocialMediaClient[] = [
     type: 'social',
     title: "o2 Fitness Club",
     category: "Social Media Marketing",
-    clientName: "FitLife Gym",
+    clientName: "O2 Fitness GYM",
     description: "Comprehensive social media campaign for a fitness brand",
     campaignDesc: "Instagram and Facebook campaign that increased engagement by 65%",
     image: "/Images/socialmedia/Fitness/thumb.png",
@@ -99,7 +99,7 @@ const socialMediaClients: SocialMediaClient[] = [
     clientName: "Niranjan",
     description: "Food photography and promotional campaign for an upscale restaurant",
     campaignDesc: "Food photography and promotional campaign that boosted reservations",
-    image: "/Images/socialmedia/Niranjan/thumb.png",
+    image: "/Images/socialmedia/Niranjan/thumb.png", 
     galleryImages: ["/Images/socialmedia/Niranjan/n1.png","/Images/socialmedia/Niranjan/n2.png","/Images/socialmedia/Niranjan/n3.png"]
   },
   {
@@ -378,14 +378,72 @@ const adsCaseStudies: SocialMediaClient[] = [
         newMemberships: "17 (31.5% conversion)",
         costPerLead: "₹333",
         costPerMembership: "₹1,059",
-        revenueGrowth: "60% increase from prior month"
+        revenueGrowth: "60% increase from prior month",
+        clickThroughRate: "",
+        estimatedRevenue: "",
+        ROAS: "",
+        leadToMembershipConversionRate: ""
+      }
+    }
+  },
+  {
+    id: 2,
+    type: 'social',
+    title: "Fitness Fuel Case Study",
+    category: "Ads",
+    clientName: "Fitness Fuel Gym",
+    description: "Meta Leads campaign to drive trial sign-ups and convert to paying members at a Gachibowli gym.",
+    campaignDesc: "Psychology-first, data-backed Meta Leads campaign that boosted memberships and lead quality.",
+    image: "",
+    galleryImages: [],
+    campaignDetails: {
+      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
+      strategy: {
+        targeting: [
+          "Location: Gachibowli + 8 km radius",
+          "Age Group: 18–40 years",
+          "Profession Focus: IT professionals, college students, remote workers",
+          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
+          "Behaviors: Gym app users, purchase behavior for fitness gear, page engagement with fitness brands",
+          "Custom Audiences: Past gym visitors, Facebook/Instagram page engagers",
+          "Lookalike Audience: Based on existing membership CRM list"
+        ],
+        triggers: [
+          "Social Proof: Before/after transformations, real member reviews",
+          "FOMO: “50 trial spots only — Get yours before it’s gone”",
+          "Commitment Trigger: Free 1-day VIP pass",
+          "Authority: Showcased certified trainers and modern equipment",
+          "Identity Appeal: “You don’t have to be extreme, just consistent. Start here.”",
+          "Ease & Speed: Instant lead forms (Name, Number, Preferred Time Slot)"
+        ],
+        formats: [
+          "Video Ads: Quick gym tour with upbeat background music",
+          "Carousel Ads: Different programs – weight loss, strength, group classes",
+          "Stories + Reels: Limited-time offer graphics with swipe-up lead forms",
+          "Placements: Facebook Feed, Instagram Feed, Stories, Instagram Explore"
+        ]
+      },
+      results: {
+        adSpend: "₹35,000",
+        impressions: "110,000+",
+        reach: "30,000+",
+        leads: "92",
+        newMemberships: "35",
+        costPerLead: "₹380",
+        costPerMembership: "₹1,000",
+        clickThroughRate: "~1.8%",
+        estimatedRevenue: "₹52,500 (35 × ₹1,500)",
+        ROAS: "1.5x",
+        leadToMembershipConversionRate: "38%",
+        revenueGrowth:"60%"
       }
     }
   }
 ];
 
+
 // Updated categories including Ads
-const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Ads"];
+const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Website Development");
@@ -410,7 +468,7 @@ const Portfolio = () => {
       setFilteredItems(videoProjects);
     } else if (activeCategory === "Graphic Design") {
       setFilteredItems(graphicDesignProjects);
-    } else if (activeCategory === "Ads") {
+    } else if (activeCategory === "Performance Marketing") {
       setFilteredItems(adsCaseStudies);
     }
   }, [activeCategory]);
@@ -600,7 +658,7 @@ const Portfolio = () => {
         )}
         
         {/* Ads Section */}
-        {(activeCategory === "Ads") && (
+        {(activeCategory === "Performance Marketing") && (
           <div 
             ref={(el) => (sectionRefs.current[4] = el)}
             className="mb-20 opacity-0"

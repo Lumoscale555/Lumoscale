@@ -41,9 +41,10 @@ const WhoWeAre = () => {
         className="container mx-auto px-4 opacity-0"
       >
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl mb-6">
-            Who <span className="text-gradient">We Are</span>
+          <h2 className="text-3xl md:text-5xl mb-6 font-serif">
+            Who <span className="text-gradient font-serif">We Are</span>
           </h2>
+
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
             At LumoScale, we combine data-driven strategies with innovative technology to transform your business vision into measurable growth.
           </p>

@@ -29,36 +29,67 @@ const testimonials = [
     company: "Lucido Interiors"
   },
   {
-    quote: "LumoScale's SEO strategies helped us rank on the first page for our target keywords in just two months. Our organic traffic has doubled since then.",
-    name: "Jennifer Lopez",
-    position: "Marketing Manager",
-    company: "TechVista"
+    quote: "From design to development, everything was on point. We now have a site that works as hard as we do.",
+    name: "M. Sundeep Reddy",
+    position: "Founder",
+    company: "Lucido Interiors"
   },
   {
-    quote: "The mobile app LumoScale developed for us has a 4.9 star rating and over 50,000 downloads in the first month. We couldn't be happier with the results.",
-    name: "Robert Kim",
-    position: "Product Manager",
-    company: "MobiConnect"
+    quote: "We saw a major boost in speed, SEO rankings, and user engagement after LumoScale’s revamp. Highly recommended.",
+    name: "Aditya Singaraju",
+    position: "Founder",
+    company: "StrategicEdge Research"
   },
   {
-    quote: "LumoScale's team went above and beyond to meet our tight deadline. Their dedication and expertise made our product launch a huge success.",
-    name: "Emily Watson",
-    position: "Operations Director",
-    company: "LaunchPad Inc"
+    quote: "LumoScale turned our outdated site into a fast, mobile-friendly, lead-generating machine. The difference was instant.",
+    name: "N. Lokeswara Rao",
+    position: "Founder",
+    company: "InternForage"
   },
   {
-    quote: "The analytics dashboard LumoScale created gives us insights we never had before. Our decision-making is now data-driven and much more effective.",
-    name: "Thomas Garcia",
-    position: "Data Analyst",
-    company: "MetricsMatter"
+    quote: "Their team built a modern, responsive website that not only looks great but performs even better. Smooth process throughout.",
+    name: "Guntireddi Ritendra Kumar",
+    position: "Founder",
+    company: "Green Cycle"
   },
   {
-    quote: "Working with LumoScale has been the best business decision we've made. Their strategic approach to digital transformation has revolutionized our company.",
-    name: "Laura Chen",
-    position: "COO",
-    company: "InnovateNow"
+    quote: "LumoScale nailed our vision with a dynamic, scalable website that helped us attract better clients and build trust.",
+    name: "Aditya Singaraju",
+    position: "Founder",
+    company: "Absolead Solutions"
+  },
+  {
+    quote: "They brought consistency, creativity, and conversions. Best decision we made for our socials.",
+    name: "Aniket Gurav",
+    position: "",
+    company: "O2 Fitness Gym"
+  },
+  {
+    quote: "From zero DMs to daily inquiries. That’s the LumoScale effect.",
+    name: "Hastimal Niranjan",
+    position: "",
+    company: ""
+  },
+  {
+    quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging — LumoScale made it effortless.",
+    name: "Rajesh",
+    position: "",
+    company: "The Food Town"
+  },
+  {
+    quote: "We were wasting hours trying to figure out trends. LumoScale stepped in and gave us clarity.",
+    name: "Suraj",
+    position: "",
+    company: "AspectSports"
+  },
+  {
+    quote: "They turned our Instagram from a ghost town to a brand asset. The results speak for themselves.",
+    name: "Samreen",
+    position: "",
+    company: "CLGBuzz"
   }
 ];
+
 
 // Duplicate testimonials to create seamless scrolling effect
 const column1Testimonials = [...testimonials, ...testimonials];

@@ -52,25 +52,37 @@ const Hero = () => {
             Ready to Innovate
           </span>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6 text-white">
-            Results-First Digital Marketing{" "}
-            <span className="text-cyan-300 font-normal">
-              Data-Driven. Psychology-Led. Results-Focused
-            </span>
-          </h1>
+      <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-2 text-white">
+  Results-First Digital Marketing
+</h1>
+<p className="text-lg md:text-xl lg:text-4xl text-cyan-300 font-normal mb-10">
+  Data-Driven. Psychology-Led. Results-Focused
+</p>
+
+
+
           <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-4xl">
             You deserve marketing that’s built on logic, not luck. We use data
             and psychology to help you attract better leads and grow with
             confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="https://calendly.com/lumoscale/30min" className="btn-primary">
-              Get Started
-            </Link>
-            <Link to="/services" className="btn-secondary">
-              Explore Services
-            </Link>
-          </div>
+  <Link
+    to="https://calendly.com/lumoscale/30min"
+    target="_blank"
+    className="btn-primary relative transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-white hover:text-black"
+  >
+    Get Started
+  </Link>
+
+  <Link
+    to="/services"
+    className="btn-secondary relative transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-cyan-300 hover:text-black"
+  >
+    Explore Services
+  </Link>
+</div>
+
         </div>
       </div>
     </section>

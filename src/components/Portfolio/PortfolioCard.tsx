@@ -48,6 +48,10 @@ export type SocialMediaClient = PortfolioItemBase & {
       costPerLead: string;
       costPerMembership: string;
       revenueGrowth: string;
+      clickThroughRate: string;
+        estimatedRevenue: string;
+        ROAS: string;
+        leadToMembershipConversionRate: string;
     };
   };
 };

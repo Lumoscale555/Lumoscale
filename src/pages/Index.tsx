@@ -6,6 +6,9 @@ import TrustedBy from '../components/TrustedBy';
 import Testimonials from '../components/Testimonials';
 import ContactSection from '../components/ContactSection';
 import Portfolio from './Portfolio';
+import WhyUs from '@/components/whyus';
+
+// Add font import
 const Index = () => {
   return (
     <div className="min-h-screen bg-lumo-900">
@@ -13,6 +16,7 @@ const Index = () => {
       <WhoWeAre />
       <ServicesOverview />
       <TrustedBy />
+       <WhyUs/>
       <Portfolio/>
       <Testimonials />
       <ContactSection />

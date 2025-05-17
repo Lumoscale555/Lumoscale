@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -49,19 +50,21 @@ const CTASection = () => {
             Contact us today to discuss how our services can help you achieve your business goals and stay ahead of the competition.
           </p>
           
-          <a 
-            href="/contact" 
-            className="premium-button group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden transition-all duration-500"
-          >
-            <span className="absolute inset-0 border border-lumo-300/30 rounded-full"></span>
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-lumo-800 to-lumo-900 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></span>
-            <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 overflow-hidden transition-opacity duration-500">
-              <span className="absolute inset-0 bg-gradient-to-br from-lumo-300/20 to-transparent blur-md"></span>
-            </span>
-            <span className="relative text-lumo-200 group-hover:text-lumo-100 tracking-wide z-10 transition-colors duration-500">
-              Get in Touch
-            </span>
-          </a>
+<Link
+  to="/contact"
+  className="group relative inline-flex items-center justify-center px-8 py-4 rounded-full border border-lumo-300/30 bg-gradient-to-br from-lumo-800 to-lumo-900 transition-all duration-500 hover:opacity-100 overflow-hidden"
+>
+  {/* Background Blur Glow on Hover */}
+  <span className="absolute inset-0 bg-gradient-to-br from-lumo-300/20 to-transparent blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></span>
+
+  {/* Button Text with Animated Underline */}
+  <span className="relative z-10 text-lumo-200 group-hover:text-lumo-100 tracking-wide transition-colors duration-500">
+    Get in Touch
+    <span className="absolute left-0 -bottom-1 h-[2px] bg-lumo-100 w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+  </span>
+</Link>
+
+
         </div>
       </div>
     </section>
