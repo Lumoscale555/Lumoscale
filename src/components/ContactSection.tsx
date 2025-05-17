@@ -267,7 +267,7 @@ className="w-full bg-gray-500/50 border border-lumo-700/30 rounded-md px-4 py-3 
                     name: "facebook",
                     url: "https://www.facebook.com/share/1BgwR54PBZ/",
                   },
-                  {
+                  { 
                     name: "twitter",
                     url: "https://x.com/Lumo_Scale12?t=r-joJXEN1mo1yilqSzPCWg&s=08",
                   },
