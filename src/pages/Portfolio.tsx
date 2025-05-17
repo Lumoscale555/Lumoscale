@@ -454,7 +454,7 @@ const seoCaseStudies: SEOProject[] = [
     targetAudience: "Businesses seeking IT solutions and services",
     mainGoal: "Increase organic traffic, keyword rankings, and leads through SEO",
     description: "A comprehensive SEO campaign to boost ITNova's online visibility and lead generation.",
-    image: "/Images/seo/itnova.jpg", // Replace with actual image path if available
+    image: "/Images/seo/IT.png", // Replace with actual image path if available
     objectives: [
       "Increase organic traffic",
       "Improve keyword rankings",
@@ -501,7 +501,7 @@ const seoCaseStudies: SEOProject[] = [
     targetAudience: "Businesses needing full-stack digital services",
     mainGoal: "Improve online visibility and lead flow",
     description: "SEO strategy to enhance ZerDs' digital presence and attract more leads.",
-    image: "/Images/seo/zerds.jpg", // Replace with actual image path if available
+    image: "/Images/seo/zerds.png", // Replace with actual image path if available
     objectives: [
       "Grow traffic",
       "Improve keyword rankings",
