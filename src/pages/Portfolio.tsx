@@ -99,8 +99,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Restaurant Promotion",
     category: "Social Media Marketing",
     clientName: "Niranjan",
-    description: "Food photography and promotional campaign for an upscale restaurant",
-    campaignDesc: "Food photography and promotional campaign that boosted reservations",
+    description: "Elevated this jewellery brand’s presence using high-visual content and strategic engagement.",
+    campaignDesc: "Elevated this jewellery brand’s presence using high-visual content and strategic engagement.",
     image: "/Images/socialmedia/Niranjan/thumb.png", 
     galleryImages: ["/Images/socialmedia/Niranjan/n1.png","/Images/socialmedia/Niranjan/n2.png","/Images/socialmedia/Niranjan/n3.png"]
   },
@@ -110,8 +110,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Product Launch",
     category: "Social Media Marketing",
     clientName: "Clg_buzz",
-    description: "Product launch campaign across multiple social media platforms",
-    campaignDesc: "Multi-platform product launch that generated 10,000+ pre-orders",
+    description: "Grew a street-interview page using viral hooks and high-visual snippets—some videos crossed 10M+ views",
+    campaignDesc: "Grew a street-interview page using viral hooks and high-visual snippets—some videos crossed 10M+ views",
     image: "/Images/socialmedia/clgbuzz/thumb.jpg",
     galleryImages: ["/Images/socialmedia/clgbuzz/clg1.png"]
   },
@@ -121,8 +121,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Fashion Brand",
     category: "Social Media Marketing",
     clientName: "batman",
-    description: "Ongoing social media management for a fashion brand",
-    campaignDesc: "Content creation and community management for a trendy fashion brand",
+    description: "Scaled a niche meme page with relatable content and trend-jacking—some reels crossed 1M+ views",
+    campaignDesc: "Scaled a niche meme page with relatable content and trend-jacking—some reels crossed 1M+ views",
     image: "/Images/socialmedia/batman/thumb.jpg",
     galleryImages: ["/Images/socialmedia/batman/batman1.png"]
   },
@@ -132,8 +132,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Real Estate Agency",
     category: "Social Media Marketing",
     clientName: "FoodTown",
-    description: "Property showcases and lead generation campaign",
-    campaignDesc: "Virtual tours and property highlights that increased inquiries by 45%",
+    description: "Boosted customer visits by 40% through high-visual content and strategic posting",
+    campaignDesc: "Boosted customer visits by 40% through high-visual content and strategic posting",
     image: "/Images/socialmedia/Foodtown/thumb.png",
     galleryImages: ["/Images/socialmedia/Foodtown/food1.png","/Images/socialmedia/Foodtown/food2.png","/Images/socialmedia/Foodtown/food3.png"]
   },
@@ -143,8 +143,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Health Products",
     category: "Social Media Marketing",
     clientName: "nimantran",
-    description: "Educational content and product promotion for health supplements",
-    campaignDesc: "Educational content strategy that positioned the brand as an industry leader",
+    description: "Elevated brand presence and boosted engagement by 35% with targeted social media strategies.",
+    campaignDesc: "Elevated brand presence and boosted engagement by 35% with targeted social media strategies.",
     image: "/Images/socialmedia/nimantran/thumb.png",
     galleryImages: ["/Images/socialmedia/nimantran/n1.png","/Images/socialmedia/nimantran/n2.png","/Images/socialmedia/nimantran/n3.png"]
   },
@@ -154,8 +154,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Coffee Shop Chain",
     category: "Social Media Marketing",
     clientName: "Audumber",
-    description: "Local marketing and community engagement for multiple locations",
-    campaignDesc: "Location-based marketing that increased foot traffic across all stores",
+    description: "Increased inquiries and visibility by 40% through focused social media management and high-impact visuals",
+    campaignDesc: "Increased inquiries and visibility by 40% through focused social media management and high-impact visuals",
     image: "/Images/socialmedia/Audumber/thumb.png",
     galleryImages: ["/Images/socialmedia/Audumber/a1.png","/Images/socialmedia/Audumber/a2.png"]
   },
@@ -165,8 +165,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Music Festival",
     category: "Social Media Marketing",
     clientName: "Aspectsportsindia",
-    description: "Event promotion and ticket sales campaign",
-    campaignDesc: "Viral campaign that led to a sold-out event three weeks before the date",
+    description: "Increased fan engagement and brand awareness by 42% with targeted content and dynamic social media strategies",
+    campaignDesc: "Increased fan engagement and brand awareness by 42% with targeted content and dynamic social media strategies",
     image: "/Images/socialmedia/sports/thumb.png",
     galleryImages: ["/Images/socialmedia/sports/sports1.png","/Images/socialmedia/sports/sports2.png"]
   },
@@ -176,8 +176,8 @@ const socialMediaClients: SocialMediaClient[] = [
     title: "Skincare Line",
     category: "Social Media Marketing",
     clientName: "Dr.rituubhatia_cardiologist",
-    description: "Influencer partnerships and product education campaign",
-    campaignDesc: "Influencer collaborations that reached over 2 million potential customers",
+    description: "Boosted patient inquiries by 53% through tailored social media content and expert audience targeting",
+    campaignDesc: "Boosted patient inquiries by 53% through tailored social media content and expert audience targeting",
     image: "/Images/socialmedia/cardiologist/thumb.png",
     galleryImages: ["/Images/socialmedia/cardiologist/dr1.png"]
   }
@@ -263,13 +263,13 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     subCategory: 'logo',
     title: "LumoScale",
     category: "Graphic Design",
-    description: "Complete logo redesign for an established restaurant",
+    description: "Created a dynamic 3D logo that elevated brand perception and instantly communicated the agency’s premium positioning",
     image: "/Images/Logos/lumoscale.jpg",
-    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    detailedDescription: "We designed a premium 3D logo with an award-inspired emblem in radiant blue, symbolizing trust and excellence. Its modern depth and sharp finish make it stand out across digital and print, becoming a powerful anchor for the agency’s identity.",
     projectInfo: {
-      client: "Bella Cucina",
+      client: "Lumoscale",
       duration: "3 weeks",
-      tools: ["Adobe Illustrator", "Adobe Photoshop"]
+      tools: ["Adobe Photoshop"]
     }
   },
   {
@@ -278,9 +278,9 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     subCategory: 'logo',
     title: "AngelArena",
     category: "Graphic Design",
-    description: "Complete logo redesign for an established restaurant",
+    description: "Crafted a stunning 3D influencer setup with aesthetic lighting and modern design to elevate content quality and brand appeal.",
     image: "/Images/Logos/anglearena.jpg",
-    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    detailedDescription: "We created a sleek 3D design of an influencer setup featuring dynamic lighting, a minimalist desk layout, and aesthetic wall panels. The visuals helped the influencer showcase a professional yet relatable vibe—perfect for brand deals and content shoots.",
     projectInfo: {
       client: "Bella Cucina",
       duration: "3 weeks",
@@ -288,14 +288,14 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     }
   },
   {
-    id: 2,
+    id: 4,
     type: 'graphic',
     subCategory: 'logo',
     title: "RichVibes",
     category: "Graphic Design",
-    description: "Complete logo redesign for an established restaurant",
+    description: "Created a bold, flat logo for a car company using sharp lines and a minimalist emblem to convey strength, speed, and modernity.",
     image: "/Images/Logos/richvibes.jpg",
-    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    detailedDescription: "Designed a sleek flat logo featuring a stylized car silhouette with red racing stripes, symbolizing speed, energy, and high performance—perfectly capturing the essence of a modern automotive brand.",
     projectInfo: {
       client: "Bella Cucina",
       duration: "3 weeks",
@@ -303,14 +303,14 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     }
   },
   {
-    id: 2,
+    id: 5,
     type: 'graphic',
     subCategory: 'logo',
     title: "Trishul",
     category: "Graphic Design",
-    description: "Complete logo redesign for an established restaurant",
+    description: "Designed a sleek 2D logo with rooftops and sharp lines to reflect trust and professionalism in real estate.",
     image: "/Images/Logos/trishul.jpg",
-    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    detailedDescription: "Crafted a clean 2D logo for a real estate brand, featuring minimalist rooftops and sharp lines to convey trust, structure, and sophistication—ideal for building strong buyer confidence.",
     projectInfo: {
       client: "Bella Cucina",
       duration: "3 weeks",
@@ -318,22 +318,22 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     }
   },
   {
-    id: 2,
+    id: 6,
     type: 'graphic',
     subCategory: 'logo',
     title: "Manam",
     category: "Graphic Design",
-    description: "Complete logo redesign for an established restaurant",
+    description: "Created a simple, heartfelt 2D logo featuring hands and a heart to symbolize care and community support.",
     image: "/Images/Logos/manam.jpg",
-    detailedDescription: "A warm, inviting logo redesign that honors the restaurant's 25-year heritage while modernizing their visual identity. The new design maintains the recognizable elements that customers associate with the brand.",
+    detailedDescription: "The 2D logo for the charitable trust features a peaceful pigeon in light blue, symbolizing hope and tranquility, combined with gentle design elements that reflect compassion and community care.",
     projectInfo: {
       client: "Bella Cucina",
       duration: "3 weeks",
       tools: ["Adobe Illustrator", "Adobe Photoshop"]
     }
   },
-  
 ];
+
 
 // New Ads case studies array
 const adsCaseStudies: SocialMediaClient[] = [
