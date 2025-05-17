@@ -100,7 +100,7 @@ const About = () => {
       {/* Hero Section */}
       <div ref={headingRef} className="container mx-auto px-4 mb-20 opacity-0">
         <h1 className="text-4xl md:text-6xl mb-6 text-center">
-          About <span className="text-gradient">LumoScale</span>
+          About <span className="text-gradient">Lumoscale</span>
         </h1>
         <p className="text-xl text-white/70 max-w-3xl mx-auto text-center">
           We are a team of digital innovators committed to transforming
