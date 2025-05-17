@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold text-gradient">LumoScale</span>
+              <span className="text-2xl font-bold text-gradient">Lumoscale</span>
             </Link>
             <p className="text-white/70 mb-6">
               Strategic digital growth partner for businesses looking to scale with innovative marketing and software solutions.
