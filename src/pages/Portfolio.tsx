@@ -269,7 +269,7 @@ const graphicDesignProjects: GraphicDesignProject[] = [
     detailedDescription: "We designed a premium 3D logo with an award-inspired emblem in radiant blue, symbolizing trust and excellence. Its modern depth and sharp finish make it stand out across digital and print, becoming a powerful anchor for the agency’s identity.",
     projectInfo: {
       client: "Lumoscale",
-      duration: "3 weeks",
+      duration: "2 Days",
       tools: ["Adobe Photoshop"]
     }
   },
