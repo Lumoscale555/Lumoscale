@@ -234,8 +234,8 @@ className="w-full bg-gray-500/50 border border-lumo-700/30 rounded-md px-4 py-3 
                       href="tel:+918919053970"
                       className="text-lumo-200 hover:text-lumo-100 transition-colors"
                     >
-                      +8919053970 <br />
-                      +91735061525
+                      +91 8074328526 <br/>
++91 7350615125
                     </a>
                   </div>
                 </div>

@@ -3,30 +3,15 @@ import { Card, CardContent } from './ui/card';
 
 // Expanded testimonial data with more entries to enable continuous scrolling
 const testimonials = [
-  {
-    quote: "Working with LumoScale completely transformed our digital presence. Their marketing strategies increased our conversion rates by 45% in just three months.",
-    name: "Sarah Johnson",
-    position: "CEO",
-    company: "GREEN CYCLE"
-  },
+
   {
     quote: "The custom software solution delivered by LumoScale streamlined our operations and reduced processing time by 60%. Their team understood our needs perfectly.",
     name: "Michael Chen",
     position: "CTO",
     company: "Namoona Group"
   },
-  {
-    quote: "LumoScale's innovative approach to our digital marketing campaign generated unprecedented engagement. They truly understand how to connect with audiences.",
-    name: "Alexia Rivera",
-    position: "Marketing Director",
-    company: "InternForage"
-  },
-  {
-    quote: "The e-commerce platform developed by LumoScale increased our online sales by 72% within the first quarter. Their attention to detail is unmatched.",
-    name: "Daniel Patel",
-    position: "Founder",
-    company: "Lucido Interiors"
-  },
+
+ 
   {
     quote: "From design to development, everything was on point. We now have a site that works as hard as we do.",
     name: "M. Sundeep Reddy",
@@ -60,31 +45,31 @@ const testimonials = [
   {
     quote: "They brought consistency, creativity, and conversions. Best decision we made for our socials.",
     name: "Aniket Gurav",
-    position: "",
+    position: "Founder",
     company: "O2 Fitness Gym"
   },
   {
     quote: "From zero DMs to daily inquiries. That's the LumoScale effect.",
     name: "Hastimal Niranjan",
-    position: "",
-    company: ""
+    position: "Founder ",
+    company: "Niranjan"
   },
   {
     quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging — LumoScale made it effortless.",
     name: "Rajesh",
-    position: "",
+    position: "Owner",
     company: "The Food Town"
   },
   {
     quote: "We were wasting hours trying to figure out trends. LumoScale stepped in and gave us clarity.",
     name: "Suraj",
-    position: "",
+    position: "Owner",
     company: "AspectSports"
   },
   {
     quote: "They turned our Instagram from a ghost town to a brand asset. The results speak for themselves.",
     name: "Samreen",
-    position: "",
+    position: "Manager ",
     company: "CLGBuzz"
   }
 ];
