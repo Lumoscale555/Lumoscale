@@ -8,9 +8,11 @@ import {
   WebDevProject,
   SocialMediaClient,
   VideoProject,
-  GraphicDesignProject 
+  GraphicDesignProject, 
+  SEOCard,
+  SEOProject
 } from '../components/Portfolio/PortfolioCard';
-import { ArrowRight, Film, Folder, Users, Image } from 'lucide-react';
+import { ArrowRight, Film, Folder, Users, Image, Search } from 'lucide-react';
 
 // Sample portfolio data - this will be replaced with your actual content
 const webdevProjects: WebDevProject[] = [
@@ -440,10 +442,207 @@ const adsCaseStudies: SocialMediaClient[] = [
     }
   }
 ];
+const seoCaseStudies: SEOProject[] = [
+  {
+    id: 1,
+    type: 'seo',
+    clientName: "ITNova",
+    title: "ITNova SEO Campaign",         // <-- Add this
+    category: "SEO Marketing", 
+    industry: "Technology Consulting",
+    targetAudience: "Businesses seeking IT solutions and services",
+    mainGoal: "Increase organic traffic, keyword rankings, and leads through SEO",
+    description: "A comprehensive SEO campaign to boost ITNova's online visibility and lead generation.",
+    image: "/Images/seo/itnova.jpg", // Replace with actual image path if available
+    objectives: [
+      "Increase organic traffic",
+      "Improve keyword rankings",
+      "Enhance technical SEO",
+      "Optimize content for users and search engines",
+      "Boost conversion rates via landing pages and CTAs"
+    ],
+    toolsUsed: [
+      "Google Search Console",
+      "Ahrefs",
+      "SEMrush",
+      "Screaming Frog",
+      "PageSpeed Insights",
+      "Surfer SEO"
+    ],
+    auditFindings: {
+      technicalSEO: "Needs HTTPS, moderate speed, mobile friendly",
+      onPageSEO: "Meta tags present but not optimized; good heading usage",
+      offPageSEO: "Limited backlink profile"
+    },
+    implementation: {
+      keywordStrategy: "Researched and mapped long-tail, commercial keywords",
+      onPage: "Optimized meta tags, schema markup, improved linking",
+      content: "Updated blogs, added SEO-focused content and multimedia",
+      technicalFixes: "Added HTTPS, fixed redirects, improved Core Web Vitals",
+      offPage: "Built backlinks via guest posts, press, influencers"
+    },
+    results: {
+      organicTraffic: { before: "1,500/mo", after: "9,000/mo", growth: "+500%" },
+      top10Keywords: { before: 10, after: 80, growth: "+700%" },
+      bounceRate: { before: "65%", after: "50%" },
+      sessionDuration: { before: "1:30 min", after: "3:00 min" },
+      newLeads: { before: "100/mo", after: "500/mo", growth: "+400%" }
+    },
+    testimonial: {
+      text: "We saw a substantial increase in traffic and quality leads.",
+      author: "Marketing Director"
+    }
+  },
+  {
+    id: 2,
+    type: 'seo',
+    clientName: "ZerDs",
+    title: "ITNova SEO Campaign",         // <-- Add this
+    category: "SEO Marketing", 
+    industry: "Digital Solutions (Web, Mobile, Cybersecurity)",
+    targetAudience: "Businesses needing full-stack digital services",
+    mainGoal: "Improve online visibility and lead flow",
+    description: "SEO strategy to enhance ZerDs' digital presence and attract more leads.",
+    image: "/Images/seo/zerds.jpg", // Replace with actual image path if available
+    objectives: [
+      "Grow traffic",
+      "Improve keyword rankings",
+      "Fix technical SEO",
+      "Increase domain authority"
+    ],
+    toolsUsed: [
+      "Google Search Console",
+      "Ahrefs",
+      "SEMrush",
+      "Screaming Frog",
+      "PageSpeed Insights",
+      "Surfer SEO"
+    ],
+    auditFindings: {
+      technicalSEO: "Fast load, responsive, uses HTTPS",
+      onPageSEO: "Optimized meta tags, weak image alt attributes",
+      offPageSEO: "Moderate backlink growth"
+    },
+    implementation: {
+      keywordStrategy: "Clustered digital service keywords by intent",
+      onPage: "Added alt attributes, improved content",
+      content: "Revamped blogs, created how-to content",
+      technicalFixes: "Image optimization, schema markup",
+      offPage: "Outreach to tech blogs and partner sites"
+    },
+    results: {
+      organicTraffic: { before: "2,000/mo", after: "10,000/mo", growth: "+400%" },
+      top10Keywords: { before: 15, after: 100, growth: "+566%" },
+      bounceRate: { before: "60%", after: "45%" },
+      sessionDuration: { before: "1:45 min", after: "3:30 min" },
+      newLeads: { before: "150/mo", after: "600/mo", growth: "+300%" }
+    },
+    testimonial: {
+      text: "Significantly boosted our online visibility and leads.",
+      author: "Marketing Director"
+    }
+  },
+  {
+    id: 3,
+    type:'seo',
+    clientName: "TechSolutions",
+    title: "ITNova SEO Campaign",         // <-- Add this
+    category: "SEO Marketing", 
+    industry: "IT Services and Solutions",
+    targetAudience: "Global businesses",
+    mainGoal: "Generate organic qualified leads",
+    description: "SEO campaign to improve TechSolutions' visibility and lead generation.",
+    image: "/Images/seo/techsolutions.jpg", // Replace with actual image path if available
+    objectives: [
+      "Improve rankings",
+      "Optimize UX and page speed",
+      "Generate leads via SEO"
+    ],
+    toolsUsed: [
+      "Google Search Console",
+      "Ahrefs",
+      "SEMrush",
+      "Screaming Frog",
+      "PageSpeed Insights",
+      "Surfer SEO"
+    ],
+    auditFindings: {
+      technicalSEO: "Fast load, HTTPS secure, strong backlinks",
+      onPageSEO: "Needs SEO-friendly structure, missing schema",
+      offPageSEO: "Strong backlink profile"
+    },
+    implementation: {
+      keywordStrategy: "Focused on IT services by vertical",
+      onPage: "SEO-friendly structure, schema added",
+      content: "Weekly blogs, multimedia added",
+      technicalFixes: "Enhanced load speed, structured data",
+      offPage: "Guest posts and partnerships"
+    },
+    results: {
+      organicTraffic: { before: "3,000/mo", after: "12,000/mo", growth: "+300%" },
+      top10Keywords: { before: 20, after: 120, growth: "+500%" },
+      bounceRate: { before: "55%", after: "40%" },
+      sessionDuration: { before: "2:00 min", after: "4:00 min" },
+      newLeads: { before: "200/mo", after: "800/mo", growth: "+300%" }
+    },
+    testimonial: {
+      text: "Dramatic improvement in visibility and lead gen.",
+      author: "Marketing Manager"
+    }
+  },
+  {
+    id: 4,
+    type: 'seo',
+    clientName: "Innovatek",
+    title: "ITNova SEO Campaign",         // <-- Add this
+    category: "SEO Marketing", 
+    industry: "AI and Machine Learning",
+    targetAudience: "Enterprise tech adopters",
+    mainGoal: "Dominate AI service keywords",
+    description: "SEO strategy to establish Innovatek as a leader in AI/ML services.",
+    image: "/Images/seo/innovatek.jpg", // Replace with actual image path if available
+    objectives: [
+      "Increase organic share",
+      "Build authority in AI/ML",
+      "Drive enterprise leads"
+    ],
+    toolsUsed: [
+      "Google Search Console",
+      "Ahrefs",
+      "SEMrush",
+      "Screaming Frog",
+      "PageSpeed Insights",
+      "Surfer SEO"
+    ],
+    auditFindings: {
+      technicalSEO: "Great speed, responsive, needs deeper AI content",
+      onPageSEO: "Needs semantic HTML, NLP-optimized content",
+      offPageSEO: "Limited AI-specific backlinks"
+    },
+    implementation: {
+      keywordStrategy: "AI, machine learning, use cases",
+      onPage: "Semantic HTML, NLP-optimized content",
+      content: "Whitepapers, case studies, long-form blogs",
+      technicalFixes: "Core Web Vitals tuned, schema used",
+      offPage: "Collaborations with AI publications"
+    },
+    results: {
+      organicTraffic: { before: "2,200/mo", after: "14,000/mo", growth: "+536%" },
+      top10Keywords: { before: 12, after: 130, growth: "+983%" },
+      bounceRate: { before: "62%", after: "39%" },
+      sessionDuration: { before: "1:50 min", after: "3:45 min" },
+      newLeads: { before: "50/mo", after: "300/mo", growth: "+500%" }
+    },
+    testimonial: {
+      text: "We built strong organic momentum in AI.",
+      author: "Growth Lead"
+    }
+  }
+];
 
 
 // Updated categories including Ads
-const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing"];
+const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing",  "SEO Marketing"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Website Development");
@@ -452,7 +651,9 @@ const Portfolio = () => {
     ...socialMediaClients, 
     ...videoProjects, 
     ...graphicDesignProjects,
-    ...adsCaseStudies
+    ...adsCaseStudies,
+    ...seoCaseStudies
+
   ]);
   
   const headingRef = useRef<HTMLDivElement>(null);
@@ -470,6 +671,9 @@ const Portfolio = () => {
       setFilteredItems(graphicDesignProjects);
     } else if (activeCategory === "Performance Marketing") {
       setFilteredItems(adsCaseStudies);
+    }
+    else if (activeCategory === "SEO Marketing") {
+      setFilteredItems(seoCaseStudies);
     }
   }, [activeCategory]);
   
@@ -517,6 +721,8 @@ const Portfolio = () => {
         return <VideoCard key={item.id} video={item} />;
       case 'graphic':
         return <GraphicDesignCard key={item.id} project={item} />;
+      case 'seo':
+        return <SEOCard key={item.id} project={item} />;
       default:
         return null;
     }
@@ -674,6 +880,26 @@ const Portfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {adsCaseStudies.map(caseStudy => (
                 <SocialMediaCard key={caseStudy.id} client={caseStudy} />
+              ))}
+            </div>
+          </div>
+        )}
+        {(activeCategory === "SEO Marketing") && (
+          <div 
+            ref={(el) => (sectionRefs.current[5] = el)}
+            className="mb-20 opacity-0"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
+                SEO Marketing
+                <Search size={20} className="text-primary" />
+              </h2>
+              <div className="h-px bg-primary/30 flex-grow"></div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {seoCaseStudies.map(project => (
+                <SEOCard key={project.id} project={project} />
               ))}
             </div>
           </div>

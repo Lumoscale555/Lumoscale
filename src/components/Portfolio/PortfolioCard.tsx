@@ -5,7 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { ArrowRight, BarChart, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, BarChart, Search, TrendingUp, Users } from "lucide-react";
 
 export type PortfolioItemBase = {
   id: number;
@@ -56,6 +56,42 @@ export type SocialMediaClient = PortfolioItemBase & {
   };
 };
 
+export type SEOProject = PortfolioItemBase & {
+  id: number;
+  type: "seo";
+  clientName: string;
+  industry: string;
+  targetAudience: string;
+  mainGoal: string;
+  description: string;
+  image?: string;
+  objectives: string[];
+  toolsUsed: string[];
+  auditFindings: {
+    technicalSEO: string;
+    onPageSEO: string;
+    offPageSEO: string;
+  };
+  implementation: {
+    keywordStrategy: string;
+    onPage: string;
+    content: string;
+    technicalFixes: string;
+    offPage: string;
+  };
+  results: {
+    organicTraffic: { before: string; after: string; growth: string };
+    top10Keywords: { before: number; after: number; growth: string };
+    bounceRate: { before: string; after: string };
+    sessionDuration: { before: string; after: string };
+    newLeads: { before: string; after: string; growth: string };
+  };
+  testimonial: {
+    text: string;
+    author: string;
+  };
+};
+
 export type VideoProject = PortfolioItemBase & {
   type: "video";
   videoUrl: string;
@@ -76,12 +112,259 @@ export type PortfolioItem =
   | WebDevProject
   | SocialMediaClient
   | VideoProject
-  | GraphicDesignProject;
+  | GraphicDesignProject
+  | SEOProject;
+  
 
 interface WebDevCardProps {
   project: WebDevProject;
 }
+interface SEOCardProps {
+  project: SEOProject;
+}
+export const SEOCard = ({ project }: SEOCardProps) => {
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <>
+      <div
+        className="glass-card-hover overflow-hidden relative group cursor-pointer h-full flex flex-col"
+        onClick={() => setIsOpen(true)}
+      >
+        {/* Client Image/Placeholder */}
+        <div className="aspect-[5/5] bg-dark-800/30 flex items-center justify-center overflow-hidden">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={project.clientName}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="text-4xl font-bold text-white/30">
+              {project.clientName.substring(0, 2).toUpperCase()}
+            </div>
+          )}
+        </div>
+
+        {/* Client Info */}
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl font-medium mb-2 group-hover:text-gradient transition-all duration-300">
+            {project.clientName}
+          </h3>
+          <p className="text-white/70 text-sm mb-4 flex-grow">
+            {project.description}
+          </p>
+
+          {/* View Case Study */}
+          <div className="flex justify-end">
+            <button className="text-sm text-primary flex items-center gap-1 group-hover:text-gradient transition-colors">
+              View Case Study <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        </div>
+
+        {/* Glow effect on hover */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
+        </div>
+      </div>
+
+      {/* Expanded Dialog */}
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="bg-dark-800 border-dark-700 max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-medium">
+              {project.clientName} SEO Case Study
+            </DialogTitle>
+          </DialogHeader>
+
+          <div className="space-y-8">
+            {/* Case Study Header */}
+            <div>
+              <h2 className="text-xl font-semibold text-gradient">
+                {project.industry} SEO Campaign
+              </h2>
+              <p className="text-white/70 mt-2 text-sm">{project.description}</p>
+            </div>
+
+            {/* Objectives */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-medium text-white">Objectives</h3>
+              <ul className="space-y-2">
+                {project.objectives.map((objective, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-white/80 text-sm">{objective}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Tools Used */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-medium text-white">Tools Used</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.toolsUsed.map((tool, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 bg-dark-700/50 rounded-md text-sm text-white/80"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Audit Findings */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-medium text-white">Audit Findings</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-2">
+                    Technical SEO
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.auditFindings.technicalSEO}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-2">
+                    On-Page SEO
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.auditFindings.onPageSEO}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-2">
+                    Off-Page SEO
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.auditFindings.offPageSEO}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Implementation */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-medium text-white">Implementation</h3>
+              <div className="space-y-2">
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-1">
+                    Keyword Strategy
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.implementation.keywordStrategy}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-1">
+                    On-Page Optimization
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.implementation.onPage}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-1">
+                    Content Strategy
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.implementation.content}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-1">
+                    Technical Fixes
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.implementation.technicalFixes}
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-white/80 mb-1">
+                    Off-Page Strategy
+                  </h4>
+                  <p className="text-white/70 text-sm">
+                    {project.implementation.offPage}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Results */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-medium text-white flex items-center gap-2">
+                <BarChart className="text-primary" size={20} />
+                Results (6 Months)
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-xs text-white/50 mb-1">Organic Traffic</p>
+                  <p className="text-xl font-semibold text-white">
+                    {project.results.organicTraffic.after}
+                  </p>
+                  <p className="text-xs text-primary">
+                    {project.results.organicTraffic.growth}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-xs text-white/50 mb-1">Top 10 Keywords</p>
+                  <p className="text-xl font-semibold text-white">
+                    {project.results.top10Keywords.after}
+                  </p>
+                  <p className="text-xs text-primary">
+                    {project.results.top10Keywords.growth}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-xs text-white/50 mb-1">Bounce Rate</p>
+                  <p className="text-xl font-semibold text-white">
+                    {project.results.bounceRate.after}
+                  </p>
+                  <p className="text-xs text-primary">
+                    From {project.results.bounceRate.before}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-xs text-white/50 mb-1">Session Duration</p>
+                  <p className="text-xl font-semibold text-white">
+                    {project.results.sessionDuration.after}
+                  </p>
+                  <p className="text-xs text-primary">
+                    From {project.results.sessionDuration.before}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <p className="text-xs text-white/50 mb-1">New Leads</p>
+                  <p className="text-xl font-semibold text-white flex items-center justify-center">
+                    <Search size={16} className="mr-1 text-primary" />
+                    {project.results.newLeads.after}
+                  </p>
+                  <p className="text-xs text-primary">
+                    {project.results.newLeads.growth}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Testimonial */}
+            <div className="p-4 border border-dark-700 rounded-md bg-dark-900/50">
+              <p className="text-white/80 italic mb-2">
+                "{project.testimonial.text}"
+              </p>
+              <p className="text-right text-sm text-primary">
+                — {project.testimonial.author}
+              </p>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+};
 export const WebDevCard = ({ project }: WebDevCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
