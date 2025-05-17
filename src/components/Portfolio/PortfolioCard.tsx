@@ -86,10 +86,7 @@ export type SEOProject = PortfolioItemBase & {
     sessionDuration: { before: string; after: string };
     newLeads: { before: string; after: string; growth: string };
   };
-  testimonial: {
-    text: string;
-    author: string;
-  };
+ 
 };
 
 export type VideoProject = PortfolioItemBase & {
@@ -351,14 +348,7 @@ export const SEOCard = ({ project }: SEOCardProps) => {
             </div>
 
             {/* Testimonial */}
-            <div className="p-4 border border-dark-700 rounded-md bg-dark-900/50">
-              <p className="text-white/80 italic mb-2">
-                "{project.testimonial.text}"
-              </p>
-              <p className="text-right text-sm text-primary">
-                — {project.testimonial.author}
-              </p>
-            </div>
+            
           </div>
         </DialogContent>
       </Dialog>

@@ -205,9 +205,9 @@ const videoProjects: VideoProject[] = [
   {
     id: 3,
     type: 'video',
-    title: "Event Highlights",
+    title: "Sports Highlight",
     category: "Video Editing",
-    description: "Compilation of key moments from a corporate event",
+    description: "Every shot, every cheer, captured in action",
     image: "",
     videoUrl: "/videos/video3.mp4"
   },
@@ -489,10 +489,7 @@ const seoCaseStudies: SEOProject[] = [
       sessionDuration: { before: "1:30 min", after: "3:00 min" },
       newLeads: { before: "100/mo", after: "500/mo", growth: "+400%" }
     },
-    testimonial: {
-      text: "We saw a substantial increase in traffic and quality leads.",
-      author: "Marketing Director"
-    }
+   
   },
   {
     id: 2,
@@ -538,10 +535,7 @@ const seoCaseStudies: SEOProject[] = [
       sessionDuration: { before: "1:45 min", after: "3:30 min" },
       newLeads: { before: "150/mo", after: "600/mo", growth: "+300%" }
     },
-    testimonial: {
-      text: "Significantly boosted our online visibility and leads.",
-      author: "Marketing Director"
-    }
+   
   },
   {
     id: 3,
@@ -586,10 +580,7 @@ const seoCaseStudies: SEOProject[] = [
       sessionDuration: { before: "2:00 min", after: "4:00 min" },
       newLeads: { before: "200/mo", after: "800/mo", growth: "+300%" }
     },
-    testimonial: {
-      text: "Dramatic improvement in visibility and lead gen.",
-      author: "Marketing Manager"
-    }
+    
   },
   {
     id: 4,
@@ -634,10 +625,7 @@ const seoCaseStudies: SEOProject[] = [
       sessionDuration: { before: "1:50 min", after: "3:45 min" },
       newLeads: { before: "50/mo", after: "300/mo", growth: "+500%" }
     },
-    testimonial: {
-      text: "We built strong organic momentum in AI.",
-      author: "Growth Lead"
-    }
+    
   }
 ];
 
@@ -660,7 +648,7 @@ const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
     clientName: 'Vishal Prajapati',
     description: '',
     campaignDesc: 'Instagram influencer campaign with high engagement.',
-    image: '/Images/influencer/vishal.png',
+    image: '/Images/influencer/thumb.png',
     galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
   },
 ];
