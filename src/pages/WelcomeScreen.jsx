@@ -132,7 +132,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
   data-aos-delay="800"
   className="inline-block px-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 font-extrabold tracking-wider animate-pulse drop-shadow-xl"
 >
-  LumoScale
+  Lumoscale
 </span>
 
                   </div>
@@ -150,7 +150,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/10 rounded-full blur-md group-hover:blur-lg transition-all duration-300" />
                   <div className="relative flex items-center gap-2 text-lg sm:text-xl md:text-2xl">
                     <span className="text-gradient">
-                      <TypewriterEffect text="Initializing....." />
+                      <TypewriterEffect text="Ready to Grow...." />
                     </span>
                   </div>
                 </a>
