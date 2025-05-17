@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent } from './ui/card';
 
 // Expanded testimonial data with more entries to enable continuous scrolling
@@ -91,39 +90,23 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const testimonialCount = testimonials.length;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % testimonialCount);
+    }, 3000);
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, []);
-
-  // Duplicate testimonials for seamless horizontal scroll
-  const horizontalTestimonials = [...testimonials, ...testimonials];
+  }, [current, testimonialCount]);
 
   return (
     <section className="section-padding overflow-hidden">
-      <div 
-        ref={sectionRef}
-        className="container mx-auto px-4 opacity-0"
-      >
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 font-serif">
             Client <span className="text-gradient">Testimonials</span>
@@ -132,55 +115,36 @@ const Testimonials = () => {
             Real stories from real people who have achieved amazing results working with LumoScale.
           </p>
         </div>
-        {/* Horizontal infinite scroll */}
-        <div className="relative w-full overflow-hidden">
-          <div
-            className="flex gap-6 animate-horizontal-scroll"
-            style={{
-              animation: 'horizontal-scroll 60s linear infinite',
-              width: `${horizontalTestimonials.length * 350}px`, // 350px per card (approx)
-            }}
-          >
-            {horizontalTestimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={`horizontal-${index}`}
-                testimonial={testimonial}
-                className="min-w-[320px] max-w-[350px] w-full"
-              />
+        <div className="flex justify-center items-center min-h-[260px] mt-[-40px]">
+          <div className="relative w-full max-w-xl h-full">
+            {testimonials.map((testimonial, idx) => (
+              <div
+                key={idx}
+                className={`absolute top-0 left-0 w-full transition-all duration-700 ease-in-out ${
+                  idx === current ? 'opacity-100 translate-x-0 z-10' : 'opacity-0 translate-x-10 pointer-events-none z-0'
+                }`}
+              >
+                <TestimonialCard testimonial={testimonial} />
+              </div>
             ))}
           </div>
         </div>
-        {/* Add keyframes for horizontal-scroll in global CSS or tailwind config */}
       </div>
     </section>
   );
 };
 
-interface TestimonialCardProps {
-  testimonial: {
-    quote: string;
-    name: string;
-    position: string;
-    company: string;
-  };
-  className?: string;
-}
-
-const TestimonialCard = ({ testimonial, className = "" }: TestimonialCardProps) => {
+const TestimonialCard = ({ testimonial }: { testimonial: { quote: string; name: string; position: string; company: string; } }) => {
   return (
-    <Card className={`glass-card border border-primary/10 hover:border-primary/30 transition-all duration-300 ${className}`}>
-      <CardContent className="p-6">
-        <p className="text-white/80 mb-5 text-sm leading-relaxed">
-          {testimonial.quote}
-        </p>
-        <div className="flex items-center">
-          {/* Avatar removed as per request */}
-          <div className="ml-0">
-            <h4 className="font-medium text-sm">{testimonial.name}</h4>
-            <p className="text-xs text-white/60">
-              {testimonial.position}{testimonial.position && testimonial.company ? ', ' : ''}{testimonial.company}
-            </p>
-          </div>
+    <Card className="glass-card border border-primary/10 shadow-turquoise-glow p-6 flex flex-col items-center justify-center">
+      <CardContent className="flex flex-col items-center justify-center">
+        <p className="italic text-center text-lg text-dark-100 mb-6">"{testimonial.quote}"</p>
+        <div className="text-center mt-2">
+          <span className="font-bold text-lg text-white-900">
+            {testimonial.name}
+            {testimonial.position && `, ${testimonial.position}`}
+            {testimonial.company && ` of ${testimonial.company}`}
+          </span>
         </div>
       </CardContent>
     </Card>
