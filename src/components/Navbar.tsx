@@ -56,21 +56,27 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {NavLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className={`relative group text-sm font-medium transition-colors duration-300 ${
-                location.pathname === link.path
-                  ? "text-lumo-200"
-                  : "text-white/80 hover:text-cyan-300"
-              }`}
-            >
-              <span className="inline-block relative">
-                {link.name}
-                <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </Link>
-          ))}
+  <Link
+    key={link.name}
+    to={link.path}
+    onClick={() => {
+      if (link.name === "About" || link.name === "Contact") {
+        window.scrollTo(0, 0);
+      }
+    }}
+    className={`relative group text-sm font-medium transition-colors duration-300 ${
+      location.pathname === link.path
+        ? "text-lumo-200"
+        : "text-white/80 hover:text-cyan-300"
+    }`}
+  >
+    <span className="inline-block relative">
+      {link.name}
+      <span className="absolute left-0 -bottom-3 h-[2px] w-0 bg-cyan-300 transition-all duration-300 group-hover:w-full"></span>
+    </span>
+  </Link>
+))}
+
 
           <Link to="/contact" className="btn-primary">
             Get Started
@@ -103,23 +109,29 @@ const Navbar = () => {
 
           <div className="flex flex-col space-y-4 p-5">
             {NavLinks.map((link, index) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
-                  location.pathname === link.path
-                    ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
-                    : "text-white/80 hover:text-white hover:bg-lumo-800/50"
-                }`}
-                style={{
-                  animationDelay: `${(index + 1) * 50}ms`,
-                  opacity: isOpen ? 1 : 0,
-                  transition: "opacity 0.3s ease-in-out",
-                }}
-              >
-                {link.name}
-              </Link>
-            ))}
+  <Link
+    key={link.name}
+    to={link.path}
+    onClick={() => {
+      if (link.name === "About" || link.name === "Contact") {
+        window.scrollTo(0, 0);
+      }
+    }}
+    className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
+      location.pathname === link.path
+        ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
+        : "text-white/80 hover:text-white hover:bg-lumo-800/50"
+    }`}
+    style={{
+      animationDelay: `${(index + 1) * 50}ms`,
+      opacity: isOpen ? 1 : 0,
+      transition: "opacity 0.3s ease-in-out",
+    }}
+  >
+    {link.name}
+  </Link>
+))}
+
           </div>
 
           <div className="mt-auto p-5 border-t border-lumo-700/30">

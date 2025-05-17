@@ -117,20 +117,23 @@ const About = () => {
                 Our <span className="text-gradient">Story</span>
               </h2>
               <p className="text-white/80 mb-4">
-                Founded in 2018, LumoScale began with a simple mission: to help
-                businesses navigate the increasingly complex digital landscape
-                with clarity and purpose.
+                We started in 2024 with a simple idea — to help businesses cut
+                through the digital noise and grow with clarity, creativity, and
+                heart.
               </p>
               <p className="text-white/80 mb-4">
-                What started as a small team of passionate digital marketers and
-                developers has grown into a comprehensive agency that bridges
-                the gap between marketing innovation and technological
-                excellence.
+                What began as a small group of creators, dreamers, and
+                problem-solvers quickly turned into a space where ideas turn
+                into stories, strategies turn into results, and brands find
+                their voice. Today, LumoScale isn’t just a digital agency. We’re
+                your growth partners, storytellers, and behind-the-scenes crew
+                making sure your brand shines in a world full of clutter.
               </p>
               <p className="text-white/80">
-                Today, we work with businesses of all sizes across multiple
-                industries, delivering tailored digital solutions that drive
-                measurable growth and lasting success.
+                We don’t do boring. We don’t do copy-paste. We build bold,
+                smart, and meaningful work that actually moves people. Because
+                at the end of the day, it’s not about us — it’s about what we
+                can help you become.
               </p>
             </div>
 
@@ -138,16 +141,17 @@ const About = () => {
               <div className="relative z-10">
                 <h3 className="text-2xl mb-6 text-gradient">Our Mission</h3>
                 <p className="text-white/80 mb-4">
-                  To empower businesses with innovative digital strategies and
-                  technologies that drive sustainable growth and meaningful
-                  connections with their audiences.
+                  At Lumoscale, we help businesses tell their story in a way
+                  that connects with people and brings real results. We use
+                  creativity and smart ideas now — and plan to use AI in the
+                  future to make our work even better.
                 </p>
                 <h3 className="text-2xl mb-6 mt-8 text-gradient">Our Vision</h3>
                 <p className="text-white/80">
-                  To be the leading growth partner for forward-thinking
-                  businesses, setting new standards in digital marketing and
-                  software development through innovation, integrity, and
-                  measurable results.
+                  We want a future where every business can grow and shine with
+                  the help of creativity and technology. Lumoscale will combine
+                  the best of human ideas and AI tools to help brands succeed,
+                  today and tomorrow.
                 </p>
               </div>
 

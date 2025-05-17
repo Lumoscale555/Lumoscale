@@ -396,7 +396,7 @@ const adsCaseStudies: SocialMediaClient[] = [
     category: "Ads",
     clientName: "Fitness Fuel Gym",
     description: "Meta Leads campaign to drive trial sign-ups and convert to paying members at a Gachibowli gym.",
-    campaignDesc: "Psychology-first, data-backed Meta Leads campaign that boosted memberships and lead quality.",
+    campaignDesc: "Hooked fitness enthusiasts with precision-targeted Meta ads—drove 35 new memberships in record time.",
     image: "/Images/performance/gym.jpg",
     galleryImages: [],
     campaignDetails: {
