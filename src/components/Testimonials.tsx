@@ -4,12 +4,7 @@ import { Card, CardContent } from './ui/card';
 // Expanded testimonial data with more entries to enable continuous scrolling
 const testimonials = [
 
-  {
-    quote: "The custom software solution delivered by LumoScale streamlined our operations and reduced processing time by 60%. Their team understood our needs perfectly.",
-    name: "Michael Chen",
-    position: "CTO",
-    company: "Namoona Group"
-  },
+ 
 
  
   {
