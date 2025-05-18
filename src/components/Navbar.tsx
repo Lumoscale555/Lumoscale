@@ -17,7 +17,7 @@ function scrollToSectionWithOffset(id) {
   if (el) {
     const yOffset = -NAVBAR_HEIGHT;
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    window.scrollTo({ top: y, behavior: "smooth" });
   }
 }
 
@@ -31,7 +31,8 @@ function useScrollToHashWithOffset() {
         const el = document.getElementById(id);
         if (el) {
           const yOffset = -NAVBAR_HEIGHT;
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          const y =
+            el.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }
       }, 100); // Delay to ensure DOM is rendered
@@ -84,17 +85,18 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {NavLinks.map((link) => (
+          {NavLinks.map((link) =>
             link.path.startsWith("#") ? (
               <a
                 key={link.name}
                 href={link.path}
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
-                  scrollToSectionWithOffset(link.path.replace('#', ''));
+                  scrollToSectionWithOffset(link.path.replace("#", ""));
                 }}
                 className={`relative group text-sm font-medium transition-colors duration-300 ${
-                  location.pathname === "/" && window.location.hash === link.path
+                  location.pathname === "/" &&
+                  window.location.hash === link.path
                     ? "text-lumo-200"
                     : "text-white/80 hover:text-cyan-300"
                 }`}
@@ -120,7 +122,7 @@ const Navbar = () => {
                 </span>
               </Link>
             )
-          ))}
+          )}
 
           <Link to="/contact" className="btn-primary">
             Get Started
@@ -136,6 +138,12 @@ const Navbar = () => {
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-95 z-40 md:hidden"
+          onClick={toggleMenu}
+        ></div>
+      )}
 
       {/* Mobile Navigation */}
       <div
@@ -145,25 +153,26 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-5 border-b border-lumo-700/30">
-            <img src="/image/logo.png" alt="Logo" className="h-8 w-auto" />
+            <img src="/logo.png" alt="Logo" className="h-8 w-auto" />
             <button onClick={toggleMenu} className="text-white">
               <X className="w-6 h-6" />
             </button>
           </div>
 
           <div className="flex flex-col space-y-4 p-5">
-            {NavLinks.map((link, index) => (
+            {NavLinks.map((link, index) =>
               link.path.startsWith("#") ? (
                 <a
                   key={link.name}
                   href={link.path}
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
-                    scrollToSectionWithOffset(link.path.replace('#', ''));
+                    scrollToSectionWithOffset(link.path.replace("#", ""));
                     setIsOpen(false);
                   }}
                   className={`text-lg font-medium p-3 rounded-md transition-all duration-300 ${
-                    location.pathname === "/" && window.location.hash === link.path
+                    location.pathname === "/" &&
+                    window.location.hash === link.path
                       ? "text-lumo-200 bg-lumo-700/30 shadow-purple-glow-sm"
                       : "text-white/80 hover:text-white hover:bg-lumo-800/50"
                   }`}
@@ -194,7 +203,7 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               )
-            ))}
+            )}
           </div>
 
           <div className="mt-auto p-5 border-t border-lumo-700/30">
