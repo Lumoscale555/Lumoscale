@@ -72,10 +72,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "py-3 bg-lumo-900/60 backdrop-blur-md border-b border-lumo-700/20"
-          : "py-5 bg-transparent"
+      className={`fixed w-full z-50 ${
+        isOpen
+          ? "bg-lumo-900 py-3 md:py-3 border-b border-lumo-700/20"
+          : "transition-all duration-300 " +
+            (scrolled
+              ? "py-3 bg-lumo-900/60 backdrop-blur-md border-b border-lumo-700/20"
+              : "py-5 bg-transparent")
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
