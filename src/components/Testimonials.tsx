@@ -95,7 +95,7 @@ const Testimonials = () => {
             Real stories from real people who have achieved amazing results working with LumoScale.
           </p>
         </div>
-        <div className="flex justify-center items-center min-h-[260px] mt-[-40px]">
+        <div className="flex justify-center items-center min-h-[660px] mt-[-320px]">
           <div className="relative w-full max-w-xl h-full">
             {testimonials.map((testimonial, idx) => (
               <div
