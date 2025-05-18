@@ -18,6 +18,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ContactSection from "./components/ContactSection.js";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <LandingPage
             showWelcome={showWelcome}
             setShowWelcome={setShowWelcome}
