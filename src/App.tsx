@@ -19,7 +19,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ContactSection from "./components/ContactSection.js";
 import ScrollToTop from "./components/ScrollToTop";
-
 const queryClient = new QueryClient();
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
@@ -53,7 +52,6 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
 
 const App = () => {
   const [showWelcome, setShowWelcome] = useState(true);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

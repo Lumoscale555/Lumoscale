@@ -7,6 +7,8 @@ import Testimonials from '../components/Testimonials';
 import ContactSection from '../components/ContactSection';
 import Portfolio from './Portfolio';
 import WhyUs from '@/components/whyus';
+import Whatsapp from '@/components/Whatsapp';
+import Call from '@/components/Call';
 
 // Add font import
 const Index = () => {
@@ -20,6 +22,8 @@ const Index = () => {
       <Portfolio/>
       <Testimonials />
       <ContactSection />
+      <Call/>
+      <Whatsapp/>
     </div>
   );
 };
