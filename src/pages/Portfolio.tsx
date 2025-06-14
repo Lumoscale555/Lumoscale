@@ -346,7 +346,7 @@ const adsCaseStudies: SocialMediaClient[] = [
     clientName: "Basha Body Care Gym",
     description: "Meta Ads campaign that increased membership sign-ups and trial bookings in Vishakhapatnam",
     campaignDesc: "Targeted Meta Ads campaign that increased membership revenue by 60%",
-    image: "",
+    image: "/Images/performance/Fitness.jpg",
     galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
     campaignDetails: { 
       objective: "Increase membership sign-ups and trial class bookings through a targeted Meta Ads campaign that leverages data-driven audience insights and consumer psychology.",
