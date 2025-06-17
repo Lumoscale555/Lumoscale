@@ -27,6 +27,8 @@ const services = [
       "Website Development",
       "Wordpress Development",
       "Ecommerce Development ",
+      "Landing Page Designs",
+      "ChatBot Integration"
     ],
     gradient: "from-secondary to-primary",
     delay: "200",
