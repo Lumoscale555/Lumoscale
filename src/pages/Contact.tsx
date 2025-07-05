@@ -266,8 +266,8 @@ const Contact = () => {
                       href="tel:+918919053970"
                       className="text-lumo-200 hover:text-lumo-100 transition-colors"
                     >
-                      +8919053970 <br />
-                      +91735061525
+                      +918074328526 <br />
+                      +917673984608
                     </a>
                   </div>
                 </div>

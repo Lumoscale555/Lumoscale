@@ -304,7 +304,7 @@ const ContactSection = () => {
                         className="text-lumo-200 hover:text-lumo-100 transition-colors"
                       >
                         +91 8074328526 <br/>
-                        +91 7350615125
+                        +91 7673984608
                       </a>
                     </div>
                   </div>

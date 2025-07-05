@@ -20,6 +20,19 @@ export const servicesData = {
       ],
       iconName: "barChart",
     },
+   {
+      title: "Influencer Marketing",
+      description:
+        "Leverage influencer partnerships to boost brand awareness and engagement.",
+      keyFeatures: [
+        "Influencer Research & Outreach",
+        "Campaign Strategy & Execution",
+        "Content Collaboration",
+        "Campaign Performance Tracking",
+        "Influencer Giveaways",
+      ],
+      iconName: "users",
+    },
     {
       title: "Social Media Management",
       description:
@@ -34,32 +47,6 @@ export const servicesData = {
       iconName: "smartphone",
     },
     {
-      title: "Creative & Branding Services",
-      description:
-        "Craft visually compelling and consistent brand experiences across digital and physical platforms.",
-      keyFeatures: [
-        "Logo & Brand Identity Design",
-        "Social Media Graphics",
-        "Video Production & Editing",
-        "Brand Guidelines",
-        "Product & Packaging Design",
-      ],
-      iconName: "palette",
-    },
-    {
-      title: "Influencer Marketing",
-      description:
-        "Leverage influencer partnerships to boost brand awareness and engagement.",
-      keyFeatures: [
-        "Influencer Research & Outreach",
-        "Campaign Strategy & Execution",
-        "Content Collaboration",
-        "Campaign Performance Tracking",
-        "Influencer Giveaways",
-      ],
-      iconName: "users",
-    },
-    {
       title: "SEO",
       description:
         "Improve your website's visibility with comprehensive SEO strategies.",
@@ -72,6 +59,19 @@ export const servicesData = {
         "SEO Performance Analytics and Reporting",
       ],
       iconName: "search",
+    },
+    {
+      title: "Creative & Branding Services",
+      description:
+        "Craft visually compelling and consistent brand experiences across digital and physical platforms.",
+      keyFeatures: [
+        "Logo & Brand Identity Design",
+        "Social Media Graphics",
+        "Video Production & Editing",
+        "Brand Guidelines",
+        "Product & Packaging Design",
+      ],
+      iconName: "film",
     },
   ],
     softwareDevelopment: [
@@ -89,18 +89,18 @@ export const servicesData = {
     iconName: "globe",
   },
   {
-    title: "WordPress Development",
-    description:
-      "Build customizable and secure WordPress sites with optimized performance.",
-    keyFeatures: [
-      "WordPress Website Setup",
-      "Theme Customization",
-      "Plugin Integration",
-      "Blog & Portfolio Websites",
-      "Speed & Security Optimization",
-    ],
-    iconName: "wordpress",
-  },
+  title: "Landing Page Development",
+  description:
+    "Design high-converting, mobile-friendly landing pages tailored to drive leads and sales.",
+  keyFeatures: [
+    "Custom Landing Page Design",
+    "Lead Capture & CRM Integration",
+    "Mobile Responsive Layouts",
+    "A/B Testing & Conversion Tracking",
+    "Fast Loading & SEO Optimized",
+  ],
+  iconName: "columns",  // replaced 'layout' with 'web'
+},
   {
     title: "E-commerce Development",
     description:
@@ -112,7 +112,20 @@ export const servicesData = {
       "Order & Inventory Management",
       "Mobile-Friendly Design",
     ],
-    iconName: "cart-shopping",
+    iconName: "monitor",
   },
+  {
+  title: "Chatbot Integration",
+  description:
+    "Automate customer interactions and boost engagement with intelligent, platform-ready chatbots.",
+  keyFeatures: [
+    "WhatsApp & Website Chatbot Setup",
+    "Lead Qualification & Routing",
+    "CRM & API Integration",
+    "Custom Conversational Flows",
+    "24/7 Automated Support",
+  ],
+  iconName: "bot",  // replace with a matching icon from your icon set
+},
 ],
 };

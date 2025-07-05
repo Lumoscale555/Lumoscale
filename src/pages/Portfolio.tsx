@@ -80,6 +80,154 @@ const webdevProjects: WebDevProject[] = [
     detailedDescription: "InternForage is an EdTech platform that helps students and professionals build real-world tech skills through hands-on courses, internships, and mentorship. It offers training in areas like AWS, full-stack development, AI, and more, with a focus on career readiness and industry-aligned learning.",
   }
 ];
+// New Ads case studies array
+const adsCaseStudies: SocialMediaClient[] = [
+  {
+    id: 1,
+    type: 'social',
+    title: "Basha Body Care Case Study",
+    category: "Ads",
+    clientName: "Basha Body Care Gym",
+    description: "Meta Ads campaign that increased membership sign-ups and trial bookings in Vishakhapatnam",
+    campaignDesc: "Targeted Meta Ads campaign that increased membership revenue by 60%",
+    image: "/Images/performance/Fitness.jpg",
+    galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
+    campaignDetails: { 
+      objective: "Increase membership sign-ups and trial class bookings through a targeted Meta Ads campaign that leverages data-driven audience insights and consumer psychology.",
+      strategy: {
+        targeting: [
+          "Location: Vishakhapatnam city and nearby suburbs (10 km radius)",
+          "Age Group: 18-45 years (focus on young adults & working professionals)",
+          "Interests: Fitness & wellness, weight training, yoga, CrossFit, healthy living",
+          "Behaviors: Frequent gym visitors, online shoppers of fitness gear",
+          "Custom Audience: Past website visitors, Facebook page engagers",
+          "Lookalike Audience: 1% lookalike based on existing members"
+        ],
+        triggers: [
+          "Social Proof: Member testimonials and transformation stories",
+          "FOMO: Limited-time offers for discounted trial memberships",
+          "Commitment & Consistency: Free trial classes to increase chances of full membership",
+          "Authority: Highlighted certified trainers and expert-led classes",
+          "Visual Motivation: High-energy, aspirational images and videos"
+        ],
+        formats: [
+          "Carousel ads for showcasing facilities and trainers",
+          "Video ads highlighting a day at the gym",
+          "Stories ads with quick CTAs for trial sign-up",
+          "Placements: Facebook Feed, Instagram Feed, Instagram Stories"
+        ]
+      },
+      results: {
+        adSpend: "₹18,000",
+        impressions: "60,000+",
+        reach: "15,000+",
+        leads: "54",
+        newMemberships: "17 (31.5% conversion)",
+        costPerLead: "₹333",
+        costPerMembership: "₹1,059",
+        revenueGrowth: "60% increase from prior month",
+        clickThroughRate: "",
+        estimatedRevenue: "",
+        ROAS: "",
+        leadToMembershipConversionRate: ""
+      }
+    }
+  },
+  {
+    id: 2,
+    type: 'social',
+    title: "Fitness Fuel Case Study",
+    category: "Ads",
+    clientName: "Fitness Fuel Gym",
+    description: "Meta Leads campaign to drive trial sign-ups and convert to paying members at a Gachibowli gym.",
+    campaignDesc: "Hooked fitness enthusiasts with precision-targeted Meta ads—drove 35 new memberships in record time.",
+    image: "/Images/performance/gym.jpg",
+    galleryImages: [],
+    campaignDetails: {
+      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
+      strategy: {
+        targeting: [
+          "Location: Gachibowli + 8 km radius",
+          "Age Group: 18–40 years",
+          "Profession Focus: IT professionals, college students, remote workers",
+          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
+          "Behaviors: Gym app users, purchase behavior for fitness gear, page engagement with fitness brands",
+          "Custom Audiences: Past gym visitors, Facebook/Instagram page engagers",
+          "Lookalike Audience: Based on existing membership CRM list"
+        ],
+        triggers: [
+          "Social Proof: Before/after transformations, real member reviews",
+          "FOMO: “50 trial spots only — Get yours before it’s gone”",
+          "Commitment Trigger: Free 1-day VIP pass",
+          "Authority: Showcased certified trainers and modern equipment",
+          "Identity Appeal: “You don’t have to be extreme, just consistent. Start here.”",
+          "Ease & Speed: Instant lead forms (Name, Number, Preferred Time Slot)"
+        ],
+        formats: [
+          "Video Ads: Quick gym tour with upbeat background music",
+          "Carousel Ads: Different programs – weight loss, strength, group classes",
+          "Stories + Reels: Limited-time offer graphics with swipe-up lead forms",
+          "Placements: Facebook Feed, Instagram Feed, Stories, Instagram Explore"
+        ]
+      },
+      results: {
+        adSpend: "₹35,000",
+        impressions: "110,000+",
+        reach: "30,000+",
+        leads: "92",
+        newMemberships: "35",
+        costPerLead: "₹380",
+        costPerMembership: "₹1,000",
+        clickThroughRate: "~1.8%",
+        estimatedRevenue: "₹52,500 (35 × ₹1,500)",
+        ROAS: "1.5x",
+        leadToMembershipConversionRate: "38%",
+        revenueGrowth:"60%"
+      }
+    }
+  }
+];
+// Influencer Marketing Data
+const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
+  {
+    id: 1,
+    type: 'video',
+    title: 'Watch Ayesha Khan bring the magic of the resort to life — real stories, real vibes, real impact ',
+    category: 'Influencer Marketing',
+    description: '',
+    image: '/Images/influencer/ayesha-thumb.jpg', // Thumbnail for video
+    videoUrl: '/videos/video1.mp4',
+  },
+  {
+    id: 2,
+    type: 'social',
+    title: 'Vishal Prajapati Influencer ',
+    category: 'Influencer Marketing',
+    clientName: 'Vishal Prajapati',
+    description: '',
+    campaignDesc: 'Instagram influencer campaign with high engagement.',
+    image: '/Images/influencer/vishal.png',
+    galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
+  },
+  {
+    id: 3,
+    type: 'video',
+    title: 'Feel the warmth, flavours, and stories that make La Casa a local favourite. ',
+    category: 'Influencer Marketing',
+    description: '',
+    image: '/Images/influencer/New thumb.jpg', // Thumbnail for video
+    videoUrl: '/videos/IMG_6833.mp4',
+  },
+  {
+    id: 3,
+    type: 'video',
+    title: 'Watch the magic of Dream Wicks Candles come alive — real moments, real warmth, real stories. ',
+    category: 'Influencer Marketing',
+    description: '',
+    image: '/Images/influencer/Newthumb1.jpg', // Thumbnail for video
+    videoUrl: '/videos/IMG_3168.mp4',
+  }
+];
 
 const socialMediaClients: SocialMediaClient[] = [
   {
@@ -336,113 +484,7 @@ const graphicDesignProjects: GraphicDesignProject[] = [
 ];
 
 
-// New Ads case studies array
-const adsCaseStudies: SocialMediaClient[] = [
-  {
-    id: 1,
-    type: 'social',
-    title: "Basha Body Care Case Study",
-    category: "Ads",
-    clientName: "Basha Body Care Gym",
-    description: "Meta Ads campaign that increased membership sign-ups and trial bookings in Vishakhapatnam",
-    campaignDesc: "Targeted Meta Ads campaign that increased membership revenue by 60%",
-    image: "/Images/performance/Fitness.jpg",
-    galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
-    campaignDetails: { 
-      objective: "Increase membership sign-ups and trial class bookings through a targeted Meta Ads campaign that leverages data-driven audience insights and consumer psychology.",
-      strategy: {
-        targeting: [
-          "Location: Vishakhapatnam city and nearby suburbs (10 km radius)",
-          "Age Group: 18-45 years (focus on young adults & working professionals)",
-          "Interests: Fitness & wellness, weight training, yoga, CrossFit, healthy living",
-          "Behaviors: Frequent gym visitors, online shoppers of fitness gear",
-          "Custom Audience: Past website visitors, Facebook page engagers",
-          "Lookalike Audience: 1% lookalike based on existing members"
-        ],
-        triggers: [
-          "Social Proof: Member testimonials and transformation stories",
-          "FOMO: Limited-time offers for discounted trial memberships",
-          "Commitment & Consistency: Free trial classes to increase chances of full membership",
-          "Authority: Highlighted certified trainers and expert-led classes",
-          "Visual Motivation: High-energy, aspirational images and videos"
-        ],
-        formats: [
-          "Carousel ads for showcasing facilities and trainers",
-          "Video ads highlighting a day at the gym",
-          "Stories ads with quick CTAs for trial sign-up",
-          "Placements: Facebook Feed, Instagram Feed, Instagram Stories"
-        ]
-      },
-      results: {
-        adSpend: "₹18,000",
-        impressions: "60,000+",
-        reach: "15,000+",
-        leads: "54",
-        newMemberships: "17 (31.5% conversion)",
-        costPerLead: "₹333",
-        costPerMembership: "₹1,059",
-        revenueGrowth: "60% increase from prior month",
-        clickThroughRate: "",
-        estimatedRevenue: "",
-        ROAS: "",
-        leadToMembershipConversionRate: ""
-      }
-    }
-  },
-  {
-    id: 2,
-    type: 'social',
-    title: "Fitness Fuel Case Study",
-    category: "Ads",
-    clientName: "Fitness Fuel Gym",
-    description: "Meta Leads campaign to drive trial sign-ups and convert to paying members at a Gachibowli gym.",
-    campaignDesc: "Hooked fitness enthusiasts with precision-targeted Meta ads—drove 35 new memberships in record time.",
-    image: "/Images/performance/gym.jpg",
-    galleryImages: [],
-    campaignDetails: {
-      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
-      strategy: {
-        targeting: [
-          "Location: Gachibowli + 8 km radius",
-          "Age Group: 18–40 years",
-          "Profession Focus: IT professionals, college students, remote workers",
-          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
-          "Behaviors: Gym app users, purchase behavior for fitness gear, page engagement with fitness brands",
-          "Custom Audiences: Past gym visitors, Facebook/Instagram page engagers",
-          "Lookalike Audience: Based on existing membership CRM list"
-        ],
-        triggers: [
-          "Social Proof: Before/after transformations, real member reviews",
-          "FOMO: “50 trial spots only — Get yours before it’s gone”",
-          "Commitment Trigger: Free 1-day VIP pass",
-          "Authority: Showcased certified trainers and modern equipment",
-          "Identity Appeal: “You don’t have to be extreme, just consistent. Start here.”",
-          "Ease & Speed: Instant lead forms (Name, Number, Preferred Time Slot)"
-        ],
-        formats: [
-          "Video Ads: Quick gym tour with upbeat background music",
-          "Carousel Ads: Different programs – weight loss, strength, group classes",
-          "Stories + Reels: Limited-time offer graphics with swipe-up lead forms",
-          "Placements: Facebook Feed, Instagram Feed, Stories, Instagram Explore"
-        ]
-      },
-      results: {
-        adSpend: "₹35,000",
-        impressions: "110,000+",
-        reach: "30,000+",
-        leads: "92",
-        newMemberships: "35",
-        costPerLead: "₹380",
-        costPerMembership: "₹1,000",
-        clickThroughRate: "~1.8%",
-        estimatedRevenue: "₹52,500 (35 × ₹1,500)",
-        ROAS: "1.5x",
-        leadToMembershipConversionRate: "38%",
-        revenueGrowth:"60%"
-      }
-    }
-  }
-];
+
 const seoCaseStudies: SEOProject[] = [
   {
     id: 1,
@@ -540,32 +582,9 @@ const seoCaseStudies: SEOProject[] = [
   
 ];
 
-// Influencer Marketing Data
-const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
-  {
-    id: 1,
-    type: 'video',
-    title: 'Watch Ayesha Khan bring the magic of the resort to life — real stories, real vibes, real impact ',
-    category: 'Influencer Marketing',
-    description: '',
-    image: '/Images/influencer/ayesha-thumb.jpg', // Thumbnail for video
-    videoUrl: '/videos/video1.mp4',
-  },
-  {
-    id: 2,
-    type: 'social',
-    title: 'Vishal Prajapati Influencer ',
-    category: 'Influencer Marketing',
-    clientName: 'Vishal Prajapati',
-    description: '',
-    campaignDesc: 'Instagram influencer campaign with high engagement.',
-    image: '/Images/influencer/vishal.png',
-    galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
-  },
-];
 
 // Updated categories including Ads
-const categories = ["Website Development", "Social Media Marketing", "Video Editing", "Graphic Design", "Performance Marketing",  "SEO Marketing", "Influencer Marketing"];
+const categories = ["Website Development", "Performance Marketing","Influencer Marketing", "Social Media Marketing", "Video Editing", "Graphic Design","SEO Marketing"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Website Development");

@@ -46,7 +46,7 @@ const WhoWeAre = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-            At LumoScale, we combine data-driven strategies with innovative technology to transform your business vision into measurable growth.
+            At Lumoscale, we combine data-driven strategies with innovative technology to transform your business vision into measurable growth.
           </p>
         </div>
         
@@ -69,7 +69,7 @@ const WhoWeAre = () => {
             },
             // {
             //   title: "Dedicated Partnership",
-            //   description: "With LumoScale, you don’t just get a service — you get a dedicated partner committed to your success, working like an extension of your team.",
+            //   description: "With Lumoscale, you don’t just get a service — you get a dedicated partner committed to your success, working like an extension of your team.",
             //   delay: "300"
             // }
 

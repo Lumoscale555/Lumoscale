@@ -10,9 +10,9 @@ const services = [
     description:
       "Data-driven strategies to expand your digital footprint and drive meaningful engagement.",
     items: [
-      "Social Media Management",
       "Performance Marketing",
       "Influencer Marketing ",
+      "Social Media Marketing",
       "SEO",
       "Creative & Branding Services",
     ],
@@ -25,9 +25,8 @@ const services = [
       "Custom software solutions built with cutting-edge technology to solve complex business challenges.",
     items: [
       "Website Development",
-      "Wordpress Development",
-      "Ecommerce Development ",
       "Landing Page Designs",
+      "Ecommerce Development ",
       "ChatBot Integration"
     ],
     gradient: "from-secondary to-primary",
