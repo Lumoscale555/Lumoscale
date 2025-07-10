@@ -75,7 +75,6 @@ const WhyUs = () => {
               className="glass-card-hover p-8"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
               <h3 className="text-xl mb-4 font-medium">{item.title}</h3>
               <p className="text-white/70">{item.description}</p>
             </div>
