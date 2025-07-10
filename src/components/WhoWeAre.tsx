@@ -46,25 +46,27 @@ const WhoWeAre = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-            At Lumoscale, we combine data-driven strategies with innovative technology to transform your business vision into measurable growth.
+          We don’t run ads. We build automated growth systems that attract, qualify, and convert — powered by AI, psychology, and precision strategy.
+If you're here to dominate, not dabble — you're in the right place.                                                                                                                
+
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              title: "Strategic Growth Partner",
-              description: "You're not just hiring an agency — you're gaining a strategic growth partner, offering you 360° support across digital marketing, branding, and deep business strategy. ",
+              title: "Precision Over Guesswork",
+              description: "We don’t experiment with your budget. Every ad, funnel, and automation is backed by data, psychology, and proven frameworks that drive real profit. ",
               delay: "0"
             },
             {
-              title: "Focus on Real Results",
-              description: "What sets you apart? You get real results—more leads, sales, and growth. We study your industry, craft custom strategies, and partner closely with you.",
+              title: "Systems That Scale",
+              description: "We build end-to-end client acquisition machines. From AI-powered follow-ups to CRM handover, everything runs while you focus on growth.",
               delay: "100"
             },
             {
-              title: "Psychology-Driven Marketing",
-              description: "You benefit from strategies crafted by marketing psychologists who understand what truly motivates your customers—so your marketing connects, convinces, and converts.",
+              title: "Real Partnership, Real Results",
+              description: "We don’t just deliver tasks — we embed into your mission. Our success is measured in ROI, not reports. If you grow, we grow.",
               delay: "200"
             },
             // {

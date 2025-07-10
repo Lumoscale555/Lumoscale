@@ -49,22 +49,20 @@ const Hero = () => {
         <div className="flex flex-col items-center max-w-6xl mx-auto">
           <span className="bg-[#3beded] text-transparent bg-clip-text text-base sm:text-xl font-medium flex items-center mb-2">
             <Sparkles className="sm:w-4 sm:h-4 w-3 h-3 mr-2 text-green-400" />
-            Ready to Innovate
+            Ready to Grow
           </span>
 
-      <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-2 text-white">
-  Results-First Digital Marketing
+      <h1 className="text-xl md:text-5xl lg:text-6xl font-light mb-2 text-white">
+  Revolutionizing How Businesses Grow
+
 </h1>
 <p className="text-lg md:text-xl lg:text-4xl text-cyan-300 font-normal mb-10">
-  Data-Driven. Psychology-Led. Results-Focused
+  Modern Marketing, Engineered for Impact
+
 </p>
-
-
-
           <p className="text-xl md:text-2xl text-white/80 mb-10 max-w-4xl">
-            You deserve marketing that’s built on logic, not luck. We use data
-            and psychology to help you attract better leads and grow with
-            confidence.
+            We blend AI, psychology, and automation to build marketing systems that don’t chase attention — they drive action. 
+            It’s not just marketing. It’s evolution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
   <Link

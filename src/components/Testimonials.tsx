@@ -14,13 +14,13 @@ const testimonials = [
     company: "Lucido Interiors"
   },
   {
-    quote: "We saw a major boost in speed, SEO rankings, and user engagement after LumoScale's revamp. Highly recommended.",
+    quote: "We saw a major boost in speed, SEO rankings, and user engagement after Lumoscale's revamp. Highly recommended.",
     name: "Aditya Singaraju",
     position: "Founder",
     company: "StrategicEdge Research"
   },
   {
-    quote: "LumoScale turned our outdated site into a fast, mobile-friendly, lead-generating machine. The difference was instant.",
+    quote: "Lumoscale turned our outdated site into a fast, mobile-friendly, lead-generating machine. The difference was instant.",
     name: "N. Lokeswara Rao",
     position: "Founder",
     company: "InternForage"
@@ -32,7 +32,7 @@ const testimonials = [
     company: "Green Cycle"
   },
   {
-    quote: "LumoScale nailed our vision with a dynamic, scalable website that helped us attract better clients and build trust.",
+    quote: "Lumoscale nailed our vision with a dynamic, scalable website that helped us attract better clients and build trust.",
     name: "Aditya Singaraju",
     position: "Founder",
     company: "Absolead Solutions"
@@ -44,19 +44,19 @@ const testimonials = [
     company: "O2 Fitness Gym"
   },
   {
-    quote: "From zero DMs to daily inquiries. That's the LumoScale effect.",
+    quote: "From zero DMs to daily inquiries. That's the Lumoscale effect.",
     name: "Hastimal Niranjan",
     position: "Founder ",
     company: "Niranjan"
   },
   {
-    quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging — LumoScale made it effortless.",
+    quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging — Lumoscale made it effortless.",
     name: "Rajesh",
     position: "Owner",
     company: "The Food Town"
   },
   {
-    quote: "We were wasting hours trying to figure out trends. LumoScale stepped in and gave us clarity.",
+    quote: "We were wasting hours trying to figure out trends. Lumoscale stepped in and gave us clarity.",
     name: "Suraj",
     position: "Owner",
     company: "AspectSports"
@@ -92,7 +92,7 @@ const Testimonials = () => {
             Client <span className="text-gradient">Testimonials</span>
           </h2>
           <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto">
-            Real stories from real people who have achieved amazing results working with LumoScale.
+            Real stories from real people who have achieved amazing results working with Lumoscale.
           </p>
         </div>
         <div className="flex justify-center items-center min-h-[660px] mt-[-320px]">
