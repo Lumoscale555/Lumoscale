@@ -118,7 +118,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                       data-aos-delay="400"
                       className="inline-block px-2"
                     >
-                      To
+                      to
                     </span>{" "}
                     <span
                       data-aos="fade-right"

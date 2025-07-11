@@ -14,11 +14,11 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
-
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import ContactSection from "./components/ContactSection.js";
+import ContactSection from "./components/ContactSection";
 import ScrollToTop from "./components/ScrollToTop";
+
 const queryClient = new QueryClient();
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
