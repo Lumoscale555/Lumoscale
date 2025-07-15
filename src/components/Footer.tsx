@@ -82,11 +82,12 @@ const Footer = () => {
             <h3 className="text-lg font-medium mb-6">Services</h3>
             <ul className="space-y-3">
               {[
-                { name: 'Digital Marketing', path: '/services#digital-marketing' },
-                { name: 'Software Development', path: '/services#software-development' },
-                { name: 'Social Media Management', path: '/services#social-media' },
-                { name: 'Performance Marketing', path: '/services#performance' },
-                { name: 'Web Applications', path: '/services#web-apps' }
+                { name: 'Website and Landing page', path: '/services#software-development' },
+                { name: 'Performance Marketing', path: '/services#performance'},
+                { name: 'Social Media Marketing', path: '/services#social-media'},
+                { name: 'Influencer Marketing', path: '/services#influencer-marketing'},
+                { name: 'SEO', path: '/services#SEO'},
+                
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -99,7 +100,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          
+        
           {/* Resources */}
           <div>
             <h3 className="text-lg font-medium mb-6">Company</h3>
@@ -108,8 +109,6 @@ const Footer = () => {
                 { name: 'About Us', path: '/about' },
                 { name: 'Portfolio', path: '/portfolio' },
                 { name: 'Contact', path: '/contact' },
-                { name: 'Privacy Policy', path: '/privacy' },
-                { name: 'Terms of Service', path: '/terms' }
               ].map((link) => (
                 <li key={link.name}>
                   <Link 

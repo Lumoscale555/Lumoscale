@@ -20,6 +20,12 @@ const testimonials = [
     company: "StrategicEdge Research"
   },
   {
+    quote: "Thanks to Lumoscale, our candles reached a much wider audience than before. The campaign was well organized, and the engagement was higher than we expected",
+    name: "Bhavana",
+    position: "Manager",
+    company: " Dreamwick Candles"
+  },
+  {
     quote: "Lumoscale turned our outdated site into a fast, mobile-friendly, lead-generating machine. The difference was instant.",
     name: "N. Lokeswara Rao",
     position: "Founder",
@@ -30,6 +36,12 @@ const testimonials = [
     name: "Guntireddi Ritendra Kumar",
     position: "Founder",
     company: "Green Cycle"
+  },
+   {
+    quote: "The influencer campaign brought real foot traffic to LaCasa Cafe. The team was responsive and ensured the content truly connected with our local customers",
+    name: "Uday",
+    position: "Manager",
+    company: " LaCasa Cafe"
   },
   {
     quote: "Lumoscale nailed our vision with a dynamic, scalable website that helped us attract better clients and build trust.",
@@ -44,22 +56,10 @@ const testimonials = [
     company: "O2 Fitness Gym"
   },
   {
-    quote: "From zero DMs to daily inquiries. That's the Lumoscale effect.",
-    name: "Hastimal Niranjan",
-    position: "Founder ",
-    company: "Niranjan"
-  },
-  {
-    quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging — Lumoscale made it effortless.",
+    quote: "Our socials finally reflect our brand. Consistent, on-brand, and engaging. Lumoscale made it effortless.",
     name: "Rajesh",
     position: "Owner",
     company: "The Food Town"
-  },
-  {
-    quote: "We were wasting hours trying to figure out trends. Lumoscale stepped in and gave us clarity.",
-    name: "Suraj",
-    position: "Owner",
-    company: "AspectSports"
   },
   {
     quote: "They turned our Instagram from a ghost town to a brand asset. The results speak for themselves.",

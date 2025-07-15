@@ -279,6 +279,7 @@ const ContactSection = () => {
                       </a>
                     </div>
                   </div>
+                  
 
                   <div className="flex items-start">
                     <div className="bg-lumo-800/70 p-3 rounded-md mr-4">

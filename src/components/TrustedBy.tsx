@@ -18,11 +18,7 @@ const clients = [
     name: "Lucido Interiors",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/li.jpg-GXbIeeIAwmAI7Jo5BbzvptsvLqWylv.jpeg",
   },
-  { name: "Niranjan", logo: "/Images/socialmedia/Niranjan/thumb.png" },
-  { name: "Nimantran", logo: "/Images/socialmedia/nimantran/thumb.png" },
   { name: "Audumber", logo: "/Images/socialmedia/Audumber/thumb.png" },
-  { name: "Aspect sports", logo: "/Images/socialmedia/sports/thumb.png" },
-  { name: "Dr.ritu Bhatia", logo: "/Images/socialmedia/cardiologist/thumb.png" },
    {name: "the food town", logo: "/Images/socialmedia/Foodtown/thumb.png"},
    {name: "O2 Fitness Gym", logo: "/Images/socialmedia/Fitness/thumb.png" }
 ];

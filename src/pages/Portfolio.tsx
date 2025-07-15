@@ -93,43 +93,44 @@ const adsCaseStudies: SocialMediaClient[] = [
     image: "/Images/performance/Fitness.jpg",
     galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
     campaignDetails: { 
-      objective: "Increase membership sign-ups and trial class bookings through a targeted Meta Ads campaign that leverages data-driven audience insights and consumer psychology.",
+      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
       strategy: {
         targeting: [
-          "Location: Vishakhapatnam city and nearby suburbs (10 km radius)",
+          "Location: Vizag + 8 km radius",
           "Age Group: 18-45 years (focus on young adults & working professionals)",
-          "Interests: Fitness & wellness, weight training, yoga, CrossFit, healthy living",
-          "Behaviors: Frequent gym visitors, online shoppers of fitness gear",
-          "Custom Audience: Past website visitors, Facebook page engagers",
-          "Lookalike Audience: 1% lookalike based on existing members"
+          "Profession Focus: IT professionals, college students, remote workers",
+          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
+          "Behaviors: Gym app users, fitness gear buyers, fitness page engagers",
+          "Custom Audience: Past gym visitors, Facebook/Instagram engagers",
+          "Lookalike Audience: Based on gym CRM member list"
         ],
         triggers: [
-          "Social Proof: Member testimonials and transformation stories",
-          "FOMO: Limited-time offers for discounted trial memberships",
+          "Social Proof: Before/after photos, member testimonials",
+          "FOMO: Only 40 VIP trial passes — Claim yours now",
           "Commitment & Consistency: Free trial classes to increase chances of full membership",
           "Authority: Highlighted certified trainers and expert-led classes",
+          "Identity Appeal: “You don’t have to be extreme, just consistent",
+          "Ease & Speed: Instant lead forms with minimal fields",
           "Visual Motivation: High-energy, aspirational images and videos"
         ],
         formats: [
-          "Carousel ads for showcasing facilities and trainers",
-          "Video ads highlighting a day at the gym",
+          "Video Ads: Quick gym tour with energizing music",
+          "Carousel Ads: Highlighting various training programs",
+          "Stories & Reels: Flash offer creatives with swipe-up forms",
           "Stories ads with quick CTAs for trial sign-up",
           "Placements: Facebook Feed, Instagram Feed, Instagram Stories"
         ]
       },
       results: {
-        adSpend: "₹18,000",
-        impressions: "60,000+",
-        reach: "15,000+",
-        leads: "54",
-        newMemberships: "17 (31.5% conversion)",
-        costPerLead: "₹333",
-        costPerMembership: "₹1,059",
-        revenueGrowth: "60% increase from prior month",
-        clickThroughRate: "",
-        estimatedRevenue: "",
-        ROAS: "",
-        leadToMembershipConversionRate: ""
+        adSpend: "₹16,500",
+        QualifiedLeads: "48",
+        reach:"13,500+",
+        LiveSiteVisitsORConversions: "14",
+        ROIAchieved: "3.9x",
+        ManualWorkloadCut: "35%+",
+        AutomationCoverage: "65% ",
+      
+
       }
     }
   },
@@ -171,18 +172,58 @@ const adsCaseStudies: SocialMediaClient[] = [
         ]
       },
       results: {
+        adSpend: "₹18,000",
+        QualifiedLeads: "54",
+         reach: "15,000+",
+        LiveSiteVisitsORConversions: "17",
+        ROIAchieved: "4.2x",
+        ManualWorkloadCut: "40%+",
+        AutomationCoverage: "70% ",
+       
+      }
+    }
+  },
+{
+    id: 3,
+    type: 'social',
+    title: "AI Funnel Real Estate Campaign",
+    category: "Ads",
+    clientName: "RealEstate Campaign",
+    description: "Real estate automation funnel that generated 800+ qualified leads and 10.3x ROI in the Indian market",
+    campaignDesc: "Real estate automation funnel that generated 800+ qualified leads and 10.3x ROI in the Indian market.",
+    image: "",
+    galleryImages: [],
+    campaignDetails: {
+      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
+      strategy: {
+        targeting: [
+          "Targeted end buyers, Indian investors, and retirement home seekers",
+          "Focused on Tier-1 and Tier-2 Indian cities",
+          "Used tailored messaging for each audience type",
+         " Excluded bot traffic and low-intent regions",
+        ],
+        triggers: [
+          "Built trust using testimonials, credibility badges, and real visuals",
+          "Created urgency with time-sensitive offers and follow-ups",
+          "Delivered instant gratification through WhatsApp and AI calls",
+          "Positioned the brand as an authority in the local market",
+        ],
+        formats: [
+          "Ran 3 video and 3 static creatives",
+          "Used emotional, logical, and curiosity-based hooks",
+          "Retargeted warm audiences with urgency-led ads",
+          "Placed ads on Facebook Feed, Instagram Feed, Stories, and Audience Network"
+        ]
+      },
+      results: {
         adSpend: "₹35,000",
-        impressions: "110,000+",
-        reach: "30,000+",
-        leads: "92",
-        newMemberships: "35",
-        costPerLead: "₹380",
-        costPerMembership: "₹1,000",
-        clickThroughRate: "~1.8%",
-        estimatedRevenue: "₹52,500 (35 × ₹1,500)",
-        ROAS: "1.5x",
-        leadToMembershipConversionRate: "38%",
-        revenueGrowth:"60%"
+         reach: "30,000+",
+        QualifiedLeads: "800+",
+        LiveSiteVisitsORConversions: "70+",
+        ROIAchieved: "10.3x",
+        ManualWorkloadCut: "60%",
+        AutomationCoverage: "100%",
+       
       }
     }
   }
@@ -209,7 +250,35 @@ const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
     image: '/Images/influencer/vishal.png',
     galleryImages: ['/Images/influencer/vishal1.png', '/Images/influencer/vishal2.png'],
   },
+ {
+    id: 3,
+    type: 'video',
+    title: 'Watch how Dreamwick Candles transform every space — real scents, real moods, real feels',
+    category: 'Influencer Marketing',
+    description: '',
+    image: ' ', // Thumbnail for video
+    videoUrl: 'videos/IMG_3168.mp4',
+  },
+  {
+    id: 4,
+    type: 'video',
+    title: 'Bringing the vibe of LaCasa Café to life — real food, real feels, real moments',
+    category: 'Influencer Marketing',
+    description: '',
+    image: ' ', // Thumbnail for video
+    videoUrl: 'videos/IMG_6833.mp4',
+  },
+  {
+    id: 5,
+    type: 'video',
+    title: 'Rayalaseema Ruchulu like never before — real taste, real culture, real memories',
+    category: 'Influencer Marketing',
+    description: '',
+    image: ' ', // Thumbnail for video
+    videoUrl: 'videos/WhatsApp Video 2025-07-15 at 13.23.42_b2c59542.mp4',
+  },
 ];
+
 
 const socialMediaClients: SocialMediaClient[] = [
   {
@@ -226,17 +295,6 @@ const socialMediaClients: SocialMediaClient[] = [
   {
     id: 2,
     type: 'social',
-    title: "Restaurant Promotion",
-    category: "Social Media Marketing",
-    clientName: "Niranjan",
-    description: "Elevated this jewellery brand’s presence using high-visual content and strategic engagement.",
-    campaignDesc: "Elevated this jewellery brand’s presence using high-visual content and strategic engagement.",
-    image: "/Images/socialmedia/Niranjan/thumb.png", 
-    galleryImages: ["/Images/socialmedia/Niranjan/n1.png","/Images/socialmedia/Niranjan/n2.png","/Images/socialmedia/Niranjan/n3.png"]
-  },
-  {
-    id: 3,
-    type: 'social',
     title: "Product Launch",
     category: "Social Media Marketing",
     clientName: "Clg_buzz",
@@ -246,7 +304,7 @@ const socialMediaClients: SocialMediaClient[] = [
     galleryImages: ["/Images/socialmedia/clgbuzz/clg1.png"]
   },
   {
-    id: 4,
+    id: 3,
     type: 'social',
     title: "Fashion Brand",
     category: "Social Media Marketing",
@@ -257,7 +315,7 @@ const socialMediaClients: SocialMediaClient[] = [
     galleryImages: ["/Images/socialmedia/batman/batman1.png"]
   },
   {
-    id: 5,
+    id: 4,
     type: 'social',
     title: "Real Estate Agency",
     category: "Social Media Marketing",
@@ -266,17 +324,6 @@ const socialMediaClients: SocialMediaClient[] = [
     campaignDesc: "Boosted customer visits by 40% through high-visual content and strategic posting",
     image: "/Images/socialmedia/Foodtown/thumb.png",
     galleryImages: ["/Images/socialmedia/Foodtown/food1.png","/Images/socialmedia/Foodtown/food2.png","/Images/socialmedia/Foodtown/food3.png"]
-  },
-  {
-    id: 6,
-    type: 'social',
-    title: "Health Products",
-    category: "Social Media Marketing",
-    clientName: "nimantran",
-    description: "Elevated brand presence and boosted engagement by 35% with targeted social media strategies.",
-    campaignDesc: "Elevated brand presence and boosted engagement by 35% with targeted social media strategies.",
-    image: "/Images/socialmedia/nimantran/thumb.png",
-    galleryImages: ["/Images/socialmedia/nimantran/n1.png","/Images/socialmedia/nimantran/n2.png","/Images/socialmedia/nimantran/n3.png"]
   },
   {
     id: 7,
@@ -289,28 +336,6 @@ const socialMediaClients: SocialMediaClient[] = [
     image: "/Images/socialmedia/Audumber/thumb.png",
     galleryImages: ["/Images/socialmedia/Audumber/a1.png","/Images/socialmedia/Audumber/a2.png"]
   },
-  {
-    id: 8,
-    type: 'social',
-    title: "Music Festival",
-    category: "Social Media Marketing",
-    clientName: "Aspectsportsindia",
-    description: "Increased fan engagement and brand awareness by 42% with targeted content and dynamic social media strategies",
-    campaignDesc: "Increased fan engagement and brand awareness by 42% with targeted content and dynamic social media strategies",
-    image: "/Images/socialmedia/sports/thumb.png",
-    galleryImages: ["/Images/socialmedia/sports/sports1.png","/Images/socialmedia/sports/sports2.png"]
-  },
-  {
-    id: 9,
-    type: 'social',
-    title: "Skincare Line",
-    category: "Social Media Marketing",
-    clientName: "Dr.rituubhatia_cardiologist",
-    description: "Boosted patient inquiries by 53% through tailored social media content and expert audience targeting",
-    campaignDesc: "Boosted patient inquiries by 53% through tailored social media content and expert audience targeting",
-    image: "/Images/socialmedia/cardiologist/thumb.png",
-    galleryImages: ["/Images/socialmedia/cardiologist/dr1.png"]
-  }
 ];
 
 const videoProjects: VideoProject[] = [
@@ -335,20 +360,20 @@ const videoProjects: VideoProject[] = [
   {
     id: 3,
     type: 'video',
-    title: "Sports Highlight",
+    title: "Brand Commercial",
     category: "Video Editing",
-    description: "Every shot, every cheer, captured in action",
+    description: "Fashion meets storytelling. A sharp, cinematic brand reel for Zara — crafted with style, pace, and vibe.",
     image: "",
-    videoUrl: "/videos/video3.mp4"
+    videoUrl: "videos/New Project 12 [FCA0D94].mp4"
   },
   {
     id: 4,
     type: 'video',
-    title: "Venue Highlight",
+    title: "App Commercial",
     category: "Video Editing",
-    description: "Commercial of a restro bar with a complimention of top performing foods",
+    description: "High-energy, fast-cut promo for the bidding app WonByBid. Designed to capture clicks, wins",
     image: "",
-    videoUrl: "/videos/video4.mp4"
+    videoUrl: "videos/Final Wonbybid [69B7C02].mp4"
   },
   {
     id: 5,
@@ -749,18 +774,6 @@ const Portfolio = () => {
                 <VideoCard key={video.id} video={video} />
               ))}
             </div>
-            
-            <div className="flex justify-center">
-              <a 
-                href="https://drive.google.com/drive/folders/166GPH-DU9kq4raR2B-23eVLYPdiyA8Cp" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary flex items-center gap-2"
-              >
-                <Folder size={18} />
-                View More Videos
-              </a>
-            </div>
           </div>
         )}
         
@@ -786,18 +799,6 @@ const Portfolio = () => {
                 ))}
               </div>
             </div>
-            <div className="flex justify-center">
-              <a 
-                href="https://drive.google.com/drive/folders/1hvi7RDQvbtorJYQJ3KOqjfT3121JS1bk?usp=sharing" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary flex items-center gap-2"
-              >
-                <Folder size={18} />
-                View More 
-              </a>
-            </div>
-          
           </div>
         )}
         

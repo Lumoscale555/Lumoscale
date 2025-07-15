@@ -41,17 +41,13 @@ export type SocialMediaClient = PortfolioItemBase & {
     };
     results: {
       adSpend: string;
-      impressions: string;
+      QualifiedLeads: string,
+      LiveSiteVisitsORConversions: string,
+      ROIAchieved: string,
+      ManualWorkloadCut: string,
+      AutomationCoverage: string,
       reach: string;
-      leads: string;
-      newMemberships: string;
-      costPerLead: string;
-      costPerMembership: string;
-      revenueGrowth: string;
-      clickThroughRate: string;
-        estimatedRevenue: string;
-        ROAS: string;
-        leadToMembershipConversionRate: string;
+
     };
   };
 };
@@ -669,55 +665,39 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
                   </div>
 
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Impressions</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.impressions}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center">
                     <p className="text-xs text-white/50 mb-1">Reach</p>
                     <p className="text-xl font-semibold text-white">
                       {client.campaignDetails.results.reach}
                     </p>
                   </div>
-
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Leads</p>
-                    <p className="text-xl font-semibold text-white flex items-center justify-center">
-                      <Users size={16} className="mr-1 text-primary" />
-                      {client.campaignDetails.results.leads}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">New Memberships</p>
+                    <p className="text-xs text-white/50 mb-1">Qualified Leads</p>
                     <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.newMemberships}
+                      {client.campaignDetails.results.QualifiedLeads}
                     </p>
                   </div>
-
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Cost Per Lead</p>
+                    <p className="text-xs text-white/50 mb-1">Live Site Visits OR Conversions</p>
                     <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.costPerLead}
+                      {client.campaignDetails.results.LiveSiteVisitsORConversions}
                     </p>
                   </div>
-
                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">
-                      Cost Per Membership
-                    </p>
+                    <p className="text-xs text-white/50 mb-1">ROI Achieved</p>
                     <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.costPerMembership}
+                      {client.campaignDetails.results.ROIAchieved}
                     </p>
                   </div>
-
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Revenue Growth</p>
-                    <p className="text-xl font-semibold text-white flex items-center justify-center">
-                      <BarChart size={16} className="mr-1 text-primary" />
-                      {client.campaignDetails.results.revenueGrowth}
+                   <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Manual Workload Cut</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.ManualWorkloadCut}
+                    </p>
+                  </div>
+                   <div className="flex flex-col items-center text-center">
+                    <p className="text-xs text-white/50 mb-1">Automation Coverage</p>
+                    <p className="text-xl font-semibold text-white">
+                      {client.campaignDetails.results.AutomationCoverage}
                     </p>
                   </div>
                 </div>

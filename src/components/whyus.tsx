@@ -2,23 +2,23 @@ import React, { useRef, useEffect } from 'react';
 
 const differentiators = [
   {
-    title: " We Build Machines, Not Campaigns",
+    title: "1) We Build Machines, Not Campaigns",
     description: "You don’t need “likes” — you need predictable, qualified leads. We create AI-powered systems that turn strangers into buyers on autopilot",
   },
   {
-    title: "Our Strategy Is Psychology-Driven",
+    title: "2) Our Strategy Is Psychology-Driven",
     description: "We don’t follow trends. We follow human behavior.Every word, hook, and creative is built to persuade, convert, and scale.",
   },
   {
-    title: "100% Done-For-You Automation",
+    title: "3) 100% Done-For-You Automation",
     description: "From AI calls to WhatsApp flows to CRM handover — we handle it all. No chasing leads. No leaky funnels. No wasted time.",
   },
   {
-    title: "Obsessed With ROI, Not Vanity Metrics",
+    title: "4) Obsessed With ROI, Not Vanity Metrics",
     description: "We don’t celebrate impressions. We celebrate results. 10x ROI, 800+ leads, 60% workload reduction — and we’re just getting started.",
   },
   {
-    title: "We Act Like Partners, Not Vendors",
+    title: "5) We Act Like Partners, Not Vendors",
     description: "We’re not here to deliver files and disappear. We work like an extension of your team — with one goal: your growth.",
   }
 ];
