@@ -93,43 +93,39 @@ const adsCaseStudies: SocialMediaClient[] = [
     image: "/Images/performance/Fitness.jpg",
     galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
     campaignDetails: { 
-      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
+      objective: "Generate walk-in bookings and demo session appointments for the gym, especially targeting people looking to start their fitness journey or switch gyms.",
       strategy: {
-        targeting: [
-          "Location: Vizag + 8 km radius",
-          "Age Group: 18-45 years (focus on young adults & working professionals)",
-          "Profession Focus: IT professionals, college students, remote workers",
-          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
-          "Behaviors: Gym app users, fitness gear buyers, fitness page engagers",
-          "Custom Audience: Past gym visitors, Facebook/Instagram engagers",
-          "Lookalike Audience: Based on gym CRM member list"
-        ],
-        triggers: [
-          "Social Proof: Before/after photos, member testimonials",
-          "FOMO: Only 40 VIP trial passes — Claim yours now",
-          "Commitment & Consistency: Free trial classes to increase chances of full membership",
-          "Authority: Highlighted certified trainers and expert-led classes",
-          "Identity Appeal: “You don’t have to be extreme, just consistent",
-          "Ease & Speed: Instant lead forms with minimal fields",
-          "Visual Motivation: High-energy, aspirational images and videos"
-        ],
-        formats: [
-          "Video Ads: Quick gym tour with energizing music",
-          "Carousel Ads: Highlighting various training programs",
-          "Stories & Reels: Flash offer creatives with swipe-up forms",
-          "Stories ads with quick CTAs for trial sign-up",
-          "Placements: Facebook Feed, Instagram Feed, Instagram Stories"
-        ]
-      },
+  Targeting: [
+    "7–10 km radius around Basha Gym, Vizag",
+
+    "Audience: Working professionals, college students, fitness enthusiasts",
+
+    "Age: 20–38 years",
+
+    "Interests: Fitness, bodybuilding, gym motivation, healthy lifestyle"
+  ],
+  CreativesUsed: [
+    "Client transformation static",
+    "Gym walk-through reel",
+    "Offer-based posters (“Free First Demo”)",
+    "Motivational carousel"
+
+  ],
+  FunnelSetup: [
+    "Meta Lead Form Ads with simple, focused questions",
+    "WhatsApp automation to immediately confirm interest and book free demo",
+    "Manual follow-up by gym manager after 1st message confirmation",
+  ],
+},
+
       results: {
-        adSpend: "₹16,500",
-        QualifiedLeads: "48",
-        reach:"13,500+",
-        LiveSiteVisitsORConversions: "14",
-        ROIAchieved: "3.9x",
-        ManualWorkloadCut: "35%+",
-        AutomationCoverage: "65% ",
-      
+        AdSpend: "₹16,500",
+LeadsGenerated: "48",
+EstimatedWalkinsDemoAttendees: "14",
+Reach: "13,500+",
+AverageCostPerLead: "₹343",
+ROI: "~3.9x",
+
 
       }
     }
@@ -137,97 +133,199 @@ const adsCaseStudies: SocialMediaClient[] = [
   {
     id: 2,
     type: 'social',
-    title: "Fitness Fuel Case Study",
+    title: "Fitness Fuel – Case Study",
     category: "Ads",
-    clientName: "Fitness Fuel Gym",
-    description: "Meta Leads campaign to drive trial sign-ups and convert to paying members at a Gachibowli gym.",
-    campaignDesc: "Hooked fitness enthusiasts with precision-targeted Meta ads—drove 35 new memberships in record time.",
+    clientName: "Fitness Fuel",
+    description: "Meta Ads campaign that increased trial sign-ups and memberships in Gachibowli, Hyderabad",
+campaignDesc: "Targeted 2-day free trial offer with bonus diet plan that boosted monthly & quarterly membership conversions by 55%",
     image: "/Images/performance/gym.jpg",
-    galleryImages: [],
-    campaignDetails: {
-      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
+    galleryImages: ["/Images/socialmedia/Fitness/Fitness1.png", "/Images/socialmedia/Fitness/Fitness2.png"],
+    campaignDetails: { 
+      objective: "Drive consistent gym footfall and paid membership sign-ups by targeting local professionals and college students with a 2-day free trial offer and bonus diet plan — aimed at converting trials into monthly and quarterly packages.",
       strategy: {
-        targeting: [
-          "Location: Gachibowli + 8 km radius",
-          "Age Group: 18–40 years",
-          "Profession Focus: IT professionals, college students, remote workers",
-          "Interests: Muscle building, home workouts, fitness influencers, protein supplements, Zumba, body transformation",
-          "Behaviors: Gym app users, purchase behavior for fitness gear, page engagement with fitness brands",
-          "Custom Audiences: Past gym visitors, Facebook/Instagram page engagers",
-          "Lookalike Audience: Based on existing membership CRM list"
-        ],
-        triggers: [
-          "Social Proof: Before/after transformations, real member reviews",
-          "FOMO: “50 trial spots only — Get yours before it’s gone”",
-          "Commitment Trigger: Free 1-day VIP pass",
-          "Authority: Showcased certified trainers and modern equipment",
-          "Identity Appeal: “You don’t have to be extreme, just consistent. Start here.”",
-          "Ease & Speed: Instant lead forms (Name, Number, Preferred Time Slot)"
-        ],
-        formats: [
-          "Video Ads: Quick gym tour with upbeat background music",
-          "Carousel Ads: Different programs – weight loss, strength, group classes",
-          "Stories + Reels: Limited-time offer graphics with swipe-up lead forms",
-          "Placements: Facebook Feed, Instagram Feed, Stories, Instagram Explore"
-        ]
+       Targeting:[
+        "Radius: 5 km around Gachibowli IT corridor",
+        "Audience: Working professionals (especially IT), college students, and beginners",
+        "Age Group: 21–35",
+        "Interests: Fitness Motivation, Weight Loss, Gym Routines, Bodybuilding, Health & Wellness"
+ ],
+
+CreativesUsed:[
+  "Before/After Transformation Posters (real client results)",
+  "Gym Tour Reel – Walkthrough of machines, ambience, and trainers",
+  "Offer Static Poster – “Get 2-Day Free Access + Diet Plan Worth '₹999' ",
+  "Motivational Quote Carousel (used for retargeting and engagement)",
+],
+
+
+FunnelSetup:[
+
+"Meta Lead Form Ads with 3-step questions: Name, Phone, Preferred Workout Time",
+
+"WhatsApp Automation: Instant message with offer details + location",
+
+"Daily Manual Follow-up: Gym manager sent personalised messages every evening",
+
+"Walk-in Slot Confirmation: Done via WhatsApp post-interest"
+],
       },
+
+
       results: {
-        adSpend: "₹18,000",
-        QualifiedLeads: "54",
-         reach: "15,000+",
-        LiveSiteVisitsORConversions: "17",
-        ROIAchieved: "4.2x",
-        ManualWorkloadCut: "40%+",
-        AutomationCoverage: "70% ",
-       
+        AdSpend: "₹15,263",
+OrdersGenerated: "119",
+Revenue: "₹58,620",
+WebsiteVisitors: "15,400+",
+CostPerPurchase: "₹107.14",
+ROIAchieved: "4.6x",
+ManualWorkloadCut: "35%+",
+AutomationCoverage: "70%",
+
       }
     }
   },
 {
-    id: 3,
-    type: 'social',
-    title: "AI Funnel Real Estate Campaign",
-    category: "Ads",
-    clientName: "RealEstate Campaign",
-    description: "Real estate automation funnel that generated 800+ qualified leads and 10.3x ROI in the Indian market",
-    campaignDesc: "Real estate automation funnel that generated 800+ qualified leads and 10.3x ROI in the Indian market.",
-    image: "",
-    galleryImages: [],
-    campaignDetails: {
-      objective: "Drive high-quality trial sign-ups and convert them into full-paying members using a psychology-first, data-backed Meta Leads campaign.",
-      strategy: {
-        targeting: [
-          "Targeted end buyers, Indian investors, and retirement home seekers",
-          "Focused on Tier-1 and Tier-2 Indian cities",
-          "Used tailored messaging for each audience type",
-         " Excluded bot traffic and low-intent regions",
-        ],
-        triggers: [
-          "Built trust using testimonials, credibility badges, and real visuals",
-          "Created urgency with time-sensitive offers and follow-ups",
-          "Delivered instant gratification through WhatsApp and AI calls",
-          "Positioned the brand as an authority in the local market",
-        ],
-        formats: [
-          "Ran 3 video and 3 static creatives",
-          "Used emotional, logical, and curiosity-based hooks",
-          "Retargeted warm audiences with urgency-led ads",
-          "Placed ads on Facebook Feed, Instagram Feed, Stories, and Audience Network"
-        ]
-      },
-      results: {
-        adSpend: "₹35,000",
-         reach: "30,000+",
-        QualifiedLeads: "800+",
-        LiveSiteVisitsORConversions: "70+",
-        ROIAchieved: "10.3x",
-        ManualWorkloadCut: "60%",
-        AutomationCoverage: "100%",
-       
-      }
+  id: 3,
+  type: "social",
+  title: "Real Estate Campaign Case Study",
+  category: "Ads",
+  clientName: "Confidential Real Estate Developer",
+  description: "A multi-month Meta Ads campaign that generated high-intent real estate leads through creative optimization and precise audience segmentation in India.",
+campaignDesc: "Targeted Meta Ads campaign driving 10.5x ROI with high-quality leads and conversions.",
+
+  image: "",
+  galleryImages: [],
+  campaignDetails: {
+    objective: "Generate high-intent real estate leads using Meta Ads while testing different creatives, hooks, and audiences in a short trial window.",
+    strategy: {
+      FunnelObjective: [
+        "Drive Meta form submissions from buyers actively looking for residential property.",
+        "Test 4 ad creatives to identify the best-performing asset for scale-up."
+      ],
+      TargetingStrategy: [
+        "Location: City-specific targeting within India",
+        "Segments: Home buyers, real estate investors, NRI interest groups",
+        "Age Group: 28–50 years",
+        "Interests: Real estate, home loans, property portals",
+        "Custom Audience: Website visitors & engagement retargeting"
+      ],
+      CreativeTesting: [
+        "4 creatives tested (2 original + 2 variations)",
+        "Mixed format: static and carousel",
+        "Copy variations: emotional urgency, pricing hook, and project highlights"
+      ],
+      OptimizationFocus: [
+        "CTR & cost per result used to identify best creatives",
+        "Eliminated low-performing assets after 3-day cycle"
+      ]
+    },
+    results: {
+      AdSpend: "₹2,12,000",
+QualifiedLeads: "800+",
+LiveSiteVisitsOrConversions: "70+",
+Reach: "1,20,000+",
+ROIAchieved: "10.3x",
+ManualWorkloadCut: "60%+",
+AutomationCoverage: "100%",
+
     }
   }
-];
+},
+  {
+  id: 4,
+  type: "social",
+  title: "Real Estate Trial Campaign Case Study",
+  category: "Ads",
+  clientName: "Confidential Real Estate Developer",
+  description: "Meta Ads campaign that generated high-intent real estate leads through creative and audience testing in India",
+  campaignDesc: "Targeted 4 creatives and segmented audiences to boost qualified leads and appointments within a 3-day trial window",
+  image: "",
+  galleryImages: [],
+  campaignDetails: {
+    objective: "Generate high-intent real estate leads using Meta Ads while testing different creatives, hooks, and audiences in a short trial window.",
+    strategy: {
+      FunnelObjective: [
+        "Drive Meta form submissions from buyers actively looking for residential property.",
+        "Test 4 ad creatives to identify the best-performing asset for scale-up."
+      ],
+      TargetingStrategy: [
+        "Location: City-specific targeting within India",
+        "Segments: Home buyers, real estate investors, NRI interest groups",
+        "Age Group: 28–50 years",
+        "Interests: Real estate, home loans, property portals",
+        "Custom Audience: Website visitors & engagement retargeting"
+      ],
+      CreativeTesting: [
+        "4 creatives tested (2 original + 2 variations)",
+        "Mixed format: static and carousel",
+        "Copy variations: emotional urgency, pricing hook, and project highlights"
+      ],
+      OptimizationFocus: [
+        "CTR & cost per result used to identify best creatives",
+        "Eliminated low-performing assets after 3-day cycle"
+      ]
+    },
+    results: {
+      AdSpend: "₹1,271.18",
+QualifiedLeads: "56",
+Reach: "24,000+",
+LiveVisitsConversions: "10",
+ROIAchieved: "4.8x",
+ManualWorkloadCut: "40%+",
+AutomationCoverage: "65%",
+
+    }
+  }
+},
+{
+  id: 5,
+  type: "social",
+  title: "eCommerce Cosmetics Brand Trial Campaign Case Study",
+  category: "Ads",
+  clientName: "Confidential D2C Skincare Brand",
+  description: "Meta Ads campaign that boosted direct purchases and ROAS for a D2C skincare brand in India with backend automation",
+campaignDesc: "Tested 3 creatives targeting skincare enthusiasts and used automation to improve retargeting and increase lifetime value over 30 days",
+  image: "",
+  galleryImages: [],
+  campaignDetails: {
+    objective: "Generate direct purchases and increase ROAS for a cosmetic product line using Meta Ads, while building backend automation to reduce manual operations and improve LTV.",
+    strategy: {
+      FunnelObjective: [
+        "Drive cold traffic to product landing pages with optimized product offers.",
+        "Use automation to retarget abandoned carts and upsell customers post-purchase."
+      ],
+      TargetingStrategy: [
+         "Location: Tier 1 & Tier 2 cities in India",
+  "Segments: Skincare buyers, beauty enthusiasts, impulse shoppers",
+  "Age Group: 22–38 years",
+  "Interests: Cosmetics, skincare routines, beauty influencers, self-care",
+  "Custom Audience: Add-to-cart users, past purchasers, and video viewers"
+      ],
+      CreativeTesting: [
+        "3 creatives tested (1 testimonial reel, 2 product explainer carousels)",
+  "Copy variations: skin concern triggers, influencer voiceover, time-limited discount",
+  "Visual angles: before-after skin glow, minimalist packaging, UGC-style demo"
+      ],
+      OptimizationFocus: [
+        "Tracked cost per purchase & add-to-cart to identify friction points",
+  "Improved landing page speed & mobile layout after initial traffic data",
+  "Retargeting with WhatsApp automation for checkout recovery and COD confirmations"
+      ]
+    },
+    results: {
+    AdSpend: "₹12,750",
+OrdersGenerated: "119",
+Revenue: "₹58,620",
+WebsiteVisitors: "15,400+",
+CostPerPurchase: "₹107.14",
+ROIAchieved: "4.6x",
+ManualWorkloadCut: "35%+",
+AutomationCoverage: "70%",
+
+    }
+  }
+}
+]
 // Influencer Marketing Data
 const influencerMarketing: (SocialMediaClient | VideoProject)[] = [
   {

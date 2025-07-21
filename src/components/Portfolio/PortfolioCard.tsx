@@ -35,18 +35,36 @@ export type SocialMediaClient = PortfolioItemBase & {
   campaignDetails?: {
     objective: string;
     strategy: {
-      targeting: string[];
-      triggers: string[];
-      formats: string[];
+      Targeting?: string[]; 
+      AudienceTargeting?: string[];             // 🎯 Audience Targeting
+      CreativesUsed?: string[];         // 🎨 Creatives Used
+      FunnelSetup?: string[];                // 🧭 Funnel Setup
+      Triggers?: string[];              // 🧠 Psychological Triggers (optional, if still used)
+      Formats?: string[];
+      FunnelObjective?: string[];
+      TargetingStrategy?: string[]; 
+      CreativeTesting?: string[];
+      OptimizationFocus?: string[];          // 🖼️ Ad Formats & Placements
     };
+
+    
     results: {
-      adSpend: string;
-      QualifiedLeads: string,
-      LiveSiteVisitsORConversions: string,
-      ROIAchieved: string,
-      ManualWorkloadCut: string,
-      AutomationCoverage: string,
-      reach: string;
+  AdSpend: string;
+  LeadsGenerated?: string;
+  EstimatedWalkinsDemoAttendees?: string;
+  Reach?: string;
+  AverageCostPerLead?: string;
+  ROI?: string;
+  OrdersGenerated?: string;
+  Revenue?: string;
+  WebsiteVisitors?: string;
+  CostPerPurchase?: string;
+  ROIAchieved?: string;
+  ManualWorkloadCut?: string;
+  AutomationCoverage?: string;
+  QualifiedLeads?: string;
+  LiveSiteVisitsOrConversions?: string;
+  LiveVisitsConversions?: string;
 
     };
   };
@@ -598,56 +616,171 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
               </div>
 
               {/* Strategy & Execution Section */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">
-                  Strategy & Execution
-                </h3>
+             <div className="space-y-4">
+  <h3 className="text-lg font-medium text-white">Strategy & Execution</h3>
 
-                {/* Audience Targeting */}
-                <div>
-                  <h4 className="text-sm font-medium text-white mb-2">
-                    1. Audience Targeting
-                  </h4>
-                  <ul className="space-y-2">
-                    {client.campaignDetails.strategy.targeting.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-white/80 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+  {/* 🎯 Audience Targeting */}
+  {client.campaignDetails.strategy.Targeting?.length > 0 && (
+    <div>
+      <h4 className="text-sm font-medium text-white mb-2">1. Audience Targeting</h4>
+      <ul className="space-y-2">
+        {client.campaignDetails.strategy.Targeting.map((item, idx) => (
+          <li key={idx} className="flex items-start">
+            <div className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
+            <span className="text-white/80 text-sm">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
 
-                {/* Psychological Triggers */}
-                <div>
-                  <h4 className="text-sm font-medium text-white mb-2">
-                    2. Psychological Triggers Used
-                  </h4>
-                  <ul className="space-y-2">
-                    {client.campaignDetails.strategy.triggers.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-white/80 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+  {/* 🎨 Creatives Used */}
+  {client.campaignDetails.strategy.CreativesUsed?.length > 0 && (
+    <div>
+      <h4 className="text-sm font-medium text-white mb-2">2. Creatives Used</h4>
+      <ul className="space-y-2">
+        {client.campaignDetails.strategy.CreativesUsed.map((item, idx) => (
+          <li key={idx} className="flex items-start">
+            <div className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
+            <span className="text-white/80 text-sm">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
 
-                {/* Ad Formats and Placements */}
-                <div>
-                  <h4 className="text-sm font-medium text-white mb-2">
-                    3. Ad Formats and Placements
-                  </h4>
-                  <ul className="space-y-2">
-                    {client.campaignDetails.strategy.formats.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-white/80 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+  {/* 🧭 Funnel Setup */}
+  {client.campaignDetails.strategy.FunnelSetup?.length > 0 && (
+    <div>
+      <h4 className="text-sm font-medium text-white mb-2">3. Funnel Setup</h4>
+      <ul className="space-y-2">
+        {client.campaignDetails.strategy.FunnelSetup.map((item, idx) => (
+          <li key={idx} className="flex items-start">
+            <div className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
+            <span className="text-white/80 text-sm">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {/* 🧠 Optional: Psychological Triggers */}
+  {client.campaignDetails.strategy.Triggers?.length > 0 && (
+    <div>
+      <h4 className="text-sm font-medium text-white mb-2">4. Psychological Triggers</h4>
+      <ul className="space-y-2">
+        {client.campaignDetails.strategy.Triggers.map((item, idx) => (
+          <li key={idx} className="flex items-start">
+            <div className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
+            <span className="text-white/80 text-sm">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+{/* 🎯 Audience Targeting */}
+{client.campaignDetails.strategy.AudienceTargeting?.length > 0 && (
+  <div>
+    <h4 className="text-sm font-medium text-white mb-2">
+      1. Audience Targeting
+    </h4>
+    <ul className="space-y-2">
+      {client.campaignDetails.strategy.AudienceTargeting.map((item, idx) => (
+        <li key={idx} className="flex items-start">
+          <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+          <span className="text-white/80 text-sm">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+  {/* 🖼️ Ad Formats & Placements */}
+  {client.campaignDetails.strategy.Formats?.length > 0 && (
+    <div>
+      <h4 className="text-sm font-medium text-white mb-2">5. Ad Formats & Placements</h4>
+      <ul className="space-y-2">
+        {client.campaignDetails.strategy.Formats.map((item, idx) => (
+          <li key={idx} className="flex items-start">
+            <div className="h-2 w-2 bg-primary rounded-full mt-2 mr-3" />
+            <span className="text-white/80 text-sm">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
+{/* 🎯 Funnel Objective */}
+{client.campaignDetails.strategy.FunnelObjective?.length > 0 && (
+  <div>
+    <h4 className="text-sm font-medium text-white mb-2">
+      1. Funnel Objective
+    </h4>
+    <ul className="space-y-2">
+      {client.campaignDetails.strategy.FunnelObjective.map((point, index) => (
+        <li key={index} className="flex items-start">
+          <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+          <span className="text-white/80 text-sm">{point}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+
+{/* 🎯 Targeting Strategy */}
+{client.campaignDetails.strategy.TargetingStrategy?.length > 0 && (
+  <div>
+    <h4 className="text-sm font-medium text-white mb-2">
+      2. Targeting Strategy
+    </h4>
+    <ul className="space-y-2">
+      {client.campaignDetails.strategy.TargetingStrategy.map((item, idx) => (
+        <li key={idx} className="flex items-start">
+          <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+          <span className="text-white/80 text-sm">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{/* 🧪 Creative Testing */}
+{client.campaignDetails.strategy.CreativeTesting?.length > 0 && (
+  <div>
+    <h4 className="text-sm font-medium text-white mb-2">
+      3. Creative Testing
+    </h4>
+    <ul className="space-y-2">
+      {client.campaignDetails.strategy.CreativeTesting.map((item, idx) => (
+        <li key={idx} className="flex items-start">
+          <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+          <span className="text-white/80 text-sm">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+{/* ⚙️ Optimization Focus */}
+{client.campaignDetails.strategy.OptimizationFocus?.length > 0 && (
+  <div>
+    <h4 className="text-sm font-medium text-white mb-2">
+      4. Optimization Focus
+    </h4>
+    <ul className="space-y-2">
+      {client.campaignDetails.strategy.OptimizationFocus.map((item, idx) => (
+        <li key={idx} className="flex items-start">
+          <div className="h-2 w-2 rounded-full bg-primary mt-2 mr-3 flex-shrink-0"></div>
+          <span className="text-white/80 text-sm">{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
+
+
 
               {/* Results Section */}
               <div className="space-y-4">
@@ -656,50 +789,155 @@ export const SocialMediaCard = ({ client }: SocialMediaCardProps) => {
                   Results (30 day campaign)
                 </h3>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Ad Spend</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.adSpend}
-                    </p>
-                  </div>
+                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Reach</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.reach}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Qualified Leads</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.QualifiedLeads}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Live Site Visits OR Conversions</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.LiveSiteVisitsORConversions}
-                    </p>
-                  </div>
-                  <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">ROI Achieved</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.ROIAchieved}
-                    </p>
-                  </div>
-                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Manual Workload Cut</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.ManualWorkloadCut}
-                    </p>
-                  </div>
-                   <div className="flex flex-col items-center text-center">
-                    <p className="text-xs text-white/50 mb-1">Automation Coverage</p>
-                    <p className="text-xl font-semibold text-white">
-                      {client.campaignDetails.results.AutomationCoverage}
-                    </p>
-                  </div>
+   {client.campaignDetails.results.AdSpend?.trim().length > 0 && (
+  <div className="flex flex-col items-center text-center">
+    <p className="text-xs text-white/50 mb-1">Ad Spend</p>
+    <p className="text-xl font-semibold text-white">
+      {client.campaignDetails.results.AdSpend}
+    </p>
+  </div>
+)}
+
+{client.campaignDetails.results.Reach?.trim().length > 0 && (
+  <div className="flex flex-col items-center text-center">
+    <p className="text-xs text-white/50 mb-1">Reach</p>
+    <p className="text-xl font-semibold text-white">
+      {client.campaignDetails.results.Reach}
+    </p>
+  </div>
+)}
+
+
+    {client.campaignDetails.results.LeadsGenerated?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Leads Generated</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.LeadsGenerated}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.EstimatedWalkinsDemoAttendees?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Estimated Walk-ins/Demo Attendees</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.EstimatedWalkinsDemoAttendees}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.AverageCostPerLead?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Average Cost per Lead</p>
+        <p className="text-xl font-semibold text-white">
+          ₹{client.campaignDetails.results.AverageCostPerLead}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.ROI?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">ROI</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.ROI}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.OrdersGenerated?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Orders Generated</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.OrdersGenerated}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.Revenue?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Revenue</p>
+        <p className="text-xl font-semibold text-white">
+          ₹{client.campaignDetails.results.Revenue}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.WebsiteVisitors?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Website Visitors</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.WebsiteVisitors}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.CostPerPurchase?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Cost per Purchase</p>
+        <p className="text-xl font-semibold text-white">
+          ₹{client.campaignDetails.results.CostPerPurchase}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.ROIAchieved?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">ROI Achieved</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.ROIAchieved}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.ManualWorkloadCut?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Manual Workload Cut</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.ManualWorkloadCut}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.AutomationCoverage?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Automation Coverage</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.AutomationCoverage}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.QualifiedLeads?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Qualified Leads</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.QualifiedLeads}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.LiveSiteVisitsOrConversions?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Live Site Visits / Conversions</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.LiveSiteVisitsOrConversions}
+        </p>
+      </div>
+    )}
+
+    {client.campaignDetails.results.LiveVisitsConversions?.trim().length > 0 && (
+      <div className="flex flex-col items-center text-center">
+        <p className="text-xs text-white/50 mb-1">Live Visits/Conversions</p>
+        <p className="text-xl font-semibold text-white">
+          {client.campaignDetails.results.LiveVisitsConversions}
+        </p>
+      </div>
+    )}
+
+
+
                 </div>
               </div>
             </div>
