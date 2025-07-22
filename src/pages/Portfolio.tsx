@@ -123,7 +123,7 @@ const adsCaseStudies: SocialMediaClient[] = [
 LeadsGenerated: "48",
 EstimatedWalkinsDemoAttendees: "14",
 Reach: "13,500+",
-AverageCostPerLead: "₹343",
+AverageCostPerLead: "343",
 ROI: "~3.9x",
 
 
@@ -176,7 +176,7 @@ FunnelSetup:[
 OrdersGenerated: "119",
 Revenue: "₹58,620",
 WebsiteVisitors: "15,400+",
-CostPerPurchase: "₹107.14",
+CostPerPurchase: "107.14",
 ROIAchieved: "4.6x",
 ManualWorkloadCut: "35%+",
 AutomationCoverage: "70%",
@@ -315,9 +315,9 @@ campaignDesc: "Tested 3 creatives targeting skincare enthusiasts and used automa
     results: {
     AdSpend: "₹12,750",
 OrdersGenerated: "119",
-Revenue: "₹58,620",
+Revenue: "58,620",
 WebsiteVisitors: "15,400+",
-CostPerPurchase: "₹107.14",
+CostPerPurchase: "107.14",
 ROIAchieved: "4.6x",
 ManualWorkloadCut: "35%+",
 AutomationCoverage: "70%",
